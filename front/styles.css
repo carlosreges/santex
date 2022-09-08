@@ -1,0 +1,107 @@
+.fondo {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(https://viapais.com.ar/resizer/Sh3MMLROpBObLVewekcsx4Quz3c=/982x551/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/MIYDKOBRHAZGENRYMZTDMZTEGQ.jpg);
+
+	position: absolute;
+}
+
+.logo {
+	width: 30%;
+}
+
+#menu, #menu ul {
+            list-style:none;
+            padding:0;
+            margin:0;
+        }
+        /* hace referencia a los primeros enlaces */
+        #menu li {
+            float:left;
+            position:relative;
+            width: 20em;
+        }
+        /* hace referencia a los segundos submenus */
+        #menu li ul {
+            position:absolute;
+            display:none;
+        }
+        /* hace referencia a los terceros submenus */
+        #menu li ul li ul {
+            margin-top:-2.2em;
+            margin-left:20em;
+        }
+        /* hace referencia a los cuartos submenus */
+        #menu li ul li ul li ul {
+            margin-top:-2.2em;
+            margin-left:20em;
+        }
+        
+        /* hace referencia al formato de los enlaces */
+        #menu a {
+            display:block;
+            border-right:1px solid #fff;
+            background:#E0F574;
+            color:#3B3B3B;
+            text-decoration:none;
+            padding:20px;
+        }
+        /* hace referencia al formato 
+           cuando se pasa el raton por encima del enlace */
+        #menu a:hover {
+            background-color:#5798B4;
+            color:#fff;
+        }
+        /* hace referencia a los bloques de los segundos menus en adelante */
+        #menu ul {
+            border-top:1px solid #fff;
+        }
+        /* hace referencia al formato
+           del enlaces de los segundos menus en adelante */
+        #menu ul a {
+            border-right:none;
+            border-right:1px solid #fff;
+            border-bottom:1px solid #fff;
+            border-left:1px solid #fff;
+            background:#AEC245;
+        }
+
+        /* esconde los menus de tercer nivel cuando estamos en el primer nivel */
+        #menu li:hover ul ul {
+            display:none;
+        }
+        /* esconde los menus de cuarto nivel cuando estamos en el primer nivel */
+        #menu li:hover ul ul ul {
+            display:none;
+        }
+        /* esconde los menus de cuarto nivel cuando estamos en el segundo nivel */
+        #menu li ul li:hover ul ul {
+            display:none;
+        }
+        /* muestra los menus de segundo nivel */
+        #menu li:hover ul {
+            display:block;
+        }
+        /* muestra los menus de tercer nivel */
+        #menu li ul li:hover ul{
+            display:block;
+        }
+        /* muestra los menus de cuarto nivel */
+        #menu li ul li ul li:hover ul{
+            display:block;
+        }
+
+h1 {
+	position: absolute;
+	width: 759px;
+	height: 170px;
+	left: 120px;
+	top: 90px;
+
+	font-family: 'Abhaya Libre';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 72px;
+	line-height: 85px;
+	color: #FFFFFF;
+}
