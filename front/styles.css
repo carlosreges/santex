@@ -1,7 +1,7 @@
 .fondo {
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url(https://viapais.com.ar/resizer/Sh3MMLROpBObLVewekcsx4Quz3c=/982x551/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/MIYDKOBRHAZGENRYMZTDMZTEGQ.jpg);
+	background-image: url(./images/Imagenes_Morteros_Ansenuza/contratapa.jpg);
 
 	position: absolute;
 }
@@ -105,3 +105,21 @@ h1 {
 	line-height: 85px;
 	color: #FFFFFF;
 }
+
+h2{
+	
+	font-family: 'Abhaya Libre';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 2em;
+	line-height: 85px;
+	color: cornsilk;
+}
+
+/*flex: display;
+	position: absolute;
+	width: 759px;
+	height: 170px;
+	left: 120px;
+	top: 90px;
+*/
