@@ -6,15 +6,16 @@ import { PiesComponent } from './pies/pies.component';
 
 
 
+
 @NgModule({
   declarations: [
     CabezaComponent,
     CuerpoComponent,
-    PiesComponent
+    PiesComponent,
   ],
   imports: [
     CommonModule
- 
+
   ],
   exports: [
     CabezaComponent,
