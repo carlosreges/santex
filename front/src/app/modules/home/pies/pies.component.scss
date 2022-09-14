@@ -44,13 +44,14 @@
 }
 
 .pie-cuerpo-contacto{
-  text-align:left;
+  text-align:center;
   font-size: 14px;
   font-style:italic;
   padding-left: 5%;
   line-height: normal;
   display : flex;
   flex-direction : row;
+  width: 150%;
 
   }
 
@@ -69,7 +70,7 @@
    /*classes de division de div
    <div class ="box-row"></div>*/
   .contenidoInfo{
-    text-align: justify;
+    text-align: center;
     background-color: whitesmoke;
    margin-top: 1em;
     border-radius: 0.5%;
@@ -81,7 +82,7 @@
     background-color:whitesmoke;
     margin: 5em;
     padding: 3%;
-    text-align: left;
+    text-align: center;
     font-size:xx-large;
     display : flex;
     flex-direction : row;
