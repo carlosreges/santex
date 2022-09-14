@@ -1,46 +1,113 @@
-.accordion{
-  margin: 5%;
-  border-radius: 2%;
-}
-
-.card{
- display:inline-block;
- padding:0.0%;
- margin: 1%;
- height: 8vh;
- width:8vh;
- text-align: center;
- background-color: rgba(0, 0, 0, 0);
-}
-
-.card-text{
-  height: 15vh;
-}
-
-.accordion-button{
-  background-color: rgba(32, 148, 171, 0.5);
-  text-align: center;
-}
-
-.accordion-footer{
-  text-align: end;
-}
-
-.accordion-footerContacto{
-  text-align:left;
-}
-
-/*.presentacion{
-  margin: 5%;
-  border-radius: 2%;
-}*/
-
-/*.TextoPresentacion{
+.pie-titulo-contacto{
+  color: rgb(47, 47, 224);
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
   margin: 1%;
-  border-radius: 2%;
-  text-align: center;
-}*/
+  border-style: none;
+  border-spacing: 5%;
+}
 
-/*.TextoGrande{
-  text-align: center;
-}*/
+.pie-cuerpo-contacto{
+  text-align:left;
+  font-style: italic;
+  margin: 1%;
+}
+
+.pie-imagen{
+  margin: 0.1%;
+  vertical-align:text-top;
+  border-style:outset;
+  max-width: 100%;
+
+}
+
+  .iconoRedesSociales{
+    display:inline-block;
+    padding:0.0%;
+    margin: 1%;
+    height: 8vh;
+    width:8vh;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    border-spacing: 1%;
+   }
+
+   .box {
+
+    margin: 5%;
+    background-color: rgba(177, 199, 240, 0.637);
+  }
+
+  .bySantex{
+    text-align:right;
+    font-style: italic;
+    margin: 1%;
+  }
+
+  //SEGUNDA PARTE
+
+  .accordion{
+    margin: 5%;
+    border-radius: 2%;
+  }
+
+  .card{
+   display:inline-block;
+   padding:0.0%;
+   margin: 1%;
+   height: 8vh;
+   width:8vh;
+   text-align: center;
+   background-color: rgba(0, 0, 0, 0);
+   border-style: none;
+
+  }
+
+  .UL {
+    background: rgba(177, 199, 240, 0.637);
+    margin: 5%;
+    padding: 0%;
+  }
+  .pieContacto{
+
+    padding:0.0%;
+    margin: 1%;
+    //height: 8vh;
+    //width:8vh;
+    //text-align: center;
+  }
+
+  .card-text{
+    height: 15vh;
+  }
+
+  .accordion-button{
+    background-color: rgba(32, 148, 171, 0.5);
+    text-align: center;
+  }
+
+  .accordion-footer{
+    text-align: end;
+  }
+
+  .accordion-footerContacto{
+    text-align:left;
+  }
+
+  /*.presentacion{
+    margin: 5%;
+    border-radius: 2%;
+  }*/
+
+  .contactoInfo{
+    margin: 1%;
+    border-radius: 2%;
+    //text-align: center;
+  }
+
+  /*.TextoGrande{
+    text-align: center;
+  }*/
