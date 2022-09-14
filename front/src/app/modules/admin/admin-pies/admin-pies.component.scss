@@ -1,0 +1,96 @@
+.iconoRedesSociales{
+  display:inline-block;
+  padding:0%;
+  margin: 1%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+  border-spacing: 1%;
+  vertical-align:text-top;
+ }
+
+ .bySantex{
+  text-align:right;
+  font-style: italic;
+  margin: 1%;
+  padding: 0%;
+
+}
+
+.boxPie {
+
+  background-color: rgba(177, 199, 240, 0.637);
+}
+
+.boxContacto {
+  margin-top: 5%;
+  display : flex;
+  flex-direction : row;
+  background-color: rgb(214, 212, 212);
+  padding: 1em;
+
+  //background-color: rgba(125, 152, 202, 0.637);
+}
+
+.pie-titulo-contacto{
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
+  border-style: none;
+  //border-spacing: 5%;
+  padding-left: 5%;
+  line-height: 100%;
+}
+
+.pie-cuerpo-contacto{
+  text-align:center;
+  font-size: 14px;
+  font-style:italic;
+  padding-left: 5%;
+  line-height: normal;
+  display : flex;
+  flex-direction : row;
+  width: 150%;
+
+  }
+
+  .iconoContacto{
+    display:inline;
+    padding:0.0%;
+    margin: 1%;
+    height: 20px;
+    width:20px;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    border-spacing: 1%;
+   }
+
+
+   /*classes de division de div
+   <div class ="box-row"></div>*/
+  .contenidoInfo{
+    text-align: center;
+    background-color: whitesmoke;
+   margin-top: 1em;
+    border-radius: 0.5%;
+    border-color: black;
+    font-size:large;
+
+  }
+  .ContenedorContacto{
+    background-color:whitesmoke;
+    margin: 5em;
+    padding: 3%;
+    text-align: center;
+    font-size:xx-large;
+    display : flex;
+    flex-direction : row;
+
+  }
+  .imgLogo{
+    display : flex;
+    flex-direction : row;
+    width: 45%;
+    height: 8em;
+  }
