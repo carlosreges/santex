@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './modules/home/home.module';
+import { AdminModule } from './modules/admin/admin.module';
+
 import { TemplateFormsComponent } from './template-forms/template-forms.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
@@ -20,7 +22,8 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     BrowserAnimationsModule,
     AppRoutingModule,
     CoreModule,
-    HomeModule
+    HomeModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

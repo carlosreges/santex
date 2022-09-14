@@ -5,9 +5,12 @@ import { NotLoggedInGuard } from './core/guards/login/notloggedin/notloggedin.gu
 import { CabezaComponent } from './modules/home/cabeza/cabeza.component';
 import { CuerpoComponent } from './modules/home/cuerpo/cuerpo.component';
 import { PiesComponent } from './modules/home/pies/pies.component';
+import { AdminCabezaComponent } from './modules/home/admin/admin-cabeza.component';
+import { AdminCuerpoComponent } from './modules/home/cuerpo/admin-cuerpo.component';
+import { AdminPieComponent } from './modules/home/pies/admin-pie.component';
 
 const routes: Routes = [
-  {
+  /* {
     path: '',
     component:CabezaComponent
   },
@@ -18,7 +21,22 @@ const routes: Routes = [
   {
     path:'',
     component:PiesComponent
+  }] */
+  //SECCION DE ADMINISTRADOR
+  {
+    path: '',
+    component:AdminCabezaComponent
+  },
+  {
+    path: '',
+     component:AdminCuerpoComponent
+  },
+  {
+    path:'',
+    component:AdminPieComponent
   }]
+
+
   /*{
     path: 'auth',
     canActivate: [NotLoggedInGuard],
