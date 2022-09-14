@@ -1,176 +1,259 @@
-<div class="accordion" id="accordionExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Gastronomia
-        </button>
-      </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <div class="card">
-                        <img src="assets/iconos/food.svg" width = "100em" height="100em"  alt="resto">
-                        <div class="card-body" >
-                        <h5 class="card-title">Resto Ansenuza</h5>
-                        <p class="card-text"> Av. primera 1545 -  </p>
-                        <a href="#" class="btn btn-primary">Resto Ansenuza</a>
-                        </div>
-                    </div>
-                                        <div class="card">
-                        <img src="assets/iconos/food.svg" width = "100em" height="100em"  alt="resto">
+
+
+<div class="ContenedorAnsenuza">
+  <div class="box-row>">
+  Parque Nacional Ansenuza
+  <div class="contenidoparque">El <span>Parque Nacional Ansenuza</span> es un área natural protegida situada en la provincia de Córdoba, República Argentina1​ con una superficie de 661.416 ha., que incluye la Laguna de Mar Chiquita o Mar de Ansenuza. La ley nacional que dicta su creación fue sancionada el 30 de junio de 2022. 2​
+
+    Los bañados del río Dulce (también llamado Salí o Petri) y la laguna de Mar Chiquita conforman uno de los humedales de importancia </div>
+</div>
+  <div class="imgparque"><img src="assets\images\logo_ansenuza_parque.webp" alt="logo" ></div>
+</div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button" (click)="showDataGa()">Gastronomia</button>
+        <button class="btn btn-primary" type="button" (click)="showDataAj()">Alojamiento</button>
+        <button class="btn btn-primary" type="button" (click)="showDataAc()">Actividades</button>
+
+    </div>
+
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div *ngIf="elementG == true">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Gastronomia</text></svg>
+
                         <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h3>Resto Anzenuza</h3>
+                            <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
+                            <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+
                         </div>
+
                     </div>
-                    <div class="card">
-                        <img src="assets/iconos/food.svg" width = "100em" height="100em"  alt="resto">
-                        <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="assets/iconos/food.svg" width = "100em" height="100em"  alt="resto">
-                        <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
+                  </div>
                 </div>
             </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Gastronomia</text></svg>
+
+              <div class="card-body">
+                <h3>Pizzeria Flamencos</h3>
+
+
+                <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
+                <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Gastronomia</text></svg>
+
+              <div class="card-body">
+                <h3>Parrilla "la primera"</h3>
+                <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
+                <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" (click)="hideDataG()">Cerrar</button>
+            </div>
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">            
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Gastronomia</text></svg>
+    
+                        <div class="card-body">
+                            <h3>Resto Anzenuza</h3>
+                            <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
+                            <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+                            
+                        </div>
+                 
+                    </div>
+                  </div>
+                </div>
+            </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Gastronomia</text></svg>
+  
+              <div class="card-body">
+                <h3>Pizzeria Flamencos</h3>
+   
+                
+                <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
+                <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+                 
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Gastronomia</text></svg>
+  
+              <div class="card-body">
+                <h3>Parrilla "la primera"</h3>
+                <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
+                <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+                  
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" (click)="hideDataG()">Cerrar</button>
+            </div>
+            </div>
+
+        <!--termina el div gastronomia-->
+        <div *ngIf="elementAj == true">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Alojamiento</text></svg>
+
+                    <div class="card-body">
+                        <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
+                        <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+
+                    </div>
+
+                </div>
+              </div>
+            </div>
+             </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Alojamiento</text></svg>
+
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Alojamiento</text></svg>
+
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <button class="btn btn-primary" type="button" (click)="hideDataAj()">Cerrar</button>
+          </div>
         </div>
-            <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Atracciones
-                </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <div class="card">
-                        <img src="assets/iconos/tickets.svg" width = "100em" height="100em"  alt="Atracciones">
-                        <div class="card-body" >
-                        <h5 class="card-title">Resto Ansenuza</h5>
-                        <p class="card-text"> Av. primera 1545 -  </p>
-                        <a href="#" class="btn btn-primary">Resto Ansenuza</a>
+
+  <!---->
+        <div *ngIf="elementAc == true">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Actividades</text></svg>
+
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">web</button>
+
+                        </div>
+
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="assets/iconos/tickets.svg" width = "100em" height="100em"  alt="Atracciones">
-                        <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
                     </div>
-                    <div class="card">
-                        <img src="assets/iconos/tickets.svg" width = "100em" height="100em"  alt="Atracciones">
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Actividades</text></svg>
+
                         <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+
                         </div>
-                    </div>
-                    <div class="card">
-                        <img src="assets/iconos/tickets.svg" width = "100em" height="100em"  alt="Atracciones">
-                        <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+
                         </div>
                     </div>
                 </div>
-            </div>
-            </div>
-            <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Alojamineto
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <div class="card">
-                        <img src="assets/iconos/hotel.svg" width = "100em" height="100em"  alt="hotel">
-                        <div class="card-body" >
-                        <h5 class="card-title">Resto Ansenuza</h5>
-                        <p class="card-text"> Av. primera 1545 -  </p>
-                        <a href="#" class="btn btn-primary">Resto Ansenuza</a>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Actividades</text></svg>
+
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+
+                        </div>
+
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="assets/iconos/hotel.svg" width = "100em" height="100em"  alt="hotel">
-                        <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="assets/iconos/hotel.svg" width = "100em" height="100em"  alt="hotel">
-                        <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="assets/iconos/hotel.svg" width = "100em" height="100em"  alt="hotel">
-                        <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
                     </div>
                 </div>
-            </div>
-            </div>
-            <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                Actividades
-                </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <div class="card">
-                        <img src="assets/iconos/actividades.svg" width = "100em" height="100em"  alt="actividades">
-                        <div class="card-body" >
-                        <h5 class="card-title">Resto Ansenuza</h5>
-                        <p class="card-text"> Av. primera 1545 -  </p>
-                        <a href="#" class="btn btn-primary">Resto Ansenuza</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="assets/iconos/actividades.svg" width = "100em" height="100em"  alt="actividades">
-                        <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="assets/iconos/actividades.svg" width = "100em" height="100em"  alt="actividades">
-                        <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="assets/iconos/actividades.svg" width = "100em" height="100em"  alt="actividades">
-                        <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
+                <button class="btn btn-primary" type="button" (click)="hideDataAc()">Cerrar</button>
                 </div>
+         </div>
       </div>
     </div>
-</div>
-
 
