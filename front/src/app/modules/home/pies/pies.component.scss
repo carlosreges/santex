@@ -18,12 +18,17 @@
 }
 
 .boxPie {
-  margin: 5%;
+ 
   background-color: rgba(177, 199, 240, 0.637);
 }
 
 .boxContacto {
-  margin: 5%;
+  margin-top: 5%;
+  display : flex;
+  flex-direction : row;
+  background-color: rgb(214, 212, 212);
+  padding: 1em;
+
   //background-color: rgba(125, 152, 202, 0.637);
 }
 
@@ -44,6 +49,8 @@
   font-style:italic;
   padding-left: 5%;
   line-height: normal;
+  display : flex;
+  flex-direction : row;
 
   }
 
