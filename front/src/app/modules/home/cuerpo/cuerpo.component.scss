@@ -51,13 +51,43 @@
     -webkit-overflow-scrolling: touch;
   }
   .container{
-    background-color: rgb(188, 206, 251, 0.3);
+    background-color: white;
     padding: 3%;
     border-radius: 0.5%;
     border-color: black;
     
   }
   .btn-primary{
-    background-color:  rgb(188, 206, 251, 0.3);
-    border-color: black;
+    background-color:whitesmoke;
+    border-color:whitesmoke;
+    color:black;
+    font-size:xx-large;
+    
   }
+  .contenidoparque{
+    text-align: justify;
+    background-color: whitesmoke;
+   margin-top: 1em;
+    border-radius: 0.5%;
+    border-color: black;
+    font-size:large;
+   
+  }
+  .ContenedorAnsenuza{
+    background-color:whitesmoke;
+    margin: 5em;
+    padding: 3%;
+    text-align: left;
+    font-size:xx-large;
+    display : flex;
+    flex-direction : row;
+   
+  }
+  .imgparque{
+    display : flex;
+    flex-direction : row;
+    width: 45%;
+    height: 8em;
+  }
+ 
+  
