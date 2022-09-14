@@ -1,51 +1,59 @@
+.iconoRedesSociales{
+  display:inline-block;
+  padding:0%;
+  margin: 1%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+  border-spacing: 1%;
+  vertical-align:text-top;
+ }
+
+ .bySantex{
+  text-align:right;
+  font-style: italic;
+  margin: 1%;
+  padding: 0%;
+
+}
+
+.boxPie {
+  margin: 5%;
+  background-color: rgba(177, 199, 240, 0.637);
+}
+
+.boxContacto {
+  margin: 5%;
+  //background-color: rgba(125, 152, 202, 0.637);
+}
+
 .pie-titulo-contacto{
-  color: rgb(0, 0, 0);
-  font-size: 25px;
+  font-size: 20px;
   font-style: italic;
   font-weight: bold;
   text-decoration: underline;
-  margin: 1%;
   border-style: none;
-  border-spacing: 5%;
+  //border-spacing: 5%;
   padding-left: 5%;
+  line-height: 100%;
 }
 
 .pie-cuerpo-contacto{
   text-align:left;
-  font-size: 22px;
-  font-style: italic;
-  margin: 0.1%;
+  font-size: 14px;
+  font-style:italic;
+  padding-left: 5%;
+  line-height: normal;
+
   }
 
-.pie-imagen{
-  margin: 0.1%;
-  vertical-align:text-top;
-  border-style:outset;
-  max-width: 100%;
-
-}
-
-  .iconoRedesSociales{
-    display:inline-block;
+  .iconoContacto{
+    display:inline;
     padding:0.0%;
     margin: 1%;
-    height: 8vh;
-    width:8vh;
-    text-align: center;
+    height: 20px;
+    width:20px;
     background-color: rgba(0, 0, 0, 0);
     border-style: none;
     border-spacing: 1%;
    }
-
-   .box {
-
-    margin: 5%;
-    background-color: rgba(177, 199, 240, 0.637);
-  }
-
-  .bySantex{
-    text-align:right;
-    font-style: italic;
-    margin: 1%;
-  }
-
