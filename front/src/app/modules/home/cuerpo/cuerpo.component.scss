@@ -1,7 +1,6 @@
 
 .bd-placeholder-img {
-    font-size: 1.125rem;
-    
+    font-size: 1.125rem;    
     text-anchor: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -12,6 +11,10 @@
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
     }
+    .bg-light {
+      --bs-bg-opacity: 0;
+      background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
+  }
   }
 
   .b-example-divider {
@@ -51,7 +54,7 @@
     -webkit-overflow-scrolling: touch;
   }
   .container{
-    background-color: white;
+    background-color: whitesmoke;
     padding: 3%;
     border-radius: 0.5%;
     border-color: black;
@@ -64,6 +67,8 @@
     font-size:xx-large;
     
   }
+  /*classes de division de div
+   <div class ="box-row"></div>*/
   .contenidoparque{
     text-align: justify;
     background-color: whitesmoke;
