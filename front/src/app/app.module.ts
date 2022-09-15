@@ -22,7 +22,7 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     BrowserAnimationsModule,
     AppRoutingModule,
     CoreModule,
-    HomeModule,
+    HomeModule
 
   ],
   providers: [],

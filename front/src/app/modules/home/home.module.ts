@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CabezaComponent } from './cabeza/cabeza.component';
 import { CuerpoComponent } from './cuerpo/cuerpo.component';
 import { PiesComponent } from './pies/pies.component';
-import { AdminComponent } from './admin/admin.component';
+
 
 
 
@@ -13,7 +13,7 @@ import { AdminComponent } from './admin/admin.component';
     CabezaComponent,
     CuerpoComponent,
     PiesComponent,
-    AdminComponent,
+
   ],
   imports: [
     CommonModule
@@ -23,7 +23,6 @@ import { AdminComponent } from './admin/admin.component';
     CabezaComponent,
     CuerpoComponent,
     PiesComponent,
-    AdminComponent
-  ]
+    ]
 })
 export class HomeModule { }

@@ -5,7 +5,7 @@ import { NotLoggedInGuard } from './core/guards/login/notloggedin/notloggedin.gu
 import { CabezaComponent } from './modules/home/cabeza/cabeza.component';
 import { CuerpoComponent } from './modules/home/cuerpo/cuerpo.component';
 import { PiesComponent } from './modules/home/pies/pies.component';
-import { AdminComponent } from './modules/home/admin/admin.component';
+
 
 const routes: Routes = [
 {
@@ -20,10 +20,7 @@ const routes: Routes = [
     path:'',
     component:PiesComponent
   },
-  {
-    path:'',
-    component:AdminComponent
-  }]
+ ]
 
 
 
