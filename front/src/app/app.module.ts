@@ -23,7 +23,6 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     AppRoutingModule,
     CoreModule,
     HomeModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

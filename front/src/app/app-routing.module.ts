@@ -1,3 +1,4 @@
+import { AdministradorComponent } from './modules/home/administrador/administrador.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoggedInGuard } from './core/guards/login/loggedin/loggedin.guard';
@@ -5,6 +6,7 @@ import { NotLoggedInGuard } from './core/guards/login/notloggedin/notloggedin.gu
 import { CabezaComponent } from './modules/home/cabeza/cabeza.component';
 import { CuerpoComponent } from './modules/home/cuerpo/cuerpo.component';
 import { PiesComponent } from './modules/home/pies/pies.component';
+
 
 
 const routes: Routes = [
@@ -19,6 +21,10 @@ const routes: Routes = [
   {
     path:'',
     component:PiesComponent
+  },
+  {
+    path:'',
+    component:AdministradorComponent
   },
  ]
 
