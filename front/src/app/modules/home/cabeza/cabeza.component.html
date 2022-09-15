@@ -6,33 +6,70 @@
     <meta name="description" content="">
     <meta name="generator" content="Hugo 0.101.0">
     <title>Cabeza</title>
-
+    <link rel=stylesheet href="cabeza.component.scss">
+    <style type="text/css">
+      
+    </style>
     <!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/headers/">
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
   </head>
   <body>
-  <header>  
-  <nav class="py-2 bg-light border-bottom">
-    <div class="container d-flex flex-wrap">
-      <a href="#" class="d-block link-dark text-decoration-none">
-            <img src=".../src/assets/images/morteroslogo.jpg" alt="logo" width="32" class="rounded-circle">
+  <header> 
+    <nav class="navbar navbar-expand-lg bg-light fixed-top">
+  <div class="container-fluid">
+    <img src="assets/images/morteroslogo.jpg" width="200">
+    <!--<a class="navbar-brand" href="#">Turismo Municipalidad de Morteros</a>-->
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<!--        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <strong>Descúbrenos</strong>
           </a>
-      <ul class="nav me-auto">
-        <li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page"></a></li>
-          <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Gastronomía</a></li>
-          <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Alojamientos</a>  </li>
-          <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Actividades</a></li>
-          <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Atractivos</a></li>
-          <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Agencias de viajes</a></li>
-        </ul>
-        <ul class="nav">
-         <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Login</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div>
-      
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Atracciones</a></li>
+            <li><a class="dropdown-item" href="#">Actividades</a></li>
+            <li><a class="dropdown-item" href="#">Agencias de Viajes</a></li>
+            <li><a class="dropdown-item" href="#">Alojamiento</a></li>
+            <li><a class="dropdown-item" href="#">Gastronomía</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Contacto</a></li>
+          </ul>
+        </li>
+<!--        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>-->
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Usuario" aria-label="Usuario">
+        <input class="form-control me-2" type="search" placeholder="Password" aria-label="Password">
+        <button class="btn btn-outline-success" type="submit">Ingreso</button>
+      </form>
     </div>
-  </header>
+  </div>
+</nav>
+  <div>
+    <img src="assets/images/Pie_Pagina.jpg" width="100%" id="imagen">
+  </div>
+    <h1>Ansenuza</h1>
+      <div class="container container-md y-40">
+        <p class="text-justify fst-italic">Esta zona es producto del esfuerzo de sus habitantes, que desde siempre han tenido el deseo de hacer conocido el paraíso en el que viven. La protagonista más importante de esta área turística es la reconocida Laguna de Mar Chiquita, una laguna de agua salada de 6 mil kilómetros de extensión, que constituye uno de los humedales salinos más grandes de Latinoamérica y del mundo.</p>
+      </div>
+      <div class="container container-md y-40">
+        <h2 class="text-center text-uppercase fw-bold">¿Qué hacer en Ansenuza?</h2>
+      </div>
+      <div>
+
+      </div>
+    </header>
   </body>
 </html>
