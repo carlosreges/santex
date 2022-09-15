@@ -38,6 +38,9 @@
 <!-- CUERPO -->
 <!-- ******** -->
 
+
+<!-- ******** -->
+<!-- SECCIONES -->
 <div class="container">
   <div class=" text-center mt-5 ">
       <h3>SECCIONES</h3>
@@ -70,15 +73,15 @@
                   <!-- COLUMNA -->
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="form_name">Titulo *</label>
-                      <input id="form_name" type="text" name="name" class="form-control" placeholder="Ingrese Nombre del Lugar *" required="required" data-error="Nombre es requerido.">
+                      <label for="form_titulo">Titulo *</label>
+                      <input id="form_titulo" type="text" name="titulo" class="form-control" placeholder="Ingrese Nombre del Lugar *" required="required" data-error="Nombre es requerido.">
                     </div>
                   </div>
                   <!-- COLUMNA -->
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="form_lastname">Dirección *</label>
-                      <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Ingrese la Direccion del Lugar *" required="required" data-error="Direccion es requerido.">
+                      <label for="form_direccion">Dirección *</label>
+                      <input id="form_direccion" type="text" name="direccion" class="form-control" placeholder="Ingrese la Direccion del Lugar *" required="required" data-error="Direccion es requerido.">
                     </div>
                   </div>
                 </div>
@@ -87,8 +90,23 @@
                   <!-- COLUMNA -->
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="form_email">Email *</label>
-                      <input id="form_email" type="email" name="email" class="form-control" placeholder="Email del Establecimiento *" required="required" data-error="Email es requerido.">
+                      <label for="form_email">Email</label>
+                      <input id="form_email" type="email" name="email" class="form-control" placeholder="Email del Establecimiento">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_web">Web</label>
+                      <input id="form_web" type="text" name="web" class="form-control" placeholder="Web del Establecimiento *">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_imagen">Imagen *</label>
+                      <input type="file" class="file-upload" onchange="console.log(event.target.files)">
+                      <!-- <input id="form_imagen" type="imagen" name="imagen" class="form-control" placeholder="Imagen del Establecimiento *" required="required" data-error="Imagen es requerido."> -->
                     </div>
                   </div>
                   <!-- COLUMNA -->
@@ -114,4 +132,150 @@
     <!-- /.row-->
   </div>
 </div>
+<!-- ******** -->
+<!-- FIN SECCIONES -->
 
+<!-- ******** -->
+<!-- REDES SOCIALES -->
+
+<div class="container">
+  <div class=" text-center mt-5 ">
+      <h3>REDES SOCIALES</h3>
+  </div>
+
+  <div class="row ">
+    <div class="col-lg-7 mx-auto">
+      <div class="card mt-2 mx-auto p-4 bg-light">
+        <div class="card-body bg-light">
+          <div class = "container">
+            <form id="contact-form" role="form">
+              <div class="controls">
+                <!-- FILA -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_need">Especifique la Red Social *</label>
+                      <select id="form_need" name="need" class="form-control" required="required" data-error="Especifique la Seccion.">
+                        <option value="" selected disabled>--Seleccione--</option>
+                        <option >Whatsapp</option>
+                        <option >Twitter</option>
+                        <option >Instagram</option>
+                        <option >Facebook</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FILA -->
+                <div class="row">
+                  <!-- COLUMNA -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_url">Url</label>
+                      <input id="form_url" type="text" name="url" class="form-control" placeholder="Url de la Red Social*">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Guardar" >
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- /.8 -->
+    </div>
+    <!-- /.row-->
+  </div>
+</div>
+
+<!-- ******** -->
+<!-- FIN REDES SOCIALES -->
+
+<!-- ******** -->
+<!-- CONTACTO -->
+
+<div class="container">
+  <div class=" text-center mt-5 ">
+      <h3>CONTACTO</h3>
+  </div>
+
+  <div class="row ">
+    <div class="col-lg-7 mx-auto">
+      <div class="card mt-2 mx-auto p-4 bg-light">
+        <div class="card-body bg-light">
+          <div class = "container">
+            <form id="contact-form" role="form">
+              <div class="controls">
+                <!-- FILA -->
+                <div class="row">
+                  <!-- COLUMNA -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_titulo">Titulo *</label>
+                      <input id="form_titulo" type="text" name="titulo" class="form-control" placeholder="Ingrese Nombre del Lugar *" required="required" data-error="Nombre es requerido.">
+                    </div>
+                  </div>
+                  <!-- COLUMNA -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_direccion">Dirección *</label>
+                      <input id="form_direccion" type="text" name="direccion" class="form-control" placeholder="Ingrese la Direccion del Lugar *" required="required" data-error="Direccion es requerido.">
+                    </div>
+                  </div>
+                </div>
+                <!-- FILA -->
+                <div class="row">
+                  <!-- COLUMNA -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_email">Email</label>
+                      <input id="form_email" type="email" name="email" class="form-control" placeholder="Email del Establecimiento">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_web">Web</label>
+                      <input id="form_web" type="text" name="web" class="form-control" placeholder="Web del Establecimiento *">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_imagen">Imagen *</label>
+                      <input type="file" class="file-upload" onchange="console.log(event.target.files)">
+                      <!-- <input id="form_imagen" type="imagen" name="imagen" class="form-control" placeholder="Imagen del Establecimiento *" required="required" data-error="Imagen es requerido."> -->
+                    </div>
+                  </div>
+                  <!-- COLUMNA -->
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="form_message">Breve Descripcion *</label>
+                      <textarea id="form_message" name="message" class="form-control" placeholder="Escriba una descripcion del Lugar." rows="4" required="required" ></textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Guardar" >
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- /.8 -->
+    </div>
+    <!-- /.row-->
+  </div>
+</div>
+<!-- ******** -->
+<!-- FIN CONTACTO -->
+
+
+<app-pies></app-pies>
