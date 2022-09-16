@@ -10,26 +10,15 @@ import { AppComponent } from './app.component';
 
 
 
-const routes: Routes = [
-{
-    path: '',
-    component:CabezaComponent
-  },
-  {
-    path: '',
-     component:CuerpoComponent
-  },
-   {
-    path:'',
-    component:PiesComponent
-  },
-  {
-    path:'',
+const routes: Routes = 
+[{
+    path:'administrador', //Al entrar a esta ruta lo que hace es reenderizar el componente declarado abajo: "AdministradorComponent"
     component:AdministradorComponent
   },
-
-
- ]
+  {
+    path: '**', //Lo que hace el ** es que si pones alguna ruta agena de la que no se encuentre en este archivo Routing, te reenderiza CuerpoComponent
+     component:CuerpoComponent
+  }];
 
 
 

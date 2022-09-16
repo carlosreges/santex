@@ -11,10 +11,10 @@ export class CabezaComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.router.navigateByUrl //PARA DIRECCIONAR A UNA PAGINA DENTRO DEL PROYECTO
   }
+  
   login():void{
     debugger;
-    this.router.navigateByUrl("/administrador")
+    this.router.navigateByUrl("administrador")
   }
 }

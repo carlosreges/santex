@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-administrador',
@@ -9,7 +10,7 @@ export class AdministradorComponent implements OnInit {
   elementSec = false; //SECCIONES
   elementCon = false; //CONTACTO
   elementRSoc = false; //REDES SOCIALES
- constructor() { }
+ constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -32,4 +33,8 @@ export class AdministradorComponent implements OnInit {
     return (this.elementRSoc = false);
   }
 
+  //Función para desloguear administrador.
+  logout(): void{
+    this.router.navigateByUrl('')
+  }
 }
