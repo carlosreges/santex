@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './modules/home/home.module';
+
+
 import { TemplateFormsComponent } from './template-forms/template-forms.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
