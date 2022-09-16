@@ -11,13 +11,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">SECCIONES</a>
+          <a class="nav-link active" aria-current="page" (click)="showDataSec(); hideDataRSoc(); hideDataCon()" href="#">SECCIONES</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">REDES SOCIALES</a>
+          <a class="nav-link active" aria-current="page" (click)="showDataRSoc(); hideDataSec(); hideDataCon() " href="#">REDES SOCIALES</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">DATOS CONTACTO</a>
+          <a class="nav-link active" aria-current="page" (click)="showDataCon(); hideDataRSoc(); hideDataSec()" href="#">DATOS CONTACTO</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -41,6 +41,7 @@
 
 <!-- ******** -->
 <!-- SECCIONES -->
+<div *ngIf="elementSec == true">
 <div class="container">
   <div class=" text-center mt-5 ">
       <h3>SECCIONES</h3>
@@ -148,12 +149,13 @@
     <!-- /.row-->
   </div>
 </div>
+</div>
 <!-- ******** -->
 <!-- FIN SECCIONES -->
 
 <!-- ******** -->
 <!-- REDES SOCIALES -->
-
+<div *ngIf="elementRSoc == true">
 <div class="container">
   <div class=" text-center mt-5 ">
       <h3>REDES SOCIALES</h3>
@@ -207,13 +209,13 @@
     <!-- /.row-->
   </div>
 </div>
-
+</div>
 <!-- ******** -->
 <!-- FIN REDES SOCIALES -->
 
 <!-- ******** -->
 <!-- CONTACTO -->
-
+<div *ngIf="elementCon == true">
 <div class="container">
   <div class=" text-center mt-5 ">
       <h3>CONTACTO</h3>
@@ -281,6 +283,7 @@
     </div>
     <!-- /.row-->
   </div>
+</div>
 </div>
 <!-- ******** -->
 <!-- FIN CONTACTO -->
