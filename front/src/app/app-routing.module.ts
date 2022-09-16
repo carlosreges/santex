@@ -24,7 +24,7 @@ const routes: Routes = [
     component:PiesComponent
   },
   {
-    path:'administrador',
+    path:'',
     component:AdministradorComponent
   },
 
