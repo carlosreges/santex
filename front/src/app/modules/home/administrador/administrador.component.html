@@ -11,16 +11,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" (click)="showDataSec(); hideDataAdm(); hideDataRSoc(); hideDataCon()" href="#">SECCIONES</a>
+          <a class="nav-link active" aria-current="page" (click)="showDataSec(); hideDataAdm(); hideDataRSoc(); hideDataCon()" href="#">Secciones</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" (click)="showDataRSoc(); hideDataAdm(); hideDataSec(); hideDataCon() " href="#">REDES SOCIALES</a>
+          <a class="nav-link active" aria-current="page" (click)="showDataRSoc(); hideDataAdm(); hideDataSec(); hideDataCon() " href="#">Redes Sociales</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" (click)="showDataCon(); hideDataAdm(); hideDataRSoc(); hideDataSec()" href="#">DATOS CONTACTO</a>
+          <a class="nav-link active" aria-current="page" (click)="showDataCon(); hideDataAdm(); hideDataRSoc(); hideDataSec()" href="#">Contacto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" (click)="showDataAdm(); hideDataRSoc(); hideDataSec(); hideDataCon()" href="#">ADMINISTRADOR</a>
+          <a class="nav-link active" aria-current="page" (click)="showDataAdm(); hideDataRSoc(); hideDataSec(); hideDataCon()" href="#">Administrador</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -140,7 +140,7 @@
                     <div class="form-group">
                       <label for="form_imagen">Imagen *</label>
                       <input type="file" class="file-upload" onchange="console.log(event.target.files)">
-                      <!-- <input id="form_imagen" type="imagen" name="imagen" class="form-control" placeholder="Imagen del Establecimiento *" required="required" data-error="Imagen es requerido."> -->
+
                     </div>
                   </div>
                   <!-- COLUMNA -->
@@ -219,9 +219,9 @@
                   </div>
                 </div>
 
-                <!-- FILA -->
+
                 <div class="row">
-                  <!-- COLUMNA -->
+
                   <div class="col-md-12">
                     <div class="form-group">
                       <label for="form_url">Url</label>
@@ -242,16 +242,14 @@
           </div>
         </div>
       </div>
-      <!-- /.8 -->
+
     </div>
-    <!-- /.row-->
+
   </div>
 </div>
 </div>
-<!-- ******** -->
-<!-- FIN REDES SOCIALES -->
 
-<!-- ******** -->
+<!-- FIN REDES SOCIALES -->
 <!-- CONTACTO -->
 <div *ngIf="elementCon == true">
 <div class="container">
@@ -266,7 +264,7 @@
           <div class = "container">
             <form id="contact-form" role="form">
               <div class="controls">
-                <!-- FILA -->
+
                 <!-- *********SEARCH**************** -->
                 <div class="row">
                   <div class="col-md-12">
@@ -280,9 +278,9 @@
                     </div>
                   </div>
                 </div>
-                <!-- ******************************* -->
+
                 <div class="row">
-                  <!-- COLUMNA -->
+
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_direccion">Dirección *</label>
@@ -296,9 +294,9 @@
                     </div>
                   </div>
                 </div>
-                <!-- FILA -->
+
                 <div class="row">
-                  <!-- COLUMNA -->
+
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_telefono">Telefono</label>
@@ -319,7 +317,7 @@
                       <input type="file" class="file-upload" onchange="console.log(event.target.files)">
                     </div>
                   </div>
-                  <!-- COLUMNA -->
+
                 </div>
                 <div class="row">
                   <div class="col-md-6">
@@ -334,15 +332,13 @@
           </div>
         </div>
       </div>
-      <!-- /.8 -->
+
     </div>
-    <!-- /.row-->
+
   </div>
 </div>
 </div>
-<!-- ******** -->
 <!-- FIN CONTACTO -->
-<!-- ******** -->
 <!-- ADMINISTRADOR -->
 <div *ngIf="elementAdm == true">
   <div class="container">
@@ -357,8 +353,6 @@
             <div class = "container">
               <form id="contact-form" role="form">
                 <div class="controls">
-                  <!-- FILA -->
-                  <!-- *********SEARCH**************** -->
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
@@ -371,9 +365,9 @@
                       </div>
                     </div>
                   </div>
-                  <!-- ******************************* -->
+
                   <div class="row">
-                    <!-- COLUMNA -->
+
                     <div class="col-md-12">
                       <div class="form-group">
                         <label for="form_usuario">Usuario *</label>
@@ -396,18 +390,17 @@
                     <div class="col-md-6">
                       <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Guardar" >
                     </div>
-
                   </div>
                 </div>
               </form>
             </div>
           </div>
         </div>
-        <!-- /.8 -->
+
       </div>
-      <!-- /.row-->
+
     </div>
   </div>
   </div>
-  <!-- ******** -->
+
   <!-- FIN CONTACTO -->
