@@ -10,9 +10,16 @@ export class AdministradorComponent implements OnInit {
   elementSec = false; //SECCIONES
   elementCon = false; //CONTACTO
   elementRSoc = false; //REDES SOCIALES
+  elementAdm = false; //ADMINISTRADOR
  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+  showDataAdm() {
+    return (this.elementAdm = true);
+  }
+  hideDataAdm() {
+    return (this.elementAdm = false);
   }
   showDataSec() {
     return (this.elementSec = true);
