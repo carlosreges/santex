@@ -60,12 +60,30 @@
     border-color: black;
 
   }
-  .btn-primary{
+  
+  
+  .boton{
     background-color:whitesmoke;
+    box-shadow: 1%;
+    color:black;
+    font-size:large;
+    border-radius: 3%;
+    
+border-color: whitesmoke;
+  
+
+  }
+  .boton:hover{
+    background-color:rgb(110, 108, 108,0.2);
     border-color:whitesmoke;
     color:black;
-    font-size:x-large;
+    font-size:large;
+    border-color: whitesmoke;
 
+  }
+  .contenidoCuerpo{
+    margin-left: 3%;
+    
   }
   /*classes de division de div
    <div class ="box-row"></div>*/
@@ -108,7 +126,7 @@
     margin-top: 1em;
   }
   .row{
-    margin:2%;
+    margin:3%;
   }
 
   /* *********  ********* */
