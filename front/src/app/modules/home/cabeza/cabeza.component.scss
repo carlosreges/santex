@@ -12,10 +12,10 @@ width:100%;
 .textoExplicativo{
   text-align: justify;
   background-color: whitesmoke;
-  margin-top: 2em;
+  margin-top: 0.5em;
   border-radius: 0.5%;
   border-color: black;
-  font-size: large;
+  font-size: x-large;
 }
 
 .containerTexto{
@@ -33,4 +33,14 @@ width:100%;
   flex-direction: row;
   width: 45%;
   height: 2em;
+}
+.text-left{
+  margin-left: 2em;
+  margin-top: 0.5em;
+  text-align: center;
+}
+.header{
+  position: sticky;
+  top: 0;
+  
 }
