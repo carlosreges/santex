@@ -6,16 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cuerpo.component.scss']
 })
 export class CuerpoComponent implements OnInit {
-  elementG = false; 
+  elementG = false;
   elementAc = false;
   elementAt = false;
   elementAg = false;
-  elementAj =false; 
+  elementAj =false;
   constructor() { }
 
   ngOnInit(): void {
   }
-  showDatAg() {
+  showDataAg() {
     return (this.elementAg = true);
   }
   hideDataAg() {
@@ -30,7 +30,7 @@ export class CuerpoComponent implements OnInit {
   hideDataAj() {
     return (this.elementAj = false);
   }
-  hideDataG() {
+  hideDataGa() {
     return (this.elementG = false);
   }
   showDataAj() {
@@ -38,15 +38,15 @@ export class CuerpoComponent implements OnInit {
   }
   showDataAt() {
     return (this.elementAt = true);
- 
+
   }
   showDataAc() {
     return (this.elementAc = true);
- 
+
   }
   showDataGa() {
     return (this.elementG = true);
- 
+
   }
 }
 

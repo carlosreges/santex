@@ -22,11 +22,11 @@
 
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-5">
-        <button class="btn btn-primary" type="button" (click)="showDataGa()"><img src="assets\iconos\cubierto.svg" alt="logo" width="70"><br>Gastronomia</button>
-        <button class="btn btn-primary" type="button" (click)="showDataGa()"><img src="assets\iconos\avion.svg" alt="logo" width="70"><br>Agencia de viaje</button>
-        <button class="btn btn-primary" type="button" (click)="showDataGa()"><img src="assets\iconos\teatro.svg" alt="logo" width="70"><br>Atracciones</button>
-        <button class="btn btn-primary" type="button" (click)="showDataAj()"><img src="assets\iconos\cama.svg" alt="logo" width="70"><br>Alojamiento</button>
-        <button class="btn btn-primary" type="button" (click)="showDataAc()"><img src="assets\iconos\Bici.svg" alt="logo"width="70" ><br>Actividades</button>
+        <button class="btn btn-primary" type="button" (click)="showDataGa(); hideDataAc;hideDataAg;hideDataAj;hideDataAt"><img src="assets\iconos\cubierto.svg" alt="logo" width="70"><br>Gastronomia</button>
+        <button class="btn btn-primary" type="button" (click)="showDataAg(); hideDataAc;hideDataGa;hideDataAj;hideDataAt"><img src="assets\iconos\avion.svg" alt="logo" width="70"><br>Agencia de viaje</button>
+        <button class="btn btn-primary" type="button" (click)="showDataAt(); hideDataAc;hideDataAg;hideDataAj;hideDataGa"><img src="assets\iconos\teatro.svg" alt="logo" width="70"><br>Atracciones</button>
+        <button class="btn btn-primary" type="button" (click)="showDataAj(); hideDataAc;hideDataAg;hideDataGa;hideDataAt"><img src="assets\iconos\cama.svg" alt="logo" width="70"><br>Alojamiento</button>
+        <button class="btn btn-primary" type="button" (click)="showDataAc(); hideDataGa;hideDataAg;hideDataAj;hideDataAt"><img src="assets\iconos\Bici.svg" alt="logo"width="70" ><br>Actividades</button>
 
     </div>
 
@@ -92,7 +92,7 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-primary" type="button" (click)="hideDataG()">Cerrar</button>
+
             </div>
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div class="col">
@@ -152,7 +152,7 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-primary" type="button" (click)="hideDataG()">Cerrar</button>
+
             </div>
             </div>
 
@@ -210,7 +210,7 @@
             </div>
 
           </div>
-          <button class="btn btn-primary" type="button" (click)="hideDataAj()">Cerrar</button>
+
           </div>
         </div>
 
@@ -265,7 +265,7 @@
                     </div>
                     </div>
                 </div>
-                <button class="btn btn-primary" type="button" (click)="hideDataAc()">Cerrar</button>
+
                 </div>
          </div>
       </div>
@@ -277,7 +277,7 @@
 
 <div class="container text-center text-md-left">
   <div class="pie-titulo-contacto">
-    <a> Informacion de la Dirección de Turismo de Morteros</a>
+    <a> Dirección de Turismo de Morteros</a>
   </div>
   <hr>
   <div class="row">
@@ -320,4 +320,4 @@
 </div>
 
 
-<app-pies></app-pies>
+
