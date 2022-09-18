@@ -7,8 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./administrador.component.scss']
 })
 export class AdministradorComponent implements OnInit {
-  elementSec = false; //SECCIONES
-  elementCon = false; //CONTACTO
+  elementCat = false; //SECCIONES
+  elementInf = false; //CONTACTO
   elementRSoc = false; //REDES SOCIALES
   elementAdm = false; //ADMINISTRADOR
  constructor(private router: Router) { }
@@ -21,17 +21,17 @@ export class AdministradorComponent implements OnInit {
   hideDataAdm() {
     return (this.elementAdm = false);
   }
-  showDataSec() {
-    return (this.elementSec = true);
+  showDataCat() {
+    return (this.elementCat = true);
   }
-  hideDataSec() {
-    return (this.elementSec = false);
+  hideDataCat() {
+    return (this.elementCat = false);
   }
-  showDataCon() {
-    return (this.elementCon = true);
+  showDataInf() {
+    return (this.elementInf = true);
   }
-  hideDataCon() {
-    return (this.elementCon = false);
+  hideDataInf() {
+    return (this.elementInf = false);
   }
   showDataRSoc() {
     return (this.elementRSoc = true);

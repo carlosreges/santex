@@ -11,16 +11,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" (click)="showDataSec(); hideDataAdm(); hideDataRSoc(); hideDataCon()" href="#">Secciones</a>
+          <a class="nav-link active" aria-current="page" (click)="showDataCat(); hideDataAdm(); hideDataRSoc(); hideDataInf()" href="#">Establecimientos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" (click)="showDataRSoc(); hideDataAdm(); hideDataSec(); hideDataCon() " href="#">Redes Sociales</a>
+          <a class="nav-link active" aria-current="page" (click)="showDataRSoc(); hideDataAdm(); hideDataCat(); hideDataInf() " href="#">Redes Sociales</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" (click)="showDataCon(); hideDataAdm(); hideDataRSoc(); hideDataSec()" href="#">Contacto</a>
+          <a class="nav-link active" aria-current="page" (click)="showDataInf(); hideDataAdm(); hideDataRSoc(); hideDataCat()" href="#">Información</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" (click)="showDataAdm(); hideDataRSoc(); hideDataSec(); hideDataCon()" href="#">Administrador</a>
+          <a class="nav-link active" aria-current="page" (click)="showDataAdm(); hideDataRSoc(); hideDataCat(); hideDataInf()" href="#">Administrador</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -43,11 +43,11 @@
 
 
 <!-- ******** -->
-<!-- SECCIONES -->
-<div *ngIf="elementSec == true">
+<!-- CATEGORIAS ESTABLECIMIENTOS -->
+<div *ngIf="elementCat == true">
 <div class="container">
   <div class=" text-center mt-5 ">
-      <h3>SECCIONES</h3>
+      <h3>ESTABLECIMIENTOS</h3>
   </div>
 
   <div class="row ">
@@ -75,8 +75,8 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="form_need">Especifique la Sección *</label>
-                      <select id="form_need" name="need" class="form-control" required="required" data-error="Especifique la Seccion.">
+                      <label for="form_need">Especifique la Categoria *</label>
+                      <select id="form_need" name="need" class="form-control" required="required" data-error="Especifique la Categoria.">
                         <option value="" selected disabled>--Seleccione--</option>
                         <option >Alojamiento</option>
                         <option >Atracciones</option>
@@ -250,11 +250,11 @@
 </div>
 
 <!-- FIN REDES SOCIALES -->
-<!-- CONTACTO -->
-<div *ngIf="elementCon == true">
+<!-- INFORMACION -->
+<div *ngIf="elementInf == true">
 <div class="container">
   <div class=" text-center mt-5 ">
-      <h3>CONTACTO</h3>
+      <h3>INFORMACION</h3>
   </div>
 
   <div class="row ">
@@ -368,18 +368,24 @@
 
                   <div class="row">
 
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                       <div class="form-group">
                         <label for="form_usuario">Usuario *</label>
                         <input id="form_usuario" type="text" name="usuario" class="form-control" placeholder="Ingrese el nvo usuario" required="required" data-error="Usuario es requerido.">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="form_password">Password *</label>
+                        <input id="form_password" type="text" name="password" class="form-control" placeholder="Ingrese el Password *" required="required" data-error="Password es requerido.">
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label for="form_password">Password *</label>
-                        <input id="form_password" type="text" name="password" class="form-control" placeholder="Ingrese el Password *" required="required" data-error="Password es requerido.">
+                        <label for="form_email">Email *</label>
+                        <input id="form_email" type="text" name="email" class="form-control" placeholder="Ingrese el Email *" required="required" data-error="Email es requerido.">
                       </div>
                     </div>
                   </div>
