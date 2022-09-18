@@ -21,32 +21,32 @@ export class CuerpoComponent implements OnInit {
   hideDataAg() {
     return (this.elementAg = false);
   }
+  showDataAt() {
+    return (this.elementAt = true);
+  }
   hideDataAt() {
     return (this.elementAt = false);
   }
-  hideDataAc() {
-    return (this.elementAc = false);
+    showDataAj() {
+    return (this.elementAj = true);
   }
   hideDataAj() {
     return (this.elementAj = false);
-  }
-  hideDataGa() {
-    return (this.elementG = false);
-  }
-  showDataAj() {
-    return (this.elementAj = true);
-  }
-  showDataAt() {
-    return (this.elementAt = true);
-
-  }
-  showDataAc() {
-    return (this.elementAc = true);
-
   }
   showDataGa() {
     return (this.elementG = true);
 
   }
+  hideDataGa() {
+    return (this.elementG = false);
+  }
+  showDataAc() {
+    return (this.elementAc = true);
+
+  }
+  hideDataAc() {
+    return (this.elementAc = false);
+  }
+  
 }
 
