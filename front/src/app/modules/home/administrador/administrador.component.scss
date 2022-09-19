@@ -1,0 +1,70 @@
+/* ******** */
+/* CABECERA */
+/* ******** */
+.card-body{
+  background-color: rgb(214, 212, 212);
+}
+
+.container-fluid{
+background-color: rgb(245, 245, 245);
+width:100%;
+}
+
+/* ******** */
+/* FIN CABECERA */
+/* ******** */
+/* ******** */
+/* CUERPO */
+/* ******** */
+
+body {
+  font-family: 'Lato', sans-serif;
+  
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+label {
+  color: #333;
+}
+
+.btn-send {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  width: 80%;
+  margin-left: 3px;
+  }
+.help-block.with-errors {
+  color: #ff5050;
+  margin-top: 5px;
+
+}
+
+.card{
+margin-left: 10px;
+margin-right: 10px;
+}
+
+.btn-outline-success{
+  color: rgb(0, 0, 0);
+  border-color: rgb(128, 128, 128);
+
+}
+
+.btn-outline-success:hover{
+  color: rgb(0, 0, 0);
+  border-color: rgb(128, 128, 128);
+  background-color: rgb(128, 128, 128);
+}
+
+.btn-success{
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(128, 128, 128);
+}
+
+
+

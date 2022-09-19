@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cabeza',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabezaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
   }
-
+  
+  login():void{
+    debugger;
+    this.router.navigateByUrl("administrador")
+  }
 }

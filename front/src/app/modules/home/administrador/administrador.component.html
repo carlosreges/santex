@@ -1,0 +1,412 @@
+<!-- ******** -->
+<!-- CABECERA -->
+<!-- ******** -->
+
+<nav class="navbar navbar-expand-lg bg-light sticky-top">
+  <div class="container-fluid">
+    <img src="assets/images/morteros.jpg" width="200">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" (click)="showDataCat(); hideDataAdm(); hideDataRSoc(); hideDataInf()" href="#">Establecimientos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" (click)="showDataRSoc(); hideDataAdm(); hideDataCat(); hideDataInf() " href="#">Redes Sociales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" (click)="showDataInf(); hideDataAdm(); hideDataRSoc(); hideDataCat()" href="#">Información</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" (click)="showDataAdm(); hideDataRSoc(); hideDataCat(); hideDataInf()" href="#">Administrador</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <button class="btn btn-outline-success" (click)="logout()">Salir</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div> <!-- PODER CONVERTIR LA IMAGEN EN ENCABEZADO COMPLETO -->
+  <img src="assets/images/Administración_I.png" width="100%" height="50%" >
+</div>
+
+<!-- ******** -->
+<!-- FIN CABECERA -->
+<!-- ******** -->
+<!-- ******** -->
+<!-- CUERPO -->
+<!-- ******** -->
+
+
+<!-- ******** -->
+<!-- CATEGORIAS ESTABLECIMIENTOS -->
+<div *ngIf="elementCat == true">
+<div class="container">
+  <div class=" text-center mt-5 ">
+      <h3>ESTABLECIMIENTOS</h3>
+  </div>
+
+  <div class="row ">
+    <div class="col-lg-7 mx-auto">
+      <div class="card mt-2 mx-auto p-4 bg-light">
+        <div class="card-body bg-light">
+          <div class = "container">
+            <form id="contact-form" role="form">
+              <div class="controls">
+                <!-- FILA -->
+                <!-- *********SEARCH**************** -->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="input-group rounded">
+                        <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
+                        <span class="input-group-text border-0" id="search-addon">
+                          <i class="fas fa-search"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ******************************* -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_need">Especifique la Categoria *</label>
+                      <select id="form_need" name="need" class="form-control" required="required" data-error="Especifique la Categoria.">
+                        <option value="" selected disabled>--Seleccione--</option>
+                        <option >Alojamiento</option>
+                        <option >Atracciones</option>
+                        <option >Actividades</option>
+                        <option >Gastronomia</option>
+                        <option >Agencia de Viaje</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <!-- COLUMNA -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_titulo">Titulo *</label>
+                      <input id="form_titulo" type="text" name="titulo" class="form-control" placeholder="Ingrese Nombre del Lugar *" required="required" data-error="Nombre es requerido.">
+                    </div>
+                  </div>
+                  <!-- COLUMNA -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_direccion">Dirección *</label>
+                      <input id="form_direccion" type="text" name="direccion" class="form-control" placeholder="Ingrese la Direccion del Lugar *" required= "required" data-error="Direccion es requerido.">
+                    </div>
+                  </div>
+                </div>
+                <!-- FILA -->
+                <div class="row">
+                  <!-- COLUMNA -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_telefono">Telefono *</label>
+                      <input id="form_telefono" type="text" name="telefono" class="form-control" placeholder="Telefono del Establecimiento" required= "required" data-error="Telefono es requerido.">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_web">Web</label>
+                      <input id="form_web" type="text" name="web" class="form-control" placeholder="Web del Establecimiento *">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <!-- COLUMNA -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_facebook">Facebook</label>
+                      <input id="form_facebook" type="text" name="facebook" class="form-control" placeholder="Facebook del Establecimiento">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_instagram">Instagram</label>
+                      <input id="form_instagram" type="text" name="instagram" class="form-control" placeholder="Instagram del Establecimiento *">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_imagen">Imagen *</label>
+                      <input type="file" class="file-upload" onchange="console.log(event.target.files)">
+
+                    </div>
+                  </div>
+                  <!-- COLUMNA -->
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="form_message">Breve Descripcion *</label>
+                      <textarea id="form_message" name="message" class="form-control" placeholder="Escriba una descripcion del Lugar." rows="4" required="required" ></textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Eliminar" >
+                  </div>
+                  <div class="col-md-6">
+                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Guardar" >
+                  </div>
+
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- /.8 -->
+    </div>
+    <!-- /.row-->
+  </div>
+</div>
+</div>
+<!-- ******** -->
+<!-- FIN SECCIONES -->
+
+<!-- ******** -->
+<!-- REDES SOCIALES -->
+<div *ngIf="elementRSoc == true">
+<div class="container">
+  <div class=" text-center mt-5 ">
+      <h3>REDES SOCIALES</h3>
+  </div>
+
+  <div class="row ">
+    <div class="col-lg-7 mx-auto">
+      <div class="card mt-2 mx-auto p-4 bg-light">
+        <div class="card-body bg-light">
+          <div class = "container">
+            <form id="contact-form" role="form">
+              <div class="controls">
+                <!-- FILA -->
+                <!-- *********SEARCH**************** -->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="input-group rounded">
+                        <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
+                        <span class="input-group-text border-0" id="search-addon">
+                          <i class="fas fa-search"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ******************************* -->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="form_need">Especifique la Red Social *</label>
+                      <select id="form_need" name="need" class="form-control" required="required" data-error="Especifique la Seccion.">
+                        <option value="" selected disabled>--Seleccione--</option>
+                        <option >Whatsapp</option>
+                        <option >Twitter</option>
+                        <option >Instagram</option>
+                        <option >Facebook</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="row">
+
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="form_url">Url</label>
+                      <input id="form_url" type="text" name="url" class="form-control" placeholder="Url de la Red Social*">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Eliminar" >
+                  </div>
+                  <div class="col-md-6">
+                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Guardar" >
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- FIN REDES SOCIALES -->
+<!-- INFORMACION -->
+<div *ngIf="elementInf == true">
+<div class="container">
+  <div class=" text-center mt-5 ">
+      <h3>INFORMACION</h3>
+  </div>
+
+  <div class="row ">
+    <div class="col-lg-7 mx-auto">
+      <div class="card mt-2 mx-auto p-4 bg-light">
+        <div class="card-body bg-light">
+          <div class = "container">
+            <form id="contact-form" role="form">
+              <div class="controls">
+
+                <!-- *********SEARCH**************** -->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="input-group rounded">
+                        <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
+                        <span class="input-group-text border-0" id="search-addon">
+                          <i class="fas fa-search"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_direccion">Dirección *</label>
+                      <input id="form_direccion" type="text" name="direccion" class="form-control" placeholder="Ingrese la Direccion de las Oficinas *" required="required" data-error="Direccion es requerido.">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_horario">Horario *</label>
+                      <input id="form_horario" type="text" name="horario" class="form-control" placeholder="Ingrese Horario de Atención *" required="required" data-error="Horario es requerido.">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_telefono">Telefono</label>
+                      <input id="form_telefono" type="text" name="telefono" class="form-control" placeholder="Telefono del Establecimiento">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_email">Email</label>
+                      <input id="form_email" type="email" name="email" class="form-control" placeholder="Email del Establecimiento *">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="form_imagen">Logo *</label>
+                      <input type="file" class="file-upload" onchange="console.log(event.target.files)">
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Eliminar" >
+                  </div>
+                  <div class="col-md-6">
+                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Guardar" >
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</div>
+<!-- FIN CONTACTO -->
+<!-- ADMINISTRADOR -->
+<div *ngIf="elementAdm == true">
+  <div class="container">
+    <div class=" text-center mt-5 ">
+        <h3>ADMINISTRADOR</h3>
+    </div>
+
+    <div class="row ">
+      <div class="col-lg-7 mx-auto">
+        <div class="card mt-2 mx-auto p-4 bg-light">
+          <div class="card-body bg-light">
+            <div class = "container">
+              <form id="contact-form" role="form">
+                <div class="controls">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="input-group rounded">
+                          <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
+                          <span class="input-group-text border-0" id="search-addon">
+                            <i class="fas fa-search"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="form_usuario">Usuario *</label>
+                        <input id="form_usuario" type="text" name="usuario" class="form-control" placeholder="Ingrese el nvo usuario" required="required" data-error="Usuario es requerido.">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="form_password">Password *</label>
+                        <input id="form_password" type="text" name="password" class="form-control" placeholder="Ingrese el Password *" required="required" data-error="Password es requerido.">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="form_email">Email *</label>
+                        <input id="form_email" type="text" name="email" class="form-control" placeholder="Ingrese el Email *" required="required" data-error="Email es requerido.">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Eliminar" >
+                    </div>
+                    <div class="col-md-6">
+                      <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Guardar" >
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <!-- FIN CONTACTO -->

@@ -1,6 +1,6 @@
 
 .bd-placeholder-img {
-    font-size: 1.125rem;    
+    font-size: 1.125rem;
     text-anchor: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -58,35 +58,35 @@
     padding: 3%;
     border-radius: 0.5%;
     border-color: black;
-    
+
   }
   .btn-primary{
     background-color:whitesmoke;
     border-color:whitesmoke;
     color:black;
     font-size:xx-large;
-    
+
   }
   /*classes de division de div
    <div class ="box-row"></div>*/
   .contenidoparque{
     text-align: justify;
     background-color: whitesmoke;
-   margin-top: 1em;
+   margin-top: 1.5em;
     border-radius: 0.5%;
     border-color: black;
     font-size:large;
-   
+
   }
   .ContenedorAnsenuza{
     background-color:whitesmoke;
-    margin: 5em;
+    margin: 1.5em;
     padding: 3%;
     text-align: left;
     font-size:xx-large;
     display : flex;
     flex-direction : row;
-   
+
   }
   .imgparque{
     display : flex;
@@ -94,5 +94,42 @@
     width: 45%;
     height: 8em;
   }
- 
-  
+ .containerTexto{
+    background-color:whitesmoke;
+    margin: 1.5em;
+    padding: 3%;
+    text-align: left;
+  font-size:x-large;
+    display : flex;
+    flex-direction : row;
+  }
+  .text-left{
+    margin-left: 2em;
+    margin-top: 1em;
+  }
+
+  /* *********  ********* */
+/* ********* CONTACTO ********* */
+/* *********  ********* */
+
+.iconoContacto{
+  display:inline;
+  padding:0.0%;
+  margin: 1%;
+  height: 30px;
+  width:30px;
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+  border-spacing: 1%;
+ }
+
+ .pie-titulo-contacto{
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+  /* text-decoration: underline; */
+  border-style: none;
+  //border-spacing: 5%;
+  padding-left: 2%;
+  line-height: 100%;
+}
