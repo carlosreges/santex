@@ -22,11 +22,13 @@
 
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-5">
+
         <button class="btn btn-primary" type="button" (click)="showDataGa(); hideDataAc;hideDataAg;hideDataAj;hideDataAt"><img src="assets\iconos\cubierto.svg" alt="logo" width="70"><br>Gastronomía</button>
         <button class="btn btn-primary" type="button" (click)="showDataAg(); hideDataAc;hideDataGa;hideDataAj;hideDataAt"><img src="assets\iconos\avion.svg" alt="logo" width="70"><br>Agencias de Viajes</button>
         <button class="btn btn-primary" type="button" (click)="showDataAt(); hideDataAc;hideDataAg;hideDataAj;hideDataGa"><img src="assets\iconos\teatro.svg" alt="logo" width="70"><br>Atracciones</button>
         <button class="btn btn-primary" type="button" (click)="showDataAj(); hideDataAc;hideDataAg;hideDataGa;hideDataAt"><img src="assets\iconos\cama.svg" alt="logo" width="70"><br>Alojamientos</button>
         <button class="btn btn-primary" type="button" (click)="showDataAc(); hideDataGa;hideDataAg;hideDataAj;hideDataAt"><img src="assets\iconos\Bici.svg" alt="logo"width="70" ><br>Actividades</button>
+
 
     </div>
 
@@ -53,6 +55,7 @@
                   </div>
                 </div>
             </div>
+<<<<<<< HEAD
           <div class="col">
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Gastronomía</text></svg>
@@ -68,10 +71,12 @@
                     <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
 
                   </div>
+=======
+         
+>>>>>>> 02019fb262ac0388f2307ab85c557398960e53fa
 
-                </div>
-              </div>
             </div>
+<<<<<<< HEAD
           </div>
 
           <div class="col">
@@ -93,8 +98,13 @@
             </div>
           </div>
 
+=======
+>>>>>>> 02019fb262ac0388f2307ab85c557398960e53fa
             </div>
+            <!--agencia-->
+            <div *ngIf="elementAg == true">
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+<<<<<<< HEAD
                 <div class="col">
                     <div class="card shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Gastronomia</text></svg>
@@ -130,31 +140,55 @@
                   </div>
 
                 </div>
+=======
+                  <div class="col">
+                      <div class="card shadow-sm">
+                          <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Agencia de Viajes</text></svg>
+  
+                          <div class="card-body">
+                              <h3>Resto Anzenuza</h3>
+                              <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
+                              <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
+                              <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group">
+                                  <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+  
+                          </div>
+  
+                      </div>
+                    </div>
+                  </div>
+>>>>>>> 02019fb262ac0388f2307ab85c557398960e53fa
               </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Gastronomia</text></svg>
+           
+  
+              </div>
+              </div>
+<!--atraccion-->
+<div *ngIf="elementAt == true">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+          <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Atracciones</text></svg>
 
               <div class="card-body">
-                <h3>Parrilla "la primera"</h3>
-                <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
-                <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
-                <div class="d-flex justify-content-between align-items-center">
+                  <h3>Resto Anzenuza</h3>
+                  <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
+                  <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
+                  <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
 
-                  </div>
-
-                </div>
               </div>
-            </div>
-          </div>
 
-            </div>
-            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  </div>
+  </div>
 
         <!--termina el div gastronomia-->
         <div *ngIf="elementAj == true">
