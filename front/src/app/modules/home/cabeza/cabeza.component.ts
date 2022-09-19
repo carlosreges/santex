@@ -17,4 +17,8 @@ export class CabezaComponent implements OnInit {
     debugger;
     this.router.navigateByUrl("administrador")
   }
+
+  direction():void{
+    this.router.navigateByUrl("cuerpo")
+  }
 }
