@@ -25,7 +25,7 @@ export class CabezaComponent implements OnInit {
   }
 
   showDataAg() {
-    this.router.navigate("**");
+   
     return (this.elementAg = true);
   }
   
