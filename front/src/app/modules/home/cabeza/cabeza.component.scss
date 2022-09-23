@@ -1,13 +1,40 @@
-/* .card-body{
+
+
+.textoExplicativo{
+    text-align: justify;
+    background-color: whitesmoke;
+    margin-top: 2em;
+    border-radius: 0.5%;
+    border-color: black;
+    font-size: large;
+  }
+
+  .containerTexto{
+    background-color: whitesmoke;
+    margin: 0 5em 0 2em;
+    padding: 1em 1em 1em 1em;
+    text-align: justify;
+    font-size: xx-large;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .imagen{
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    height: 2em;
+  }
+
+
+.card-body{
     background-color: rgb(214, 212, 212);
 }
 
 .container-fluid{
-background-color: rgb(128, 128, 128,0.7);
+background-color: white;
 width:100%;
 }
- */
-
 
 .textoExplicativo{
   text-align: justify;
@@ -16,7 +43,6 @@ width:100%;
   border-radius: 0.5%;
   border-color: black;
   font-size: x-large;
-  
 }
 
 .containerTexto{
@@ -42,7 +68,6 @@ width:100%;
 }
 .header{
   position: sticky;
-
-  z-index: 100;
+  top: 0;
   
 }
