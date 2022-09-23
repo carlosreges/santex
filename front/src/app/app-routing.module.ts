@@ -1,24 +1,27 @@
-import { NgModule } from '@angular/core';
+import { AdministradorComponent } from './modules/home/administrador/administrador.component';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoggedInGuard } from './core/guards/login/loggedin/loggedin.guard';
 import { NotLoggedInGuard } from './core/guards/login/notloggedin/notloggedin.guard';
 import { CabezaComponent } from './modules/home/cabeza/cabeza.component';
 import { CuerpoComponent } from './modules/home/cuerpo/cuerpo.component';
 import { PiesComponent } from './modules/home/pies/pies.component';
+import { AppComponent } from './app.component';
 
-const routes: Routes = [
-  {
-    path: '',
-    component:CabezaComponent
+
+
+const routes: Routes = 
+[{
+    path:'administrador', //Al entrar a esta ruta lo que hace es reenderizar el componente declarado abajo: "AdministradorComponent"
+    component:AdministradorComponent
   },
   {
-    path: '',
-    component:CuerpoComponent
-  },
-  {
-    path:'',
-    component:PiesComponent
-  }]
+    path: '**', //Lo que hace el ** es que si pones alguna ruta agena de la que no se encuentre en este archivo Routing, te reenderiza CuerpoComponent
+     component:CuerpoComponent
+  }];
+
+
+
   /*{
     path: 'auth',
     canActivate: [NotLoggedInGuard],
