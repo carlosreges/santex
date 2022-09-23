@@ -14,7 +14,7 @@ import { AdministradorComponent } from './administrador/administrador.component'
     CabezaComponent,
     CuerpoComponent,
     PiesComponent,
-    AdministradorComponent,
+    AdministradorComponent
 
   ],
   imports: [
