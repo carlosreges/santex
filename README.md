@@ -1,2 +1,0 @@
-# SantexAcademy
-Santex Academy
