@@ -60,11 +60,27 @@
     border-color: black;
 
   }
-  .btn-primary{
+
+
+  .boton{
     background-color:whitesmoke;
-    border-color:whitesmoke;
     color:black;
-    font-size:x-large;
+    font-size:large;
+    border-radius: 5%;
+    border-color: whitesmoke;
+    width: 50px;
+  }
+  .boton:hover{
+    background-color:rgb(110, 108, 108,0.2);
+    color:black;
+    font-size:large;
+    border-radius: 5%;
+    border-color: whitesmoke;
+
+  }
+  .contenidoCuerpo{
+    margin-left: 3%;
+    margin-right: 3%;
 
   }
   /*classes de division de div
@@ -99,7 +115,7 @@
     margin: 1.5em;
     padding: 3%;
     text-align: left;
-  font-size:x-large;
+    font-size:x-large;
     display : flex;
     flex-direction : row;
   }
@@ -135,4 +151,12 @@
   //border-spacing: 5%;
   padding-left: 2%;
   line-height: 100%;
+}
+
+
+.btn-primary{
+  background-color:whitesmoke;
+  border-color:whitesmoke;
+  color:black;
+  font-size:x-large;
 }

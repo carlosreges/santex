@@ -16,37 +16,53 @@ export class CuerpoComponent implements OnInit {
   ngOnInit(): void {
   }
   showDataAg() {
-    return (this.elementAg = true);
+    if(this.elementAg==false){
+    return (this.elementAg = true)}
+    else
+    {return (this.elementAg = false)};
+
   }
   hideDataAg() {
     return (this.elementAg = false);
   }
   showDataAt() {
-    return (this.elementAt = true);
+    if(this.elementAt==false){
+    return (this.elementAt = true)}
+    else
+    {return (this.elementAt = false)};
   }
   hideDataAt() {
     return (this.elementAt = false);
   }
     showDataAj() {
-    return (this.elementAj = true);
+      if(this.elementAj==false){
+      return (this.elementAj = true)}
+      else
+      {return (this.elementAj = false)};
   }
   hideDataAj() {
     return (this.elementAj = false);
   }
   showDataGa() {
-    return (this.elementG = true);
+    if(this.elementG==false){
+    return (this.elementG = true)}
+    else
+    {return (this.elementG = false)};
 
   }
   hideDataGa() {
     return (this.elementG = false);
   }
   showDataAc() {
-    return (this.elementAc = true);
+    if(this.elementAc==false){
+    return (this.elementAc = true)}
+    else
+    {return (this.elementAc = false)};
 
   }
   hideDataAc() {
     return (this.elementAc = false);
   }
-  
+
 }
 
