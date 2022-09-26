@@ -23,25 +23,4 @@ export class CabezaComponent implements OnInit {
     debugger;
     this.router.navigateByUrl("administrador")
   }
-
-  showDataAg() {
-   
-    return (this.elementAg = true);
-  }
-  
-  showDataAt() {
-    return (this.elementAt = true);
-  }
-  
-  showDataAj() {
-    return (this.elementAj = true);
-  }
-  
-  showDataGa() {
-    return (this.elementG = true);
-  }
-  
-  showDataAc() {
-    return (this.elementAc = true);
-  }
 }
