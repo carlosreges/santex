@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { CuerpoComponent } from '../cuerpo/cuerpo.component';
+import { UntypedFormBuilder, UntypedFormControl, Validators } from '@angular/forms';
+import { Subscription } from 'rxjs';import { AuthService } from 'src/app/core/services/auth/auth.service';
+import { MAX_PASSWORD_LENGTH, MAX_USERNAME_LENGTH, MIN_PASSWORD_LENGTH, MIN_USERNAME_LENGTH } from 'src/app/core/interfaces/users/users.interface';
+import { ToastService } from 'src/app/core/services/toast/toast.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-cabeza',
@@ -8,19 +13,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./cabeza.component.scss']
 })
 export class CabezaComponent implements OnInit {
-  elementG = false;
-  elementAc = false;
-  elementAt = false;
-  elementAg = false;
-  elementAj =false;
+ constructor(private router: Router) {}
 
-  constructor(private router: Router) {}
+  @Output() clickSection = new EventEmitter<number>()
 
   ngOnInit(): void {
+  }
+
+  goToPage(page: string):void{
+    this.router.navigate(['./'])
   }
   
   login():void{
     debugger;
     this.router.navigateByUrl("administrador")
+  }
+
+  changeSection(event:any, sectionvalue:number) {
+    this.clickSection.next(sectionvalue);
+    console.log(event);
   }
 }
