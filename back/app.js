@@ -19,6 +19,7 @@ const models = require('./models');
 const routes = require('./routes');
 
 const config = require('./config/config');
+const { response } = require('./routes');
 
 const app = express();
 
@@ -87,4 +88,9 @@ models.sequelize.authenticate()
   });
 
 app.use('/', routes);
+app.get('', function(request, response){
+  response.send('Hola');
+})
+
 module.exports = app;
+
