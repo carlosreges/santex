@@ -20,9 +20,6 @@ export class CabezaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToPage(page: string):void{
-    this.router.navigate(['./'])
-  }
   
   login():void{
     debugger;

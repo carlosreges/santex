@@ -1,230 +1,235 @@
 
-<app-cabeza></app-cabeza>
-<div>
-  <img src="assets/images/Asenuza_Late_Morteros III.PNG" width="100%" id="imagen">
-</div>
-
-<h1 class=" text-left" ><strong>Ansenuza</strong></h1>
-<div class="containerTexto">
-  <div class="box-row">
-    <p class="textoExplicativo ">Esta zona es producto del esfuerzo de sus habitantes, que desde siempre han tenido el deseo de hacer conocido el paraíso en el que viven. La protagonista más importante de esta área turística es la reconocida Laguna de Mar Chiquita, una laguna de agua salada de 6 mil kilómetros de extensión, que constituye uno de los humedales salinos más grandes de Latinoamérica y del mundo.</p>
+  <app-cabeza></app-cabeza>
+  <div>
+    <img src="assets/images/Asenuza_Late_Morteros III.PNG" width="100%" id="imagen">
   </div>
-</div>
+
+    <h1 class=" text-left" ><strong>Ansenuza</strong></h1>
+  <div class="containerTexto">
+      <div class="box-row">
+          <p class="textoExplicativo ">Esta zona es producto del esfuerzo de sus habitantes, que desde siempre han tenido el deseo de hacer conocido el paraíso en el que viven. La protagonista más importante de esta área turística es la reconocida Laguna de Mar Chiquita, una laguna de agua salada de 6 mil kilómetros de extensión, que constituye uno de los humedales salinos más grandes de Latinoamérica y del mundo.</p>
+      </div>
+    </div>
 <div class="ContenedorAnsenuza">
   <div class="box-row>">
-    Parque Nacional Ansenuza
-    <div class="contenidoparque">El <span>Parque Nacional Ansenuza</span> es un área natural protegida situada en la provincia de Córdoba, República Argentina1​ con una superficie de 661.416 ha., que incluye la Laguna de Mar Chiquita o Mar de Ansenuza. La ley nacional que dicta su creación fue sancionada el 30 de junio de 2022. Los bañados del río Dulce (también llamado Salí o Petri) y la laguna de Mar Chiquita conforman uno de los humedales de importancia </div>
-    </div>
-  <div class="imgparque">
-    <img src="assets\images\logo_ansenuza_parque.webp" alt="logo" >
-  </div>
+  Parque Nacional Ansenuza
+  <div class="contenidoparque">El <span>Parque Nacional Ansenuza</span> es un área natural protegida situada en la provincia de Córdoba, República Argentina1​ con una superficie de 661.416 ha., que incluye la Laguna de Mar Chiquita o Mar de Ansenuza. La ley nacional que dicta su creación fue sancionada el 30 de junio de 2022. 2​
+
+    Los bañados del río Dulce (también llamado Salí o Petri) y la laguna de Mar Chiquita conforman uno de los humedales de importancia </div>
+</div>
+  <div class="imgparque"><img src="assets\images\logo_ansenuza_parque.webp" alt="logo" ></div>
 </div>
 
+<div class="contenidoCuerpo">
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-5">
-  <button class="btn btn-primary" type="button" (click)="showDataGa(); hideDataAc();hideDataAg();hideDataAj();hideDataAt()"><img src="assets\iconos\cubierto.svg" alt="logo" width="70"><br>Gastronomía</button>
-  <button class="btn btn-primary" type="button" (click)="showDataAg(); hideDataAc();hideDataGa();hideDataAj();hideDataAt()"><img src="assets\iconos\avion.svg" alt="logo" width="70"><br>Agencias de Viajes</button>
-  <button class="btn btn-primary" type="button" (click)="showDataAt(); hideDataAc();hideDataAg();hideDataAj();hideDataGa()"><img src="assets\iconos\teatro.svg" alt="logo" width="70"><br>Atracciones</button>
-  <button class="btn btn-primary" type="button" (click)="showDataAj(); hideDataAc();hideDataAg();hideDataGa();hideDataAt()"><img src="assets\iconos\cama.svg" alt="logo" width="70"><br>Alojamientos</button>
-  <button class="btn btn-primary" type="button" (click)="showDataAc(); hideDataGa();hideDataAg();hideDataAj();hideDataAt()"><img src="assets\iconos\Bici.svg" alt="logo"width="70" ><br>Actividades</button>
-</div>
+        <button class="boton" type="button" (click)="showDataGa(); hideDataAc();hideDataAg();hideDataAj();hideDataAt()"><img src="assets\iconos\cubierto.svg" alt="logo" width="50"><br>Gastronomia</button>
+        <button class="boton" type="button" (click)="showDataAg(); hideDataAc();hideDataGa();hideDataAj();hideDataAt()"><img src="assets\iconos\avion.svg" alt="logo" width="50"><br>Agencia de viaje</button>
+        <button class="boton" type="button" (click)="showDataAt(); hideDataAc();hideDataAg();hideDataAj();hideDataGa()"><img src="assets\iconos\teatro.svg" alt="logo" width="50"><br>Atracciones</button>
+        <button class="boton" type="button" (click)="showDataAj(); hideDataAc();hideDataAg();hideDataGa();hideDataAt()"><img src="assets\iconos\cama.svg" alt="logo" width="50"><br>Alojamiento</button>
+        <button class="boton" type="button" (click)="showDataAc(); hideDataGa();hideDataAg();hideDataAj();hideDataAt()"><img src="assets\iconos\Bici.svg" alt="logo"width="50" ><br>Actividades</button>
 
-<div class="album py-5 bg-light">
-  <div class="container">
-    <div *ngIf="elementG == true">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Gastronomía</text></svg>
-            <div class="card-body">
-              <h3>Resto Ansenuza</h3>
-              <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
-              <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Gastronomía</text></svg>
-            <div class="card-body">
-              <h3>Pizzería Flamencos</h3>
-              <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
-              <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Gastronomía</text></svg>
-            <div class="card-body">
-              <h3>Parrilla La Primera</h3>
-              <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
-              <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-      <!--agencia-->
-    <div *ngIf="elementAg == true">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Gastronomia</text></svg>
-            <div class="card-body">
-              <h3>Resto Ansenuza</h3>
-              <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
-              <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div *ngIf="elementG == true">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="assets\images\resto\resto1.png" class="card-img-top" alt="..."style="width: 322px; height: 200px">
+
+                      <div class="card-body">
+                          <h3>Resto Anzenuza</h3>
+                          <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
+                          <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
+                          <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+
+                      </div>
+
+                  </div>
+                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Gastronomía</text></svg>
-            <div class="card-body">
-              <h3>Pizzeria Flamencos</h3>
-              <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
-              <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
-                </div>
-              </div>
+
+
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            </div>
+            <!--agencia-->
+            <div *ngIf="elementAg == true">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                  <div class="col">
+                      <div class="card shadow-sm">
+                        <img src="assets\images\agencia\agencia1.png" class="card-img-top" alt="..." style="width: 322px; height: 200px">
+
+                          <div class="card-body">
+                              <h3>Turismo Morteros</h3>
+                              <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
+                              <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
+                              <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group">
+                                  <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+
+                          </div>
+
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+
+              </div>
+              </div>
 <!--atraccion-->
-    <div *ngIf="elementAt == true">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+<div *ngIf="elementAt == true">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+          <div class="card shadow-sm">
+            <img src="assets\images\atracciones\atracciones1.png" class="card-img-top" alt="..."style="width: 322px; height: 200px">
+
+              <div class="card-body">
+                  <h3>Parque Ansenuza</h3>
+                  <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
+                  <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
+                  <div class="d-flex justify-content-between align-items-center">
+
+                     <div class="iconoRedesSociales" >
+                       <a title="Facebook" href="https://www.facebook.com/people/Direcci%C3%B3n-de-Turismo-Morteros/100049130270738/?hc_ref=ARRVQGuroGfxHcCBaE8FtbJOvqS95uRhz_0nX7aDfKsOPWrufw_m1YYLN5AKGVAMEZ8&ref=nf_target" target="_blank">
+                        <img src="assets/iconos/facebook.svg" width = "40em" height="40em"  alt="Facebook"  class="iconoRedesSociales">
+                      </a>
+
+                      <a title="Instagram" href="https://www.instagram.com/direcciondeturismomorteros/?hl=es-la" target="_blank">
+                        <img src="assets/iconos/instagram.svg" width = "40em" height="40em"  alt="Facebook" class="iconoRedesSociales">
+                      </a>
+                        </div>
+
+           </div>
+
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  </div>
+
+
+        <!--termina el div gastronomia-->
+        <div *ngIf="elementAj == true">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Alojamiento</text></svg>
+
+                    <div class="card-body">
+                        <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
+                        <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+
+                    </div>
+
+                </div>
+              </div>
+            </div>
+             </div>
+
           <div class="col">
             <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Atracciones</text></svg>
+              <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Alojamiento</text></svg>
+
               <div class="card-body">
-                <h3>Resto Anzenuza</h3>
-                <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
-                <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+
                   </div>
+
                 </div>
               </div>
             </div>
           </div>
-      </div>
-    </div>
-<!--termina el div gastronomia-->
-    <div *ngIf="elementAj == true">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Alojamiento</text></svg>
-            <div class="card-body">
-              <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
-              <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Alojamiento</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Alojamiento</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-<!--termina el div Ajencia de Viaje-->
-    <div *ngIf="elementAc == true">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Actividades</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">web</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Actividades</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Actividades</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Alojamiento</text></svg>
+
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+
+                  </div>
+
                 </div>
               </div>
             </div>
+
+          </div>
+
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+  <!---->
+        <div *ngIf="elementAc == true">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                    <img src="assets\images\atracciones\atracciones3.jpg" class="card-img-top" alt="..."style="width: 322px; height: 200px">
+
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">web</button>
+
+                        </div>
+
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="80%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Actividades</text></svg>
+
+                        <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Actividades</text></svg>
+
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+
+                        </div>
+
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                </div>
+         </div>
+
 
 <!-- ******** -->
 <!-- INFORMACION -->
@@ -275,3 +280,4 @@
 </div>
 
 <app-pies></app-pies>
+
