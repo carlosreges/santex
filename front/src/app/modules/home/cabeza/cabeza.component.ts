@@ -13,34 +13,42 @@ export class CabezaComponent implements OnInit {
   elementAt = false;
   elementAg = false;
   elementAj =false;
+  username="";
+  password="";
+  jwt="";
 
   constructor(private router: Router) {}
 
   ngOnInit(): void {
   }
-  
+
   login():void{
     debugger;
-    this.router.navigateByUrl("administrador")
+
+    if(this.jwt !=""){
+      this.router.navigateByUrl("administrador")
+    }else{
+      console.error("Usuario Invalido");
+    }
   }
 
   showDataAg() {
-   
+
     return (this.elementAg = true);
   }
-  
+
   showDataAt() {
     return (this.elementAt = true);
   }
-  
+
   showDataAj() {
     return (this.elementAj = true);
   }
-  
+
   showDataGa() {
     return (this.elementG = true);
   }
-  
+
   showDataAc() {
     return (this.elementAc = true);
   }
