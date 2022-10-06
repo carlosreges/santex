@@ -1,5 +1,5 @@
 {
-  "name": "jesus-maria-api",
+  "name": "turismo-api",
   "version": "1.0.0",
   "private": true,
   "config": {},
@@ -27,9 +27,10 @@
     "moment": "^2.29.1",
     "morgan": "~1.10.0",
     "mysql2": "^2.2.5",
+    "nodejs": "^0.0.0",
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.0",
-    "sequelize": "^6.6.5",
+    "sequelize": "^6.24.0",
     "sequelize-cli": "^6.2.0",
     "winston": "^3.3.3",
     "winston-daily-rotate-file": "^4.5.5",

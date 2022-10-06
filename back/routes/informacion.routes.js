@@ -7,7 +7,7 @@ const Validator = require('../middleware/validation.middleware');
 
 const app = Express();
 
-app.post('/login', [
+/* app.post('/login', [
   UserValidator.validate('login'),
   Validator.checkValidationResult,
 ],
@@ -17,10 +17,10 @@ userController.login);
 app.get('/myInfo', [
   Passport.authenticate('jwt', { session: false }),
 ],
-userController.userInfo);
+userController.userInfo); */
 
 app.get("",(req,res)=>{
-  res.send("Funciona Usuarios")
+  res.send("Funciona Informacion")
  });
 
 module.exports = app;

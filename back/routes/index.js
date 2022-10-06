@@ -8,6 +8,9 @@ const app = Express();
 
 // Rutas
 const userRoute = require('./user.routes');
+const localesRoute = require('./locales.routes');
+const redessocialesRoute = require('./redessociales.routes');
+const informacionRoute = require('./informacion.routes');
 
 // use=
 app.use('/ping', (req, res) => {
@@ -16,6 +19,9 @@ app.use('/ping', (req, res) => {
   });
 });
 app.use('/users', userRoute);
+app.use('/locales',localesRoute);
+app.use('/redes',redessocialesRoute);
+app.use('/info',informacionRoute);
 app.use('/', rootPath.handler);
 app.use(rootPath.setHeaders);
 app.use(errors.handler);
