@@ -19,4 +19,5 @@ app.get('/myInfo', [
 ],
 userController.userInfo);
 
+
 module.exports = app;
