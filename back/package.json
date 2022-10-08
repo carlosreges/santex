@@ -46,13 +46,7 @@
     "husky": "^4.3.8",
     "nodemon": "^2.0.13"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": [
-        "lint-staged"
-      ]
-    }
-  },
+  
   "lint-staged": {
     "*.js": [
       "./node_modules/.bin/eslint --fix",
