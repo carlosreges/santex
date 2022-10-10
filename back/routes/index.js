@@ -8,8 +8,8 @@ const app = Express();
 
 // Rutas
 const userRoute = require('./user.routes');
-const localesRoute = require('./locales.routes');
-const redessocialesRoute = require('./redessociales.routes');
+const establecimientosRoute = require('./establecimientos.routes');
+const redes_socialesRoute = require('./redes_sociales.routes');
 const informacionRoute = require('./informacion.routes');
 
 // use=
@@ -19,9 +19,9 @@ app.use('/ping', (req, res) => {
   });
 });
 app.use('/users', userRoute);
-app.use('/locales',localesRoute);
-app.use('/redes',redessocialesRoute);
-app.use('/info',informacionRoute);
+app.use('/establecimientos',establecimientosRoute);
+app.use('/redes_sociales',redes_socialesRoute);
+app.use('/informacion',informacionRoute);
 app.use('/', rootPath.handler);
 app.use(rootPath.setHeaders);
 app.use(errors.handler);
