@@ -1,6 +1,6 @@
 const Express = require('express');
 const Passport = require('passport');
-const establecimientosController = require('../controllers/categorias.controllers');
+const categoriasController = require('../controllers/categorias.controllers');
 require('../middleware/passport.middleware')(Passport);
 /* const UserValidator = require('../middleware/validations/users/user.validations.middleware');
 const Validator = require('../middleware/validation.middleware'); */
@@ -19,8 +19,8 @@ app.get('/myInfo', [
 ],
 userController.userInfo); */
 
-app.get("",(req,res)=>{
-  res.send("Funciona Categorias")
+/* app.get("",(req,res)=>{
+  res.json(categoriasController)
  });
-
+ */
 module.exports = app;

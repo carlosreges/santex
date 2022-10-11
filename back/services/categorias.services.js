@@ -1,8 +1,8 @@
-const userModel = require('../models').categorias;
+const categoriasModel = require('../models').categorias;
 
 async function findOne(data, attributes = null) {
-  const user = await userModel.findOne({ where: data, attributes });
-  return user;
+  const categorias = await categoriasModel.findOne({ where: data, attributes });
+  return categorias;
 }
 
 module.exports = {

@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const userService = require('../services/establecimientos.services');
 const InvalidPasswordException = require('../exceptions/invalidPassword.exceptions');
 
-function createToken(id) {
+/* function createToken(id) {
   const expirationTime = Number(process.env.JWT_EXPIRATION_TOKEN);
   return jwt.sign(
     { userId: id },
@@ -32,3 +32,4 @@ module.exports = {
   login,
   getOne,
 };
+ */

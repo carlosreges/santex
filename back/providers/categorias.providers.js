@@ -1,31 +1,32 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const userService = require('../services/categorias.services');
+const categoriasService = require('../services/categorias.services');
 const InvalidPasswordException = require('../exceptions/invalidPassword.exceptions');
+const categorias = require('../models/categorias');
 
 function createToken(id) {
   const expirationTime = Number(process.env.JWT_EXPIRATION_TOKEN);
   return jwt.sign(
-    { userId: id },
+    { categoriasId: id },
     process.env.JWT_ENCRYPTION_TOKEN,
     { expiresIn: expirationTime },
   );
 }
-async function login(username, password) {
-  const user = await userService.findOne({ username });
-  if (user) {
-    const isCorrect = bcrypt.compareSync(password, user.password);
+async function login(categoria, id) {
+  const categoria = await categoriasService.findOne({ categoria });
+  if (categoria) {
+    const isCorrect = bcrypt.compareSync(categoria);
     if (isCorrect) {
-      const token = createToken(user.id);
-      delete user.dataValues.password;
-      return { user, token };
+      const token = createToken(categorias.id);
+      delete categoria.dataValues.password;
+      return { categoria, token };
     }
   }
   throw new InvalidPasswordException();
 }
 
 async function getOne(data) {
-  return userService.findOne(data, { exclude: ['password'] });
+  return categoriasService.findOne(data, { exclude: ['categorias'] });
 }
 
 module.exports = {

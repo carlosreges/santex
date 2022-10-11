@@ -88,9 +88,7 @@ models.sequelize.authenticate()
   });
 
 app.use('/', routes);
-app.get('', function(request, response){
-  response.send('Hola');
-})
+
 
 module.exports = app;
 

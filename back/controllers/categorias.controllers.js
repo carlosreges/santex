@@ -1,4 +1,4 @@
-const userProvider = require('../providers/categorias.providers');
+const categoriasProvider = require('../providers/categorias.providers');
 
 /**
  *
@@ -8,9 +8,9 @@ const userProvider = require('../providers/categorias.providers');
  */
 async function login(req, res, next) {
   try {
-    const { username, password } = req.body;
-    const user = await userProvider.login(username, password);
-    res.json(user);
+    const { categoria, id } = req.body;
+    const categorias = await categoriasProvider.login(categoria, id);
+    res.json(categorias);
   } catch (error) {
     next(error);
   }
@@ -22,12 +22,12 @@ async function login(req, res, next) {
  * @param {*} res
  * @param {*} next
  */
-async function userInfo(req, res, next) {
+async function categoriaInfo(req, res, next) {
   try {
-    const userData = await userProvider.getOne({
-      id: req.user.id,
+    const categoriaData = await categoriasProvider.getOne({
+      id: req.categorias.id,
     });
-    res.json(userData);
+    res.json(categoriaData);
   } catch (error) {
     next(error);
   }
@@ -35,5 +35,5 @@ async function userInfo(req, res, next) {
 
 module.exports = {
   login,
-  userInfo,
+  categoriaInfo,
 };

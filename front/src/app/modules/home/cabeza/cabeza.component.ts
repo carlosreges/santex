@@ -1,3 +1,4 @@
+import { LoginModule } from './../../login/login.module';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -22,7 +23,7 @@ export class CabezaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login():void{
+  login(username: string, password: string):void{
     debugger;
 
     if(this.jwt !=""){

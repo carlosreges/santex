@@ -1,12 +1,12 @@
 const userProvider = require('../providers/establecimientos.providers');
 
-/**
+/*
  *
  * @param {*} req
  * @param {*} res
  * @param {*} next
  */
-async function login(req, res, next) {
+/* async function login(req, res, next) {
   try {
     const { username, password } = req.body;
     const user = await userProvider.login(username, password);
@@ -14,15 +14,15 @@ async function login(req, res, next) {
   } catch (error) {
     next(error);
   }
-}
+} */
 
-/**
+/*
  *
  * @param {*} req
  * @param {*} res
  * @param {*} next
  */
-async function userInfo(req, res, next) {
+/* async function userInfo(req, res, next) {
   try {
     const userData = await userProvider.getOne({
       id: req.user.id,
@@ -36,4 +36,4 @@ async function userInfo(req, res, next) {
 module.exports = {
   login,
   userInfo,
-};
+}; */
