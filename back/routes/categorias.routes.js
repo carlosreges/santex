@@ -6,13 +6,25 @@ const UserValidator = require('../middleware/validations/users/user.validations.
 const Validator = require('../middleware/validation.middleware');
 const { sequelize } = require('../models');
 
+
+app.get("",(req,res)=>{
+   res.send("Funciona Usuarios")
+  });
+ 
+  app.get('', [
+   Passport.authenticate('jwt', { session: false }),
+ ],
+ categoriasController.categoriasInfo);
+ module.exports = app;
+
+
 /* Controllers */
 
-module.exports = (app) => {
+/* module.exports = (app) => {
    app.get('/', (req, res) => res.status(200).send ({
         message: 'Example project did not give you access to the api web services',
    }));
    app.post('/categorias/create/categoria/:categoria/status/:status', categoriasController.create);
    app.get('/categorias/list', categoriasController.list);
    app.get('/categorias/find/categoria/:categoria', categoriasController.find)
-};
+}; */

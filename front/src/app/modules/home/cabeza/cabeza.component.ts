@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/core/services/auth/auth.service';
 import { LoginModule } from './../../login/login.module';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -18,19 +19,21 @@ export class CabezaComponent implements OnInit {
   password="";
   jwt="";
 
-  constructor(private router: Router) {}
+
+  constructor(private router: Router , private _authService: AuthService ) {}
 
   ngOnInit(): void {
   }
 
-  login(username: string, password: string):void{
+  login(username: string, password: string): void{
+   this._authService.login (this.username, this.password);
     debugger;
-
-    if(this.jwt !=""){
+    this.router.navigateByUrl("administrador")
+   /*  if(this.jwt !=""){
       this.router.navigateByUrl("administrador")
     }else{
       console.error("Usuario Invalido");
-    }
+    } */
   }
 
   showDataAg() {
