@@ -20,7 +20,7 @@ app.get('/myInfo', [
 userController.userInfo); */
 
 app.get("",(req,res)=>{
-  res.send("Funciona Establecimientos")
+  res.send("Funciona Categorias")
  });
 
 module.exports = app;
