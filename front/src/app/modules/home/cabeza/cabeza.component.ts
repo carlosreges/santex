@@ -28,6 +28,7 @@ export class CabezaComponent implements OnInit {
   login(username: string, password: string): void{
    this._authService.login (this.username, this.password);
     debugger;
+    this._authService.setUser
     this.router.navigateByUrl("administrador")
    /*  if(this.jwt !=""){
       this.router.navigateByUrl("administrador")
