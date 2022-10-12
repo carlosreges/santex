@@ -8,6 +8,8 @@ const app = Express();
 
 // Rutas
 const userRoute = require('./user.routes');
+const categoriasRoute = require('./categorias.routes');
+
 
 // use=
 app.use('/ping', (req, res) => {
@@ -16,8 +18,13 @@ app.use('/ping', (req, res) => {
   });
 });
 app.use('/users', userRoute);
+app.use('/categorias',categoriasRoute);
+
+
 app.use('/', rootPath.handler);
 app.use(rootPath.setHeaders);
 app.use(errors.handler);
+
+
 
 module.exports = app;

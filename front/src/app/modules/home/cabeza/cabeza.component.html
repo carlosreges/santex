@@ -34,8 +34,13 @@
           </li>-->
         </ul>
         <form class="d-flex" role="search">
+<<<<<<< HEAD
           <input class="form-control me-2" type="text" placeholder="Usuario" aria-label="Usuario" required>
           <input class="form-control me-2" type="password" placeholder="Contraseña" aria-label="Password" required>
+=======
+          <input class="form-control me-2" [(ngModel)]="username" name="username" type="text" placeholder="Usuario" aria-label="Usuario">
+          <input class="form-control me-2" [(ngModel)]="password" name="password" type="text" placeholder="Contraseña" aria-label="Password">
+>>>>>>> b434915ffec0cdf54a729420fb1d1da1885444de
           <button class="btn btn-outline-success" (click)="login(username, password)">Ingreso</button>
         </form>
       </div>

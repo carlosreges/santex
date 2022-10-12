@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CabezaComponent } from './cabeza/cabeza.component';
@@ -18,7 +19,8 @@ import { AdministradorComponent } from './administrador/administrador.component'
 
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
 
   ],
   exports: [
