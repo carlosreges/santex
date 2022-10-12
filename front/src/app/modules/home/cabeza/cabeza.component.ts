@@ -18,6 +18,7 @@ export class CabezaComponent implements OnInit {
   username="";
   password="";
   jwt="";
+  toastService: any;
 
 
   constructor(private router: Router , private _authService: AuthService ) {}
@@ -26,10 +27,19 @@ export class CabezaComponent implements OnInit {
   }
 
   login(username: string, password: string): void{
-   this._authService.login (this.username, this.password);
-    debugger;
-    this._authService.setUser
-    this.router.navigateByUrl("administrador")
+    this._authService.login (this.username, this.password)
+    .subscribe(
+      (res: any) => {
+        this._authService.setUser(res);
+        this.router.navigateByUrl("administrador")
+      },
+      (err) => {
+        this.toastService.presentToast(err.error);
+      }
+    )
+
+
+
    /*  if(this.jwt !=""){
       this.router.navigateByUrl("administrador")
     }else{

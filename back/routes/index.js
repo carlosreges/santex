@@ -18,7 +18,8 @@ app.use('/ping', (req, res) => {
   });
 });
 app.use('/users', userRoute);
-app.use('/categorias', categoriasRoute);
+app.use('/categorias',categoriasRoute);
+
 
 app.use('/', rootPath.handler);
 app.use(rootPath.setHeaders);

@@ -1,30 +1,41 @@
-const Express = require('express');
+/* const Express = require('express');
 const Passport = require('passport');
 const categoriasController = require('../controllers/categorias.controllers');
 require('../middleware/passport.middleware')(Passport);
 const UserValidator = require('../middleware/validations/users/user.validations.middleware');
 const Validator = require('../middleware/validation.middleware');
-const { sequelize } = require('../models');
+const { sequelize } = require('../models'); */
 
+const app = Express();
+
+/* app.post('/login', [
+  UserValidator.validate('login'),
+  Validator.checkValidationResult,
+],
+categoriasController.login); */
+
+// users/info/1
+/*  app.get('/myInfo', [
+  Passport.authenticate('jwt', { session: false }),
+],
+categoriasController.userInfo); */
 
 app.get("",(req,res)=>{
-   res.send("Funciona Usuarios")
-  });
- 
-  app.get('', [
-   Passport.authenticate('jwt', { session: false }),
- ],
- categoriasController.categoriasInfo);
- module.exports = app;
+  res.send("Funciona Usuarios")
 
+/*   pp.get('/categorias',(req,res)=>{
 
-/* Controllers */
+    const sql = 'SELECT * FROM santexacademy.categorias';
 
-/* module.exports = (app) => {
-   app.get('/', (req, res) => res.status(200).send ({
-        message: 'Example project did not give you access to the api web services',
-   }));
-   app.post('/categorias/create/categoria/:categoria/status/:status', categoriasController.create);
-   app.get('/categorias/list', categoriasController.list);
-   app.get('/categorias/find/categoria/:categoria', categoriasController.find)
-}; */
+    Connection.query(sql,(error,results)=>{
+if (error) throw error;
+if (results.length >0 ){
+    res.json (results);
+
+}else {
+    res.send ('no results');
+}
+
+    }); */
+});
+module.exports = app;
