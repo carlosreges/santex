@@ -31,10 +31,10 @@ export class CabezaComponent implements OnInit {
     .subscribe(
       (res: any) => {
         this._authService.setUser(res);
-        this.router.navigateByUrl("administrador")
+        this.router.navigateByUrl("administrador");
       },
       (err) => {
-        this.toastService.presentToast(err.error);
+        console.log (this.toastService.presentToast(err.error));
       }
     )
 
