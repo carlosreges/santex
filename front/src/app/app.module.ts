@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -22,7 +23,8 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     BrowserAnimationsModule,
     AppRoutingModule,
     CoreModule,
-    HomeModule
+    HomeModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

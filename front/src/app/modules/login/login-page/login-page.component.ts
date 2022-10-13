@@ -4,6 +4,7 @@ import { UntypedFormBuilder, UntypedFormControl, Validators } from '@angular/for
 import { Subscription } from 'rxjs';import { AuthService } from 'src/app/core/services/auth/auth.service';
 import { MAX_PASSWORD_LENGTH, MAX_USERNAME_LENGTH, MIN_PASSWORD_LENGTH, MIN_USERNAME_LENGTH } from 'src/app/core/interfaces/users/users.interface';
 import { ToastService } from 'src/app/core/services/toast/toast.service';
+import { Token } from '@angular/compiler';
 
 @Component({
   selector: 'app-login-page',
@@ -50,7 +51,8 @@ export class LoginPageComponent implements OnInit, OnDestroy {
           (res: any) => {
             this.authService.setUser(res);
             this.router.navigateByUrl('/dashboard');
-            
+
+
           },
           (err) => {
             this.toastService.presentToast(err.error);
