@@ -34,17 +34,10 @@ export class CabezaComponent implements OnInit {
         this.router.navigateByUrl("administrador");
       },
       (err) => {
-        console.log (this.toastService.presentToast(err.error));
+        this.toastService.presentToast(err.error);
       }
     )
 
-
-
-   /*  if(this.jwt !=""){
-      this.router.navigateByUrl("administrador")
-    }else{
-      console.error("Usuario Invalido");
-    } */
   }
 
   showDataAg() {
