@@ -1,25 +1,17 @@
-const categoriasProvider = require('../providers/categorias.providers');
+/* import {getConnection} from "../database/database";  */
+const getConnection = require('../database/database');
 
+async function getCategorias(req,res){
+   const connection = await getConnection();
+   const result=await connection.query("SELECT * FROM categorias ");
+   console.log(result);
+   res.json(result);
 
-/**
- *
- * @param {*} req
- * @param {*} res
- * @param {*} next
- */
-async function categoriaInfo(req, res, next) {
-  try {
-    const { id_categoria, categoria} = req.body;
-    const categoriaData = await categoriasProvider.getOne({
-      id_categoria: req.categoria.id_categoria,
-    });
-    res.json(categoriaData);
-  } catch (error) {
-    next(error);
-  }
-}
-
-module.exports = {
- 
- categoriaInfo,
 };
+module.exports = {
+  getCategorias,
+};
+
+ 
+
+
