@@ -20,11 +20,11 @@
               Conócenos
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" (click)="changeSection($event,1)" href >Atracciones</a></li>
-              <li><a class="dropdown-item" (click)="changeSection($event,2)" href >Actividades</a></li>
-              <li><a class="dropdown-item" (click)="changeSection($event,3)" href >Agencias de Viajes</a></li>
-              <li><a class="dropdown-item" (click)="changeSection($event,4)" href >Alojamientos</a></li>
-              <li><a class="dropdown-item" (click)="changeSection($event,5)" href >Gastronomía</a></li>
+              <li><a class="dropdown-item" (click)="cambiarSeccion(1)" href >Gastronomia<li>
+              <li><a class="dropdown-item" (click)="cambiarSeccion(2)" href >Agencias de Viajes</a></li>
+              <li><a class="dropdown-item" (click)="cambiarSeccion(3)" href >Atracciones</a></li>
+              <li><a class="dropdown-item" (click)="cambiarSeccion(4)" href >Alojamientos</a></li>
+              <li><a class="dropdown-item" (click)="cambiarSeccion(5)" href >Actividades</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item"  href >Contacto</a></li>
             </ul>
@@ -34,13 +34,8 @@
           </li>-->
         </ul>
         <form class="d-flex" role="search">
-<<<<<<< HEAD
-          <input class="form-control me-2" type="text" placeholder="Usuario" aria-label="Usuario" required>
-          <input class="form-control me-2" type="password" placeholder="Contraseña" aria-label="Password" required>
-=======
           <input class="form-control me-2" [(ngModel)]="username" name="username" type="text" placeholder="Usuario" aria-label="Usuario">
           <input class="form-control me-2" [(ngModel)]="password" name="password" type="text" placeholder="Contraseña" aria-label="Password">
->>>>>>> b434915ffec0cdf54a729420fb1d1da1885444de
           <button class="btn btn-outline-success" (click)="login(username, password)">Ingreso</button>
         </form>
       </div>

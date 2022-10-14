@@ -22,11 +22,11 @@
 
 <div class="contenidoCuerpo">
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-5">
-        <button class="boton" type="button" (click)="showDataGa(); hideDataAc();hideDataAg();hideDataAj();hideDataAt()"><img src="assets\iconos\cubierto.svg" alt="logo" width="50"><br>Gastronomia</button>
-        <button class="boton" type="button" (click)="showDataAg(); hideDataAc();hideDataGa();hideDataAj();hideDataAt()"><img src="assets\iconos\avion.svg" alt="logo" width="50"><br>Agencia de viaje</button>
-        <button class="boton" type="button" (click)="showDataAt(); hideDataAc();hideDataAg();hideDataAj();hideDataGa()"><img src="assets\iconos\teatro.svg" alt="logo" width="50"><br>Atracciones</button>
-        <button class="boton" type="button" (click)="showDataAj(); hideDataAc();hideDataAg();hideDataGa();hideDataAt()"><img src="assets\iconos\cama.svg" alt="logo" width="50"><br>Alojamiento</button>
-        <button class="boton" type="button" (click)="showDataAc(); hideDataGa();hideDataAg();hideDataAj();hideDataAt()"><img src="assets\iconos\Bici.svg" alt="logo"width="50" ><br>Actividades</button>
+        <button class="boton" type="button" (click)="showDataGa(); hideDataAc();hideDataAg();hideDataAj();hideDataAt()" [ngClass]="{'active': Categoria == 0}><img src="assets\iconos\cubierto.svg" alt="logo" width="50"><br>Gastronomia</button>
+        <button class="boton" type="button" (click)="showDataAg(); hideDataAc();hideDataGa();hideDataAj();hideDataAt()" [ngClass]="{'active': Categoria == 1}><img src="assets\iconos\avion.svg" alt="logo" width="50"><br>Agencia de viaje</button>
+        <button class="boton" type="button" (click)="showDataAt(); hideDataAc();hideDataAg();hideDataAj();hideDataGa()" [ngClass]="{'active': Categoria == 2}><img src="assets\iconos\teatro.svg" alt="logo" width="50"><br>Atracciones</button>
+        <button class="boton" type="button" (click)="showDataAj(); hideDataAc();hideDataAg();hideDataGa();hideDataAt()" [ngClass]="{'active': Categoria == 3}><img src="assets\iconos\cama.svg" alt="logo" width="50"><br>Alojamiento</button>
+        <button class="boton" type="button" (click)="showDataAc(); hideDataGa();hideDataAg();hideDataAj();hideDataAt()" [ngClass]="{'active': Categoria == 4}><img src="assets\iconos\Bici.svg" alt="logo"width="50" ><br>Actividades</button>
 
       </div>
     </div>

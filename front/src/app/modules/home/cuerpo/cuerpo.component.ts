@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cuerpo.component.scss']
 })
 export class CuerpoComponent implements OnInit {
+
   elementG = false;
   elementAc = false;
   elementAt = false;

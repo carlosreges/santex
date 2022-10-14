@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-=======
-import { AuthService } from 'src/app/core/services/auth/auth.service';
-import { LoginModule } from './../../login/login.module';
-import { Component, OnInit } from '@angular/core';
->>>>>>> b434915ffec0cdf54a729420fb1d1da1885444de
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth/auth.service';
 
@@ -14,49 +8,9 @@ import { AuthService } from 'src/app/core/services/auth/auth.service';
   styleUrls: ['./cabeza.component.scss']
 })
 export class CabezaComponent implements OnInit {
-<<<<<<< HEAD
- constructor(private router: Router, private _authService: AuthService ) {}
 
-  @Output() clickSection = new EventEmitter<number>()
-
-  ngOnInit(): void {
-  }
-
-  login(username: string, password: string):void{
-    this._authService.login (this.username, this.).subscribe(
-      (res) => {
-        this._authService.setUser(res.datos);
-        this._authService.setToken(res.token);
-        //localStorage.setItem("token", res.token);
-        CabezaComponent.updateUserStatus.next(true);
-        this.router.navigate(["/home"]);
-        //localStorage.setItem("datos", JSON.stringify(datosUser));
-        /*Swal.fire(
-          "Bienvenido " + res.datos.nombre_usuario,
-          "Tu Rol es: " + res.datos.rol,
-          "success"
-        );*/
-
-      },
-      /*(err) => {
-        .tr({
-          icon: "error",
-          title: "Error",
-          text:
-            "No se ha podido iniciar sesión, verifique su correo y contraseña",
-        });
-      }*/
-    );
-
- /* changeSection(event:any, sectionvalue:number) {
-    this.clickSection.next(sectionvalue);
-    console.log(event);*/
-=======
-  elementG = false;
-  elementAc = false;
-  elementAt = false;
-  elementAg = false;
-  elementAj =false;
+  @Output() changeSection= new EventEmitter<any>();
+  section="";
   username="";
   password="";
   jwt="";
@@ -66,6 +20,10 @@ export class CabezaComponent implements OnInit {
   constructor(private router: Router , private _authService: AuthService ) {}
 
   ngOnInit(): void {
+  }
+
+  cambiarSeccion(section: number){
+    this.changeSection.emit(this.section);
   }
 
   login(username: string, password: string): void{
@@ -80,8 +38,6 @@ export class CabezaComponent implements OnInit {
       }
     )
 
-
-
    /*  if(this.jwt !=""){
       this.router.navigateByUrl("administrador")
     }else{
@@ -89,28 +45,4 @@ export class CabezaComponent implements OnInit {
     } */
   }
 
-  showDataAg() {
-
-    return (this.elementAg = true);
   }
-
-  showDataAt() {
-    return (this.elementAt = true);
-  }
-
-  showDataAj() {
-    return (this.elementAj = true);
-  }
-
-  showDataGa() {
-    return (this.elementG = true);
-  }
-
-  showDataAc() {
-    return (this.elementAc = true);
->>>>>>> b434915ffec0cdf54a729420fb1d1da1885444de
-  }
-}
-
-
-
