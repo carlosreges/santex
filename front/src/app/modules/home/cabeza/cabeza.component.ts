@@ -31,18 +31,21 @@ export class CabezaComponent implements OnInit {
     .subscribe(
       (res: any) => {
         this._authService.setUser(res);
-        this.router.navigateByUrl("administrador")
+        this.router.navigateByUrl("administrador");
       },
       (err) => {
         this.toastService.presentToast(err.error);
       }
     )
 
+<<<<<<< HEAD
    /*  if(this.jwt !=""){
       this.router.navigateByUrl("administrador")
     }else{
       console.error("Usuario Invalido");
     } */
+=======
+>>>>>>> 1ab89497ee1ef9d1b62b9ac73112471bd0af6bc3
   }
 
   }
