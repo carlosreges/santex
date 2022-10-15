@@ -7,26 +7,27 @@
     <h1 class=" text-left" ><strong>Ansenuza</strong></h1>
   <div class="containerTexto">
       <div class="box-row">
-          <p class="textoExplicativo ">Esta zona es producto del esfuerzo de sus habitantes, que desde siempre han tenido el deseo de hacer conocido el paraíso en el que viven. La protagonista más importante de esta área turística es la reconocida Laguna de Mar Chiquita, una laguna de agua salada de 6 mil kilómetros de extensión, que constituye uno de los humedales salinos más grandes de Latinoamérica y del mundo.</p>
+          <p class="textoExplicativo">Esta zona es producto del esfuerzo de sus habitantes, que desde siempre han tenido el deseo de hacer conocido el paraíso en el que viven. La protagonista más importante de esta área turística es la reconocida Laguna de Mar Chiquita, una laguna de agua salada de 6 mil kilómetros de extensión, que constituye uno de los humedales salinos más grandes de Latinoamérica y del mundo.</p>
       </div>
     </div>
 <div class="ContenedorAnsenuza">
   <div class="box-row>">
   Parque Nacional Ansenuza
-  <div class="contenidoparque">El <span>Parque Nacional Ansenuza</span> es un área natural protegida situada en la provincia de Córdoba, República Argentina1​ con una superficie de 661.416 ha., que incluye la Laguna de Mar Chiquita o Mar de Ansenuza. La ley nacional que dicta su creación fue sancionada el 30 de junio de 2022. 2​
+  <div class="contenidoparque">El <span>Parque Nacional Ansenuza</span> es un área natural protegida situada en la provincia de Córdoba, República Argentina, con una superficie de 661.416 ha., que incluye la Laguna de Mar Chiquita o Mar de Ansenuza. La ley nacional que dicta su creación fue sancionada el 30 de junio de 2022. 2​
 
-    Los bañados del río Dulce (también llamado Salí o Petri) y la laguna de Mar Chiquita conforman uno de los humedales de importancia </div>
+    Los bañados del río Dulce (también llamado Salí o Petri) y la laguna de Mar Chiquita conforman uno de los humedales de importancia. </div>
 </div>
   <div class="imgparque"><img src="assets\images\logo_ansenuza_parque.webp" alt="logo" ></div>
 </div>
 
 <div class="contenidoCuerpo">
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-5">
-        <button class="boton" type="button" (click)="showDataGa(); hideDataAc();hideDataAg();hideDataAj();hideDataAt()" [ngClass]="{'active': Categoria == 0}><img src="assets\iconos\cubierto.svg" alt="logo" width="50"><br>Gastronomia</button>
-        <button class="boton" type="button" (click)="showDataAg(); hideDataAc();hideDataGa();hideDataAj();hideDataAt()" [ngClass]="{'active': Categoria == 1}><img src="assets\iconos\avion.svg" alt="logo" width="50"><br>Agencia de viaje</button>
-        <button class="boton" type="button" (click)="showDataAt(); hideDataAc();hideDataAg();hideDataAj();hideDataGa()" [ngClass]="{'active': Categoria == 2}><img src="assets\iconos\teatro.svg" alt="logo" width="50"><br>Atracciones</button>
-        <button class="boton" type="button" (click)="showDataAj(); hideDataAc();hideDataAg();hideDataGa();hideDataAt()" [ngClass]="{'active': Categoria == 3}><img src="assets\iconos\cama.svg" alt="logo" width="50"><br>Alojamiento</button>
-        <button class="boton" type="button" (click)="showDataAc(); hideDataGa();hideDataAg();hideDataAj();hideDataAt()" [ngClass]="{'active': Categoria == 4}><img src="assets\iconos\Bici.svg" alt="logo"width="50" ><br>Actividades</button>
+  <app-cabeza (changeSection)="mostrarSeccion($event)"></app-cabeza>
+        <button class="boton" type="button" (click)="showDataGa(); hideDataAc();hideDataAg();hideDataAj();hideDataAt()"><img src="assets\iconos\cubierto.svg" alt="logo" width="50"><br>Gastronomia</button>
+        <button class="boton" type="button" (click)="showDataAg(); hideDataAc();hideDataGa();hideDataAj();hideDataAt()"><img src="assets\iconos\avion.svg" alt="logo" width="50"><br>Agencia de viaje</button>
+        <button class="boton" type="button" (click)="showDataAt(); hideDataAc();hideDataAg();hideDataAj();hideDataGa()"><img src="assets\iconos\teatro.svg" alt="logo" width="50"><br>Atracciones</button>
+        <button class="boton" type="button" (click)="showDataAj(); hideDataAc();hideDataAg();hideDataGa();hideDataAt()"><img src="assets\iconos\cama.svg" alt="logo" width="50"><br>Alojamiento</button>
+        <button class="boton" type="button" (click)="showDataAc(); hideDataGa();hideDataAg();hideDataAj();hideDataAt()"><img src="assets\iconos\Bici.svg" alt="logo"width="50" ><br>Actividades</button>
 
       </div>
     </div>

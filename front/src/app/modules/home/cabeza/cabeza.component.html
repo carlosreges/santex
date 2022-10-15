@@ -20,18 +20,15 @@
               Conócenos
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" (click)="cambiarSeccion(1)" href >Gastronomia<li>
-              <li><a class="dropdown-item" (click)="cambiarSeccion(2)" href >Agencias de Viajes</a></li>
-              <li><a class="dropdown-item" (click)="cambiarSeccion(3)" href >Atracciones</a></li>
-              <li><a class="dropdown-item" (click)="cambiarSeccion(4)" href >Alojamientos</a></li>
-              <li><a class="dropdown-item" (click)="cambiarSeccion(5)" href >Actividades</a></li>
+              <li><a class="dropdown-item" (click)="cambiarSeccion('elementG')" href >Gastronomía</a><li>
+              <li><a class="dropdown-item" (click)="cambiarSeccion('elementAg')" href >Agencias de Viajes</a></li>
+              <li><a class="dropdown-item" (click)="cambiarSeccion('elementAt')" href >Atracciones</a></li>
+              <li><a class="dropdown-item" (click)="cambiarSeccion('elementAj')" href >Alojamientos</a></li>
+              <li><a class="dropdown-item" (click)="cambiarSeccion('elementAc')" href >Actividades</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item"  href >Contacto</a></li>
+              <li><a class="dropdown-item" href >Contacto</a></li>
             </ul>
           </li>
-  <!--        <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>-->
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" [(ngModel)]="username" name="username" type="text" placeholder="Usuario" aria-label="Usuario">

@@ -17,12 +17,12 @@ export class CabezaComponent implements OnInit {
   toastService: any;
 
 
-  constructor(private router: Router , private _authService: AuthService ) {}
+  constructor(private router: Router, private _authService: AuthService ) {}
 
   ngOnInit(): void {
   }
 
-  cambiarSeccion(section: number){
+  cambiarSeccion(section: string){
     this.changeSection.emit(this.section);
   }
 
@@ -37,15 +37,5 @@ export class CabezaComponent implements OnInit {
         this.toastService.presentToast(err.error);
       }
     )
-
-<<<<<<< HEAD
-   /*  if(this.jwt !=""){
-      this.router.navigateByUrl("administrador")
-    }else{
-      console.error("Usuario Invalido");
-    } */
-=======
->>>>>>> 1ab89497ee1ef9d1b62b9ac73112471bd0af6bc3
   }
-
-  }
+}
