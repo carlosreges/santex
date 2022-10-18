@@ -14,6 +14,8 @@ app.post('/login', [
 ],
 userController.login);
 
+
+
 // users/info/1
 app.get('/myInfo', [
   Passport.authenticate('jwt', { session: false }),
