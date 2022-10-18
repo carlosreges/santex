@@ -1,8 +1,9 @@
 {
+
   "name": "turismo-api",
   "version": "1.0.0",
   "private": true,
-  "config": {},
+   "config": {},
   "scripts": {
     "prod": "node ./bin/www",
     "start": "node ./bin/www",
@@ -50,10 +51,12 @@
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.20"
   },
+ 
   "lint-staged": {
     "*.js": [
       "./node_modules/.bin/eslint --fix",
       "git add"
     ]
   }
+  
 }
