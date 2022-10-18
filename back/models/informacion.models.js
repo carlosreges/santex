@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
    
-  const informacion = sequelize.define("categorias", {
+  const informacion = sequelize.define("informacion", {
     id_infomracion: {
       type: DataTypes.INTEGER(16),
       allowNull: false,
@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
 
   }, {
     timestamps: false,
-    tableName: 'categorias',
+    tableName: 'informacion',
   });
 /*  (async () => {
     await sequelize.sync({ force: true }); //CREA LAS TABLAS NUEVAMENTE
