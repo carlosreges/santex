@@ -5,7 +5,7 @@ const config = require('../config/config');
 
 
 const getConnection = require('../config/config'); //ESTA BIEN ESTA LINEA PARA REALIZAR LA CONEXION ??
-const { sequelize } = require('../models');
+const categorias = require('../models').categorias;
 
 async function getCategorias(req,res){
     const { QueryTypes } = require('sequelize');
@@ -16,7 +16,8 @@ async function getCategorias(req,res){
 
 async function deleteCategorias(req,res){
     const { QueryTypes } = require('sequelize');
-    const result = await sequelize.query("DELETE FROM `categorias` WHERE `id_categorias` = 1", { type: QueryTypes.DELETE });
+    let result = await categorias.destroy({ where: { id_categorias: req } })
+    // const result = await categorias.find("DELETE FROM `categorias` WHERE `id_categorias` = 1", { type: QueryTypes.DELETE });
     console.log(result);
     res.json(result); 
 };
