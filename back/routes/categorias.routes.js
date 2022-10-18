@@ -1,11 +1,17 @@
-const getConnection = require('../config/config');
+/* import {query} from "promise-mysql"; */
+/* const { config } = require('dotenv'); */
+const Express = require('express');
+/* const { sequelize } = require('../models');  */
+const categoriasController = require ( '../controllers/categorias.controllers');
+/* const categoriasModels = require('../models/categorias.models'); */
 
+/* const app=Express();
+app.get("/all",categoriasController.getCategorias()); */
+/* app.get("/all",async (req,res)=>{ 
+     res.send("Ruta OK"); 
+});    */
 
-const getCategorias = async(req,res)=>{
-   const connection = await getConnection();
-   const result=await connection.query("SELECT * FROM categorias");
-   console.log(result);
-   res.json(result);
+/* module.exports = app; */
 
 /* import { response, Router } from "express"; */
 /* import { methods as cateoriasControllers } from "../controllers/categorias.controllers"; */
@@ -20,13 +26,5 @@ app.put("/upd",categoriasController.updateCategorias);
 app.get("/Findall",categoriasController.findAllCategorias);
 app.post("/add", categoriasController.insertCategorias);
 
-}
 
-/* export const methods = {
-    getCategorias,
-    postCategorias
-}; */
-module.exports = {
-  getCategorias,
-  postCategorias
-};
+module.exports = app;
