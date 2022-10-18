@@ -9,7 +9,8 @@ const categorias = require('../models').categorias;
 
 async function getCategorias(req,res){
     const { QueryTypes } = require('sequelize');
-    const result = await sequelize.query("SELECT * FROM `categorias`", { type: QueryTypes.SELECT });
+    // const result = await categorias.find("SELECT * FROM `categorias`", { type: QueryTypes.SELECT });
+    const result = await categorias.findAll();
     console.log(result);
     res.json(result); 
 };
@@ -22,19 +23,19 @@ async function deleteCategorias(req,res){
     res.json(result); 
 };
 
-async function updateCategorias(req,res){
-    const { QueryTypes } = require('sequelize');
-    const result = await sequelize.query("UPDATE categorias SET `Categorias` = 'Agencia de Viajes' WHERE `id_categorias`= 2", { type: QueryTypes.UPDATE });
-    console.log(result);
-    res.json(result); 
-};
+// async function updateCategorias(req,res){
+//     const { QueryTypes } = require('sequelize');
+//     const result = await sequelize.query("UPDATE categorias SET `Categorias` = 'Agencia de Viajes' WHERE `id_categorias`= 2", { type: QueryTypes.UPDATE });
+//     console.log(result);
+//     res.json(result); 
+// };
 
-async function insertCategorias(req,res){
-    const { QueryTypes } = require('sequelize');
-    const result = await sequelize.query("INSERT INTO categorias(`Categorias`) VALUES('Atracciones')", { type: QueryTypes.UPDATE });
-    console.log(result);
-    res.json(result); 
-};
+// async function insertCategorias(req,res){
+//     const { QueryTypes } = require('sequelize');
+//     const result = await sequelize.query("INSERT INTO categorias(`Categorias`) VALUES('Atracciones')", { type: QueryTypes.UPDATE });
+//     console.log(result);
+//     res.json(result); 
+// };
 
 
 async function findAllCategorias(req,res){
