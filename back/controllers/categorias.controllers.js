@@ -30,7 +30,7 @@ async function updateCategorias(req,res){
 
 async function insertCategorias(req,res){
     const { QueryTypes } = require('sequelize');
-    const result = await sequelize.query("INSERT INTO categorias(`id_Categorias`,`Categorias`) VALUES(1,'Alojamientos')", { type: QueryTypes.UPDATE });
+    const result = await sequelize.query("INSERT INTO categorias(`Categorias`) VALUES('Atracciones')", { type: QueryTypes.UPDATE });
     console.log(result);
     res.json(result); 
 };
