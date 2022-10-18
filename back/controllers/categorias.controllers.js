@@ -47,9 +47,10 @@ console.log("Todas las Categorias:", JSON.stringify(categorias, null, 2));
 
 module.exports = {
   getCategorias,
-  findAllCategorias,
   insertCategorias,
   deleteCategorias,
   updateCategorias,
+
+  findAllCategorias,
 };
 
