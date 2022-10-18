@@ -20,8 +20,11 @@ app.get("/all",categoriasController.getCategorias()); */
 const app = Express.Router();
 
 app.get("/all",categoriasController.getCategorias);
+app.delete("/del",categoriasController.deleteCategorias);
+app.put("/upd",categoriasController.updateCategorias);
 
-/* app.post("/all", function(req, res){categoriasController.postCategorias}); */
+app.get("/Findall",categoriasController.findAllCategorias);
+app.post("/add", categoriasController.insertCategorias);
 
 
 module.exports = app;
