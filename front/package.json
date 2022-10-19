@@ -25,7 +25,11 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+<<<<<<< HEAD
     "bootstrap": "^5.2.1",
+=======
+    "mysql2": "^2.3.3",
+>>>>>>> 84c650bc89e60bd8bdc71ad5dd5da08da7e3bfa0
     "ngx-cookie-service": "^14.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",

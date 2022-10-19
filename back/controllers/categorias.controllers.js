@@ -1,31 +1,59 @@
 const mysql = require( 'mysql' );
+const { Sequelize } = require('sequelize');
+
+const config = require('../config/config');
 
 
-class Database {
-    constructor( config ) {
-        this.connection = mysql.createConnection( config );
-      
-    }
-    query( sql, args ) {
-        return new Promise( ( resolve, reject ) => {
-            this.connection.query(sql, args, ( err, rows ) => {
-                if ( err )
-                    return reject( err );
-                resolve( rows );
-            } );
-        } );
-    }
-    close() {
-        return new Promise( ( resolve, reject ) => {
-            this.connection.end( err => {
-                if ( err )
-                    return reject( err );
-                resolve();
-            } );
-        } );
-    }
-}
+const getConnection = require('../config/config'); //ESTA BIEN ESTA LINEA PARA REALIZAR LA CONEXION ??
+const categorias = require('../models').categorias;
+
+async function getCategorias(req,res){
+    const { QueryTypes } = require('sequelize');
+    // const result = await categorias.find("SELECT * FROM `categorias`", { type: QueryTypes.SELECT });
+    const result = await categorias.findAll();
+    console.log(result);
+    res.json(result); 
+};
+
+async function deleteCategorias(req,res){
+    const { QueryTypes } = require('sequelize');
+    let result = await categorias.destroy({ where: { id_categorias: req.params.id } }) //despues de params va la variable de la ruta que ingresa de front
+    // const result = await categorias.find("DELETE FROM `categorias` WHERE `id_categorias` = 1", { type: QueryTypes.DELETE });
+    console.log(result);
+    res.json(result); 
+};
+
+/* async function updateCategorias(req,res){
+     const { QueryTypes } = require('sequelize'); */
+     /* const result = await sequelize.query("UPDATE categorias SET `Categorias` = 'Agencia de Viajes' WHERE `id_categorias`= 2", { type: QueryTypes.UPDATE }); */
+/*     console.log(result);
+    res.json(result); 
+ };  */
+
+ async function insertCategorias(req,res){
+     const { QueryTypes } = require('sequelize');
+let result = await categorias.create(req.body) //PARA LOS FORMULARIOS POR TENER VARIOS CAMPOS
+/*    const result = await sequelize.query("INSERT INTO categorias(`Categorias`) VALUES('Atracciones')", { type: QueryTypes.UPDATE }); */
+     console.log(result);
+     res.json(result); 
+ };
+
+
+async function findAllCategorias(req,res){
+// Find all users
+const categorias = await categoria.findAll(); //CATEGORIA NO TOMA LA FUNCCION DE SEQUALIZE
+console.log(categorias.every(user => user instanceof categoria)); // true
+console.log("Todas las Categorias:", JSON.stringify(categorias, null, 2)); 
+ };
+
+
 
 module.exports = {
-    Database
+  getCategorias,
+  /* insertCategorias, */
+  deleteCategorias,
+ /*  updateCategorias, */
+
+  findAllCategorias,
 };
+

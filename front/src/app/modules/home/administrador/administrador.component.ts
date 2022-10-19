@@ -1,5 +1,9 @@
+import { Subscription } from 'rxjs';
+import { RedsocialService } from './../../../core/services/redsocial/redsocial.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { response } from 'express';
+import { redsocial } from 'src/app/core/interfaces/redsocial/redsocial.interfaces';
 
 @Component({
   selector: 'app-administrador',
@@ -7,11 +11,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./administrador.component.scss']
 })
 export class AdministradorComponent implements OnInit {
+  redSocialNva = {
+
+    Red_social : "",
+    Url : "",
+  }
+  componenteSubscripcion : Subscription = new Subscription();
   elementCat = false; //SECCIONES
   elementInf = false; //CONTACTO
   elementRSoc = false; //REDES SOCIALES
   elementAdm = false; //ADMINISTRADOR
- constructor(private router: Router) { }
+
+
+ constructor(private router: Router, private RedSocialService:RedsocialService) { }
 
   ngOnInit(): void {
   }
@@ -44,4 +56,21 @@ export class AdministradorComponent implements OnInit {
   logout(): void{
     this.router.navigateByUrl('')
   }
+
+  Guardar_RedSocial():void {
+debugger
+    this.componenteSubscripcion.add (
+        this.RedSocialService.Guardar_RedSocial(this.redSocialNva).subscribe({next:(response)=>{
+          debugger;
+        }}) )
+  }
+  Buscar_RedSocial(nombre:any):void{
+
+    this.componenteSubscripcion.add(
+      this.RedSocialService.BuscarRedSocial(nombre.target.value).subscribe({next:(response:redsocial)=>{
+this.redSocialNva=response;
+
+    }}))
+  }
+
 }

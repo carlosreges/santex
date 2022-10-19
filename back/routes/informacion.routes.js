@@ -2,7 +2,7 @@
 /* const { config } = require('dotenv'); */
 const Express = require('express');
 /* const { sequelize } = require('../models');  */
-const categoriasController = require ( '../controllers/categorias.controllers');
+const informacionController = require ( '../controllers/informacion.controllers')
 /* const categoriasModels = require('../models/categorias.models'); */
 
 /* const app=Express();
@@ -19,12 +19,12 @@ app.get("/all",categoriasController.getCategorias()); */
 
 const app = Express.Router();
 
-app.get("/all",categoriasController.getCategorias);
-app.delete("/del/:id",categoriasController.deleteCategorias);
-/* app.put("/upd",categoriasController.updateCategorias); */
+app.get("/all",informacionController.getInformacion);
+app.delete("/del",informacionController.deleteInformacion);
+app.put("/upd",informacionController.updateInformacion);
 
-app.get("/Findall",categoriasController.findAllCategorias);
-/* app.post("/add", categoriasController.insertCategorias); */
+app.get("/Findall",informacionController.findAllInformacion);
+app.post("/add", informacionController.insertInformacion);
 
 
 module.exports = app;

@@ -2,7 +2,7 @@
 /* const { config } = require('dotenv'); */
 const Express = require('express');
 /* const { sequelize } = require('../models');  */
-const categoriasController = require ( '../controllers/categorias.controllers');
+const redessocialesController = require ( '../controllers/redessociales.controllers');
 /* const categoriasModels = require('../models/categorias.models'); */
 
 /* const app=Express();
@@ -19,12 +19,13 @@ app.get("/all",categoriasController.getCategorias()); */
 
 const app = Express.Router();
 
-app.get("/all",categoriasController.getCategorias);
-app.delete("/del/:id",categoriasController.deleteCategorias);
+app.get("/all",redessocialesController.getRedesSociales);
+app.delete("/del/:id",redessocialesController.deleteRedesSociales);
 /* app.put("/upd",categoriasController.updateCategorias); */
 
-app.get("/Findall",categoriasController.findAllCategorias);
-/* app.post("/add", categoriasController.insertCategorias); */
+/* app.get("/Findall",redessocialesController.findAllRedesSociales); */
+app.post("/add", redessocialesController.insertRedesSociales);
+app.get("/buscar/:nombre", redessocialesController.buscarPorNombre);
 
 
 module.exports = app;

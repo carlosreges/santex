@@ -13,6 +13,8 @@ function createToken(id) {
 }
 async function login(username, password) {
   const user = await userService.findOne({ username });
+debugger;
+console.log(user);
   if (user) {
     const isCorrect = bcrypt.compareSync(password, user.password);
     if (isCorrect) {
