@@ -22,7 +22,6 @@
 
 <div class="contenidoCuerpo">
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-5">
-  <app-cabeza (changeSection)="mostrarSeccion($event)"></app-cabeza>
         <button class="boton" type="button" (click)="showDataGa(); hideDataAc();hideDataAg();hideDataAj();hideDataAt()"><img src="assets\iconos\cubierto.svg" alt="logo" width="50"><br>Gastronomia</button>
         <button class="boton" type="button" (click)="showDataAg(); hideDataAc();hideDataGa();hideDataAj();hideDataAt()"><img src="assets\iconos\avion.svg" alt="logo" width="50"><br>Agencia de viaje</button>
         <button class="boton" type="button" (click)="showDataAt(); hideDataAc();hideDataAg();hideDataAj();hideDataGa()"><img src="assets\iconos\teatro.svg" alt="logo" width="50"><br>Atracciones</button>
@@ -36,31 +35,26 @@
     <div class="album py-5 bg-light">
       <div class="container">
         <div *ngIf="elementG == true">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div class="col">
-                  <div class="card shadow-sm">
-                    <img src="assets\images\resto\resto1.png" class="card-img-top" alt="..."style="width: 322px; height: 200px">
-
-                      <div class="card-body">
-                          <h3>Resto Anzenuza</h3>
-                          <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
-                          <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
-                          <div class="d-flex justify-content-between align-items-center">
-                          <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
-
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="assets\images\resto\resto1.png" class="card-img-top" alt="..."style="width: 322px; height: 200px">
+                  <div class="card-body">
+                    <h3>Resto Anzenuza</h3>
+                    <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
+                    <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+                        </div>
                       </div>
-
-                  </div>
                   </div>
                 </div>
             </div>
-
-
-            </div>
-            </div>
-            <!--agencia-->
-            <div *ngIf="elementAg == true">
+          </div>
+        </div>
+        <!--agencia-->
+        <div *ngIf="elementAg == true">
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                   <div class="col">
                       <div class="card shadow-sm">
