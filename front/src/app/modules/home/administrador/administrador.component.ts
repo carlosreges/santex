@@ -4,6 +4,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { response } from 'express';
 import { redsocial } from 'src/app/core/interfaces/redsocial/redsocial.interfaces';
+import { informacion } from 'src/app/core/interfaces/Informacion/informacion.interfaces';
+import { locales } from 'src/app/core/interfaces/locales/locales.interfaces';
+import { User } from 'src/app/core/interfaces/users/users.interface';
 
 @Component({
   selector: 'app-administrador',
@@ -16,6 +19,7 @@ export class AdministradorComponent implements OnInit {
     Red_social : "",
     Url : "",
   }
+
   localNvo = {
     Categoria:"",
     Titulo:"",
@@ -28,12 +32,12 @@ export class AdministradorComponent implements OnInit {
     Descripcion:"",
   }
 
-
   usuarioNvo = {
     username : "",
     password : "",
     email: "",
   }
+
   informacionNva = {
     Direccion : "",
     Horario : "",
@@ -43,7 +47,6 @@ export class AdministradorComponent implements OnInit {
   }
 
 /* ************ */
-
 
   componenteSubscripcion : Subscription = new Subscription();
   elementCat = false; //SECCIONES
