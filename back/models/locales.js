@@ -63,37 +63,3 @@ module.exports = (sequelize, DataTypes) => {
   return locales;
 };
 
-/* 
-
-
-
-
-
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class locales extends Model {
-
-    static associate(models) {
-
-    }
-  }
-  locales.init({
-    id_local: DataTypes.NUMBER,
-    Categoria: DataTypes.STRING,
-    Titulo: DataTypes.STRING,
-    Direccion: DataTypes.STRING,
-    Telefono: DataTypes.STRING,
-    Web: DataTypes.STRING,
-    Facebook: DataTypes.STRING,
-    Instagram: DataTypes.STRING,
-    Imagen: DataTypes.STRING,
-    Descripcion: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'locales',
-  });
-  return locales;
-}; */
