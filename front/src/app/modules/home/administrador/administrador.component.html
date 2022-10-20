@@ -258,16 +258,17 @@
       <h3>INFORMACION</h3>
   </div>
 
+
   <div class="row ">
     <div class="col-lg-7 mx-auto">
       <div class="card mt-2 mx-auto p-4 bg-light">
         <div class="card-body bg-light">
           <div class = "container">
-            <form id="contact-form" role="form">
+            <form id="formulario-informacion" role="form" (ngSubmit)="Guardar_Info()">
               <div class="controls">
 
                 <!-- *********SEARCH**************** -->
-                <div class="row">
+ <!--                <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="input-group rounded">
@@ -278,20 +279,20 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
                 <div class="row">
 
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_direccion">Dirección *</label>
-                      <input id="form_direccion" type="text" name="direccion" class="form-control" placeholder="Ingrese la Direccion de las Oficinas *" required="required" data-error="Direccion es requerido.">
+                      <input id="form_direccion" [(ngModel)]="informacionNva.Direccion" type="text" name="direccion" class="form-control" placeholder="Ingrese la Direccion de las Oficinas *" required="required" data-error="Direccion es requerido.">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_horario">Horario *</label>
-                      <input id="form_horario" type="text" name="horario" class="form-control" placeholder="Ingrese Horario de Atención *" required="required" data-error="Horario es requerido.">
+                      <input id="form_horario" [(ngModel)]="informacionNva.Horario"type="text" name="horario" class="form-control" placeholder="Ingrese Horario de Atención *" required="required" data-error="Horario es requerido.">
                     </div>
                   </div>
                 </div>
@@ -301,13 +302,13 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_telefono">Telefono</label>
-                      <input id="form_telefono" type="text" name="telefono" class="form-control" placeholder="Telefono del Establecimiento">
+                      <input id="form_telefono" [(ngModel)]="informacionNva.Telefono" type="text" name="telefono" class="form-control" placeholder="Telefono del Establecimiento">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_email">Email</label>
-                      <input id="form_email" type="email" name="email" class="form-control" placeholder="Email del Establecimiento *">
+                      <input id="form_email" [(ngModel)]="informacionNva.Email" type="email" name="email" class="form-control" placeholder="Email del Establecimiento *">
                     </div>
                   </div>
                 </div>
@@ -315,7 +316,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_imagen">Logo *</label>
-                      <input type="file" class="file-upload" onchange="console.log(event.target.files)">
+                      <input type="file" [(ngModel)]="informacionNva.Logo" class="file-upload" onchange="console.log(event.target.files)">
                     </div>
                   </div>
 

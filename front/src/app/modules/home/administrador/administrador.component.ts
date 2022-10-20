@@ -1,5 +1,4 @@
 import { Subscription } from 'rxjs';
-import { RedsocialService } from './../../../core/services/redsocial/redsocial.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { response } from 'express';
@@ -7,6 +6,9 @@ import { redsocial } from 'src/app/core/interfaces/redsocial/redsocial.interface
 import { informacion } from 'src/app/core/interfaces/Informacion/informacion.interfaces';
 import { locales } from 'src/app/core/interfaces/locales/locales.interfaces';
 import { User } from 'src/app/core/interfaces/users/users.interface';
+
+import { RedsocialService } from './../../../core/services/redsocial/redsocial.service';
+import { informacionService } from './../../../core/services/informacion/informacion.service';
 
 @Component({
   selector: 'app-administrador',
@@ -55,7 +57,7 @@ export class AdministradorComponent implements OnInit {
   elementAdm = false; //ADMINISTRADOR
 
 
- constructor(private router: Router, private RedSocialService:RedsocialService) { }
+ constructor(private router: Router, private RedSocialService:RedsocialService, private informacionService:informacionService) { }
 
   ngOnInit(): void {
   }
@@ -105,4 +107,22 @@ this.redSocialNva=response;
     }}))
   }
 
-}
+  Guardar_Info():void {
+    debugger
+        this.componenteSubscripcion.add (
+            this.informacionService.Guardar_info(this.informacionNva).subscribe({next:(response)=>{
+              debugger;
+            }}) )
+      }
+
+      Buscar_Info(id:any):void{
+
+        this.componenteSubscripcion.add(
+          this.informacionService.Buscar_info(id.target.value).subscribe({next:(response:informacion)=>{
+    this.informacionNva=response;
+
+        }}))
+
+
+}}
+
