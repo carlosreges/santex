@@ -11,11 +11,27 @@ import { redsocial } from 'src/app/core/interfaces/redsocial/redsocial.interface
   styleUrls: ['./administrador.component.scss']
 })
 export class AdministradorComponent implements OnInit {
+  //CREAR BODYS DE RED SOCIAL / USUARIO / INFORMACION / LOCALES
   redSocialNva = {
-
     Red_social : "",
     Url : "",
   }
+  usuarioNvo = {
+    username : "",
+    password : "",
+    email: "",
+  }
+  informacionNva = {
+    Direccion : "",
+    Horario : "",
+    Telefono : "",
+    Email :"",
+    Logo : "",
+  }
+
+/* ************ */
+
+
   componenteSubscripcion : Subscription = new Subscription();
   elementCat = false; //SECCIONES
   elementInf = false; //CONTACTO
