@@ -1,4 +1,4 @@
-export  interface redsocial{
+export  interface locales{
   /*  id_local: number; */
   Categoria: string;
   Titulo: string;
