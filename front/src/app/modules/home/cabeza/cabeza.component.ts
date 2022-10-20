@@ -1,8 +1,6 @@
-import { AuthService } from 'src/app/core/services/auth/auth.service';
-import { LoginModule } from './../../login/login.module';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { AuthService } from 'src/app/core/services/auth/auth.service';
 
 @Component({
   selector: 'app-cabeza',
@@ -10,20 +8,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./cabeza.component.scss']
 })
 export class CabezaComponent implements OnInit {
-  elementG = false;
-  elementAc = false;
-  elementAt = false;
-  elementAg = false;
-  elementAj =false;
+
+  @Output() changeSection= new EventEmitter<any>();
+  section="";
   username="";
   password="";
   jwt="";
   toastService: any;
 
 
-  constructor(private router: Router , private _authService: AuthService ) {}
+  constructor(private router: Router, private _authService: AuthService ) {}
 
   ngOnInit(): void {
+  }
+
+  cambiarSeccion(section: string){
+    this.changeSection.emit(this.section);
   }
 
   login(username: string, password: string): void{
@@ -37,30 +37,5 @@ export class CabezaComponent implements OnInit {
         this.toastService.presentToast(err.error);
       }
     )
-
-  }
-
-  showDataAg() {
-
-    return (this.elementAg = true);
-  }
-
-  showDataAt() {
-    return (this.elementAt = true);
-  }
-
-  showDataAj() {
-    return (this.elementAj = true);
-  }
-
-  showDataGa() {
-    return (this.elementG = true);
-  }
-
-  showDataAc() {
-    return (this.elementAc = true);
   }
 }
-
-
-

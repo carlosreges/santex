@@ -4,6 +4,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER(16),
       allowNull: false,
       primaryKey: true,
+      autoIncrement: true,
     },
     Red_social: {
       type: DataTypes.STRING(255),
@@ -16,8 +17,8 @@ module.exports = (sequelize, DataTypes) => {
     },
   },
   {
-    timestamps: true,
-    tableName: 'users',
+    timestamps: false,
+    tableName: 'redes_sociales',
   });
 
   return red_social;

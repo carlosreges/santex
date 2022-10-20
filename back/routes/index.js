@@ -13,6 +13,7 @@ const categoriasRoute = require ('./categorias.routes');
 =======
 const categoriasRoute = require('./categorias.routes');
 const informacionRoute = require('./informacion.routes');
+const redessocialesRoute = require('./redessociales.routes');
 
 >>>>>>> b19e6b0d62176ca50677d0ee6bca4a733c60a8f3
 
@@ -27,7 +28,7 @@ app.use('/categorias',categoriasRoute);
 <<<<<<< HEAD
 =======
 app.use('/info',informacionRoute);
-
+app.use('/redSocial',redessocialesRoute);
 
 >>>>>>> b19e6b0d62176ca50677d0ee6bca4a733c60a8f3
 app.use('/', rootPath.handler);

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cuerpo.component.scss']
 })
 export class CuerpoComponent implements OnInit {
+  section="";
   elementG = false;
   elementAc = false;
   elementAt = false;
@@ -20,6 +21,7 @@ export class CuerpoComponent implements OnInit {
     return (this.elementAg = true)}
     else
     {return (this.elementAg = false)};
+  
 
   }
   hideDataAg() {
@@ -64,5 +66,8 @@ export class CuerpoComponent implements OnInit {
     return (this.elementAc = false);
   }
 
+  mostrarSeccion(section: any){
+    return (this.section)
+  }
 }
 

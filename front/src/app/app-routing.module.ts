@@ -18,7 +18,8 @@ const routes: Routes =
   {
     path: '**', //Lo que hace el ** es que si pones alguna ruta agena de la que no se encuentre en este archivo Routing, te reenderiza CuerpoComponent
      component:CuerpoComponent
-  }];
+  }
+];
 
 
 
