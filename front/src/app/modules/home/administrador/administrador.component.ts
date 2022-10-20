@@ -16,6 +16,19 @@ export class AdministradorComponent implements OnInit {
     Red_social : "",
     Url : "",
   }
+  localNvo = {
+    Categoria:"", 
+    Titulo:"",
+    Direccion:"",
+    Telefono: "",
+    Web: "",
+    Facebook:"",
+    Instagram: "",
+    Imagen: "",
+    Descripcion:"",
+  }
+
+  
   componenteSubscripcion : Subscription = new Subscription();
   elementCat = false; //SECCIONES
   elementInf = false; //CONTACTO
