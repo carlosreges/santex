@@ -48,8 +48,6 @@ export class AdministradorComponent implements OnInit {
 
 /* ************ */
 
-
->>>>>>>>> Temporary merge branch 2
   componenteSubscripcion : Subscription = new Subscription();
   elementCat = false; //SECCIONES
   elementInf = false; //CONTACTO
