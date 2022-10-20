@@ -38,13 +38,13 @@ let result = await categorias.create(req.body) //PARA LOS FORMULARIOS POR TENER 
      res.json(result); 
  };
 
-
-async function findAllCategorias(req,res){
-// Find all users
-const categorias = await categoria.findAll(); //CATEGORIA NO TOMA LA FUNCCION DE SEQUALIZE
-console.log(categorias.every(user => user instanceof categoria)); // true
-console.log("Todas las Categorias:", JSON.stringify(categorias, null, 2)); 
- };
+ async function buscarPorNombre(req,res){
+    const { QueryTypes } = require('sequelize');
+    const result = await categorias.findOne({where:{ Categoria: req.params.categoria }});
+    /* const result = await sequelize.query("SELECT * FROM `redes_sociales`", { type: QueryTypes.SELECT }); */
+    console.log(result);
+    res.json(result); 
+};
 
 
 
@@ -54,6 +54,6 @@ module.exports = {
   deleteCategorias,
  /*  updateCategorias, */
 
-  findAllCategorias,
+ 
 };
 

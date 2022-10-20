@@ -14,8 +14,7 @@ const categoriasRoute = require ('./categorias.routes');
 const categoriasRoute = require('./categorias.routes');
 const informacionRoute = require('./informacion.routes');
 const redessocialesRoute = require('./redessociales.routes');
-
->>>>>>> b19e6b0d62176ca50677d0ee6bca4a733c60a8f3
+const localesRoute = require('./locales.routes');
 
 // use=
 app.use('/ping', (req, res) => {
@@ -29,6 +28,7 @@ app.use('/categorias',categoriasRoute);
 =======
 app.use('/info',informacionRoute);
 app.use('/redSocial',redessocialesRoute);
+app.use('/local',localesRoute);
 
 >>>>>>> b19e6b0d62176ca50677d0ee6bca4a733c60a8f3
 app.use('/', rootPath.handler);

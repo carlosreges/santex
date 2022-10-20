@@ -23,7 +23,7 @@ app.get("/all",categoriasController.getCategorias);
 app.delete("/del/:id",categoriasController.deleteCategorias);
 /* app.put("/upd",categoriasController.updateCategorias); */
 
-app.get("/Findall",categoriasController.findAllCategorias);
+
 /* app.post("/add", categoriasController.insertCategorias); */
 
 
