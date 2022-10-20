@@ -38,7 +38,7 @@ async function insertInformacion(req,res){
     res.json(result); 
 };
 
-async function buscarPorNombre(req,res){
+async function buscarPorId(req,res){
     const { QueryTypes } = require('sequelize');
     const result = await informacion.findOne({where:{ id_informacion: req.params.id }});
     /* const result = await sequelize.query("SELECT * FROM `redes_sociales`", { type: QueryTypes.SELECT }); */
@@ -51,7 +51,7 @@ module.exports = {
   insertInformacion,
   deleteInformacion,
 /*   updateInformacion, */
-buscarPorNombre,
+buscarPorId,
 
 };
 

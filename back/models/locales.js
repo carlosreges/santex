@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
    
-  const establecimiento = sequelize.define("establecimientos", {
-    id_establecimientos: {
+  const locales = sequelize.define("locales", {
+    id_local: {
       type: DataTypes.INTEGER(16),
       allowNull: false,
       primaryKey: true,
@@ -43,24 +43,30 @@ module.exports = (sequelize, DataTypes) => {
       unique: false,
     },
     Imagen: {
-      type: DataTypes.STRING(255),
+      type: DataTypes.STRING(45),
       allowNull: false,
       unique: false,
     },
     Descripcion: {
-      type: DataTypes.STRING(255),
+      type: DataTypes.STRING(45),
       allowNull: false,
       unique: false,
     },
+
   }, {
     timestamps: false,
-    tableName: 'informacion',
+    tableName: 'locales',
   });
 /*  (async () => {
     await sequelize.sync({ force: true }); //CREA LAS TABLAS NUEVAMENTE
   })();  */
-  return establecimiento;
+  return locales;
 };
+
+/* 
+
+
+
 
 
 'use strict';
@@ -68,18 +74,14 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class establecimientos extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+  class locales extends Model {
+
     static associate(models) {
-      // define association here
+
     }
-  };
-  establecimientos.init({
-    idestablecimientos: DataTypes.INTEGER,
+  }
+  locales.init({
+    id_local: DataTypes.NUMBER,
     Categoria: DataTypes.STRING,
     Titulo: DataTypes.STRING,
     Direccion: DataTypes.STRING,
@@ -91,7 +93,7 @@ module.exports = (sequelize, DataTypes) => {
     Descripcion: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'establecimientos',
+    modelName: 'locales',
   });
-  return establecimientos;
-};
+  return locales;
+}; */

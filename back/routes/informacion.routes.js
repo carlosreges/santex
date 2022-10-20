@@ -11,6 +11,6 @@ app.delete("/del",informacionController.deleteInformacion);
 /* app.put("/upd",informacionController.updateInformacion); */
 
 app.post("/add", informacionController.insertInformacion);
-app.get("/buscar/:nombre", informacionController.buscarPorNombre);
+app.get("/buscar/:id", informacionController.buscarPorId);
 
 module.exports = app;

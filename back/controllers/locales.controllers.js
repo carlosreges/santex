@@ -6,19 +6,19 @@ const config = require('../config/config');
 
 
 const getConnection = require('../config/config'); //ESTA BIEN ESTA LINEA PARA REALIZAR LA CONEXION ??
-const establecimiento = require('../models').establecimientos;
+const locales = require('../models').locales;
 
-async function getEstablecimientos(req,res){
+async function getLocales(req,res){
     const { QueryTypes } = require('sequelize');
-    const result = await establecimiento.findAll();
+    const result = await locales.findAll();
     /* const result = await sequelize.query("SELECT * FROM `redes_sociales`", { type: QueryTypes.SELECT }); */
     console.log(result);
     res.json(result); 
 };
 
-async function deleteEstablecimeintos(req,res){
+async function deleteLocales(req,res){
     const { QueryTypes } = require('sequelize');
-    const result = await establecimiento.destroy({ where: { id_establecimientos: req.params.id } })
+    const result = await locales.destroy({ where: { id_locales: req.params.id } })
     /* const result = await sequelize.query("DELETE FROM `redes_sociales` WHERE `id_redes_sociales` = 2", { type: QueryTypes.DELETE }); */
     console.log(result);
     res.json(result); 
@@ -31,9 +31,9 @@ async function deleteEstablecimeintos(req,res){
     res.json(result); 
 }; */
 
-async function insertEstablecimientos(req,res){
+async function insertLocales(req,res){
     const { QueryTypes } = require('sequelize');
-    let result = await establecimiento.create(req.body) 
+    let result = await locales.create(req.body) 
     /* const result = await sequelize.query("INSERT INTO redes_sociales(`Red_social`) VALUES('Instagram')", { type: QueryTypes.UPDATE }); */
     console.log(result);
     res.json(result); 
@@ -41,7 +41,7 @@ async function insertEstablecimientos(req,res){
 
 async function buscarPorTitulo(req,res){
     const { QueryTypes } = require('sequelize');
-    const result = await establecimiento.findOne({where:{ Titulo: req.params.nombre }});
+    const result = await locales.findOne({where:{ Titulo: req.params.nombre }});
     /* const result = await sequelize.query("SELECT * FROM `redes_sociales`", { type: QueryTypes.SELECT }); */
     console.log(result);
     res.json(result); 
@@ -49,9 +49,9 @@ async function buscarPorTitulo(req,res){
 
 
 module.exports = {
-  getEstablecimientos,
-  insertEstablecimientos,
-  deleteEstablecimeintos,
+  getLocales,
+  insertLocales,
+  deleteLocales,
   buscarPorTitulo,
   /* updateCategorias, */
 
