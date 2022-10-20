@@ -11,7 +11,7 @@ const userRoute = require('./user.routes');
 const categoriasRoute = require('./categorias.routes');
 const informacionRoute = require('./informacion.routes');
 const redessocialesRoute = require('./redessociales.routes');
-
+const establecimientosRoute = require('./establecimientos.routes');
 
 // use=
 app.use('/ping', (req, res) => {
@@ -23,6 +23,7 @@ app.use('/users', userRoute);
 app.use('/categorias',categoriasRoute);
 app.use('/info',informacionRoute);
 app.use('/redSocial',redessocialesRoute);
+app.use('/local',establecimientosRoute);
 
 app.use('/', rootPath.handler);
 app.use(rootPath.setHeaders);
