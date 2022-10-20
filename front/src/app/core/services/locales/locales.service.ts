@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { ApiService } from '../../http/api.service';
-import { redsocial } from '../../interfaces/redsocial/redsocial.interfaces';
+import { locales } from '../../interfaces/locales/locales.interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class localesService {
 
   }
 
-  Buscar_local (nombre: string): Observable<local>{
+  Buscar_local (nombre: string): Observable<locales>{
   debugger;
     return this.http.get(`local/buscar/${nombre}`);
   }
