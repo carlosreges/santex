@@ -43,7 +43,7 @@
 
 
 <!-- ******** -->
-<!-- CATEGORIAS ESTABLECIMIENTOS -->
+<!-- CATEGORIAS LOCALES -->
 <div *ngIf="elementCat == true">
 <div class="container">
   <div class=" text-center mt-5 ">
@@ -55,7 +55,7 @@
       <div class="card mt-2 mx-auto p-4 bg-light">
         <div class="card-body bg-light">
           <div class = "container">
-            <form id="contact-form" role="form">
+            <form id="formulario-local" role="form" (ngSubmit)="Guardar_local()">
               <div class="controls">
                 <!-- FILA -->
                 <!-- *********SEARCH**************** -->
@@ -63,7 +63,7 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="input-group rounded">
-                        <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
+                        <input type="search" (keyup)="Buscar_local($event)" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
                         <span class="input-group-text border-0" id="search-addon">
                           <i class="fas fa-search"></i>
                         </span>
@@ -76,13 +76,13 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_need">Especifique la Categoria *</label>
-                      <select id="form_need" name="need" class="form-control" required="required" data-error="Especifique la Categoria.">
+                      <select [(ngModel)]="localNvo.Categoria" id="form_need" name="need" class="form-control" required="required" data-error="Especifique la Categoria.">
                         <option value="" selected disabled>--Seleccione--</option>
-                        <option >Alojamiento</option>
-                        <option >Atracciones</option>
-                        <option >Actividades</option>
-                        <option >Gastronomia</option>
-                        <option >Agencia de Viaje</option>
+                        <option value="Alojamientos">Alojamientos</option>
+                        <option value="Atracciones">Atracciones</option>
+                        <option value="Actividades">Actividades</option>
+                        <option value="Gastronomia">Gastronomia</option>
+                        <option value="Agencias de Viajes">Agencias de Viajes</option>
                       </select>
                     </div>
                   </div>
@@ -92,7 +92,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_titulo">Titulo *</label>
-                      <input id="form_titulo" type="text" name="titulo" class="form-control" placeholder="Ingrese Nombre del Lugar *" required="required" data-error="Nombre es requerido.">
+                      <input [(ngModel)]="localNvo.Titulo" id="form_titulo" type="text" name="titulo" class="form-control" placeholder="Ingrese Nombre del Lugar *" required="required" data-error="Nombre es requerido.">
                     </div>
                   </div>
 
@@ -100,7 +100,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_direccion">Dirección *</label>
-                      <input id="form_direccion" type="text" name="direccion" class="form-control" placeholder="Ingrese la Direccion del Lugar *" required= "required" data-error="Direccion es requerido.">
+                      <input [(ngModel)]="localNvo.Direccion" id="form_direccion" type="text" name="direccion" class="form-control" placeholder="Ingrese la Direccion del Lugar *" required= "required" data-error="Direccion es requerido.">
                     </div>
                   </div>
                 </div>
@@ -110,13 +110,13 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_telefono">Telefono *</label>
-                      <input id="form_telefono" type="text" name="telefono" class="form-control" placeholder="Telefono del Establecimiento" required= "required" data-error="Telefono es requerido.">
+                      <input [(ngModel)]="localNvo.Telefono"  id="form_telefono" type="text" name="telefono" class="form-control" placeholder="Telefono del Establecimiento" required= "required" data-error="Telefono es requerido.">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_web">Web</label>
-                      <input id="form_web" type="text" name="web" class="form-control" placeholder="Web del Establecimiento *">
+                      <input [(ngModel)]="localNvo.Web"  id="form_web" type="text" name="web" class="form-control" placeholder="Web del Establecimiento *">
                     </div>
                   </div>
                 </div>
@@ -125,13 +125,13 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_facebook">Facebook</label>
-                      <input id="form_facebook" type="text" name="facebook" class="form-control" placeholder="Facebook del Establecimiento">
+                      <input [(ngModel)]="localNvo.Facebook" id="form_facebook" type="text" name="facebook" class="form-control" placeholder="Facebook del Establecimiento">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_instagram">Instagram</label>
-                      <input id="form_instagram" type="text" name="instagram" class="form-control" placeholder="Instagram del Establecimiento *">
+                      <input [(ngModel)]="localNvo.Instagram" id="form_instagram" type="text" name="instagram" class="form-control" placeholder="Instagram del Establecimiento *">
                     </div>
                   </div>
                 </div>
@@ -140,7 +140,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_imagen">Imagen *</label>
-                      <input type="file" class="file-upload" onchange="console.log(event.target.files)">
+                      <input id="form_imagen" [(ngModel)]="localNvo.Imagen" type="file" class="file-upload" onchange="console.log(event.target.files)">
 
                     </div>
                   </div>
@@ -150,7 +150,7 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <label for="form_message">Breve Descripcion *</label>
-                      <textarea id="form_message" name="message" class="form-control" placeholder="Escriba una descripcion del Lugar." rows="4" required="required" ></textarea>
+                      <textarea [(ngModel)]="localNvo.Descripcion" id="form_message" name="message" class="form-control" placeholder="Escriba una descripcion del Lugar." rows="4" required="required" ></textarea>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -316,7 +316,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_imagen">Logo *</label>
-                      <input type="file" [(ngModel)]="informacionNva.Logo" class="file-upload" onchange="console.log(event.target.files)">
+                      <input id="form_imagen" type="file" [(ngModel)]="informacionNva.Logo" class="file-upload" onchange="console.log(event.target.files)">
                     </div>
                   </div>
 
@@ -353,7 +353,8 @@
         <div class="card mt-2 mx-auto p-4 bg-light">
           <div class="card-body bg-light">
             <div class = "container">
-              <form id="contact-form" role="form">
+              <form id="formulario-usuario" role="form" (ngSubmit)="Guardar_Usuario()"></form>
+
                 <div class="controls">
                   <div class="row">
                     <div class="col-md-12">
@@ -373,13 +374,13 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="form_usuario">Usuario *</label>
-                        <input id="form_usuario" type="text" name="usuario" class="form-control" placeholder="Ingrese el nvo usuario" required="required" data-error="Usuario es requerido.">
+                        <input [(ngModel)]="usuarioNvo.username" id="form_usuario" type="text" name="usuario" class="form-control" placeholder="Ingrese el nvo usuario" required="required" data-error="Usuario es requerido.">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="form_password">Password *</label>
-                        <input id="form_password" type="text" name="password" class="form-control" placeholder="Ingrese el Password *" required="required" data-error="Password es requerido.">
+                        <input [(ngModel)]="usuarioNvo.password"  id="form_password" type="text" name="password" class="form-control" placeholder="Ingrese el Password *" required="required" data-error="Password es requerido.">
                       </div>
                     </div>
                   </div>
@@ -387,7 +388,7 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <label for="form_email">Email *</label>
-                        <input id="form_email" type="text" name="email" class="form-control" placeholder="Ingrese el Email *" required="required" data-error="Email es requerido.">
+                        <input [(ngModel)]="usuarioNvo.email" id="form_email" type="text" name="email" class="form-control" placeholder="Ingrese el Email *" required="required" data-error="Email es requerido.">
                       </div>
                     </div>
                   </div>
