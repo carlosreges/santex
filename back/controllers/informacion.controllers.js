@@ -32,7 +32,7 @@ async function deleteInformacion(req,res){
 
 async function insertInformacion(req,res){
     const { QueryTypes } = require('sequelize');
-    let result = await informacion.creat(req.body);
+    let result = await informacion.create(req.body);
     /* const result = await sequelize.query("INSERT INTO informacion (`Direccion`,`Horario`,`Telefono`,`Email`,`Logo`) VALUES('Av. Colon 195 - PA 01', 'Lunes a Viernes | 08:30 a 12:00hs','3516175809','cbalucas@hotmail.com','')", { type: QueryTypes.UPDATE }); */
     console.log(result);
     res.json(result); 
