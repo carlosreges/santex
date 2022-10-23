@@ -130,7 +130,8 @@ export class AdministradorComponent implements OnInit {
 
   Buscar_Info(id:any):void{
     this.componenteSubscripcion.add(
-      this.informacionService.Buscar_info(id.target.value).subscribe({next:(response:informacion)=>{
+     /*  this.informacionService.Buscar_info(id.target.value).subscribe({next:(response:informacion)=>{ */
+        this.informacionService.Buscar_info(id).subscribe({next:(response:informacion)=>{
         this.informacionNva=response;
     }}))
   }
