@@ -21,6 +21,7 @@ import {
   MIN_USERNAME_LENGTH,
   PASSWORD_PATTERN,
 } from 'src/app/core/interfaces/users/users.interface';
+import { debugPort } from 'process';
 
 
 
@@ -60,10 +61,11 @@ export class AdministradorComponent implements OnInit {
     Horario : "",
     Telefono : "",
     Email :"",
-    Logo : "",
   }
 
 /* ************ */
+/* DOCUMENTOS ADJUNTOS ***************/
+private fileImp:any;
 
   componenteSubscripcion : Subscription = new Subscription();
   elementCat = false; //SECCIONES
@@ -76,6 +78,8 @@ export class AdministradorComponent implements OnInit {
   private informacionService:informacionService, private localesService:localesService) { }
 
   ngOnInit(): void {
+
+
   }
   showDataAdm() {
     return (this.elementAdm = true);
@@ -90,12 +94,14 @@ export class AdministradorComponent implements OnInit {
     return (this.elementCat = false);
   }
   showDataInf() {
+
     return (this.elementInf = true);
   }
   hideDataInf() {
     return (this.elementInf = false);
   }
   showDataRSoc() {
+
     return (this.elementRSoc = true);
   }
   hideDataRSoc() {
@@ -128,20 +134,34 @@ export class AdministradorComponent implements OnInit {
     }}))
   }
 
+  UpDate_Info():void {
+    debugger;
+    this.componenteSubscripcion.add (
+      this.informacionService.UpDate_Info(this.informacionNva).subscribe({next:(response)=>{
+        alert("Guardado Exitosamente");
+    }}))
+  }
+
+
   Buscar_Info(id:any):void{
     this.componenteSubscripcion.add(
-      this.informacionService.Buscar_info(id.target.value).subscribe({next:(response:informacion)=>{
+      /* this.informacionService.Buscar_info(id.target.value).subscribe({next:(response:informacion)=>{ */
+      this.informacionService.Buscar_info(id).subscribe({next:(response:informacion)=>{
         this.informacionNva=response;
     }}))
   }
 /* FUNCIONES LOCALES ****************/
   Guardar_local():void {
     this.componenteSubscripcion.add (
+
       this.localesService.Guardar_local(this.localNvo).subscribe({next:(response)=>{
         debugger;
           alert("Guardado Exitosamente");
-    }}))
+        }}))
   }
+
+
+
   Buscar_local(nombre:any):void{
     this.componenteSubscripcion.add(
       this.localesService.Buscar_local(nombre.target.value).subscribe({next:(response:locales)=>{

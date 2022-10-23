@@ -24,12 +24,13 @@ async function deleteRedesSociales(req,res){
     res.json(result); 
 };
 
-/* async function updateCategorias(req,res){
+async function updateRedesSociales(req,res){
     const { QueryTypes } = require('sequelize');
-    const result = await sequelize.query("UPDATE redes_sociales SET `Red_social` = 'Facebook' WHERE `id_red_social`= 2", { type: QueryTypes.UPDATE });
+    const result = await redes_sociales.put({ req:body, where: { id_redes_sociales: req.params.id } })
+/*     const result = await sequelize.query("UPDATE redes_sociales SET `Red_social` = 'Facebook' WHERE `id_red_social`= 2", { type: QueryTypes.UPDATE }); */
     console.log(result);
     res.json(result); 
-}; */
+};
 
 async function insertRedesSociales(req,res){
     const { QueryTypes } = require('sequelize');
@@ -53,7 +54,7 @@ module.exports = {
   insertRedesSociales,
   deleteRedesSociales,
   buscarPorNombre,
-  /* updateCategorias, */
+updateRedesSociales,
 
 };
 

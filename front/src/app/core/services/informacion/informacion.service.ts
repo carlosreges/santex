@@ -15,6 +15,11 @@ export class informacionService {
 
   }
 
+  UpDate_Info (body: any): Observable<void>{
+    debugger;
+      return this.http.put(`info/upd/1`,body);
+    }
+
   Buscar_info (nombre: string): Observable<informacion>{
   debugger;
     return this.http.get(`info/buscar/${nombre}`);

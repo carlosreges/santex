@@ -4,5 +4,4 @@ export  interface informacion{
   Horario: string;
   Telefono: string;
   Email: string;
-  Logo: string;
 };
