@@ -20,7 +20,10 @@ export class RedsocialService {
     return this.http.get(`redSocial/buscar/${nombre}`);
   }
 
-
+  EliminarRedSocial (nombre: string): Observable<redsocial>{
+    debugger;
+      return this.http.delete(`redSocial/del/${nombre}`);
+    }
 
 
 }

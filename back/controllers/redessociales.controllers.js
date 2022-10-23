@@ -18,23 +18,18 @@ async function getRedesSociales(req,res){
 
 async function deleteRedesSociales(req,res){
     const { QueryTypes } = require('sequelize');
-    const result = await redes_sociales.destroy({ where: { id_redes_sociales: req.params.id } })
+    const result = await redes_sociales.destroy({ where: { Red_social: req.params.nombre } })
+    /* const result = await redes_sociales.destroy({ where: { id_redes_sociales: req.params.id } }) */
     /* const result = await sequelize.query("DELETE FROM `redes_sociales` WHERE `id_redes_sociales` = 2", { type: QueryTypes.DELETE }); */
     console.log(result);
     res.json(result); 
 };
 
-async function updateRedesSociales(req,res){
-    const { QueryTypes } = require('sequelize');
-    const result = await redes_sociales.put({ req:body, where: { id_redes_sociales: req.params.id } })
-/*     const result = await sequelize.query("UPDATE redes_sociales SET `Red_social` = 'Facebook' WHERE `id_red_social`= 2", { type: QueryTypes.UPDATE }); */
-    console.log(result);
-    res.json(result); 
-};
 
 async function insertRedesSociales(req,res){
     const { QueryTypes } = require('sequelize');
-    let result = await redes_sociales.create(req.body) 
+    let [result, create] = await redes_sociales.upsert(req.body); //SELECTOR AUTOMATICO DE INSERT O UPDATE
+    /* let result = await redes_sociales.create(req.body)  */
     /* const result = await sequelize.query("INSERT INTO redes_sociales(`Red_social`) VALUES('Instagram')", { type: QueryTypes.UPDATE }); */
     console.log(result);
     res.json(result); 
@@ -54,7 +49,6 @@ module.exports = {
   insertRedesSociales,
   deleteRedesSociales,
   buscarPorNombre,
-updateRedesSociales,
 
 };
 

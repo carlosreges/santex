@@ -5,8 +5,8 @@ const redessocialesController = require ( '../controllers/redessociales.controll
 const app = Express.Router();
 
 app.get("/all",redessocialesController.getRedesSociales);
-app.delete("/del/:id",redessocialesController.deleteRedesSociales);
-app.put("/upd/:id",redessocialesController.updateRedesSociales);
+app.delete("/del/:nombre",redessocialesController.deleteRedesSociales);
+
 
 app.post("/add", redessocialesController.insertRedesSociales);
 app.get("/buscar/:nombre", redessocialesController.buscarPorNombre);
