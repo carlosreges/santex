@@ -126,6 +126,13 @@ private fileImp:any;
         this.redSocialNva=response;
     }}))
   }
+
+  Eliminar_RedSocial(nombre:string):void{
+    this.componenteSubscripcion.add(
+      this.RedSocialService.EliminarRedSocial(nombre).subscribe({next:(response:redsocial)=>{
+        alert("Eliminado Exitosamente");
+    }}))
+  }
 /* FUNCIONES INFORMACION ************ */
   Guardar_Info():void {
     this.componenteSubscripcion.add (
@@ -135,7 +142,7 @@ private fileImp:any;
   }
 
   UpDate_Info():void {
-    debugger;
+
     this.componenteSubscripcion.add (
       this.informacionService.UpDate_Info(this.informacionNva).subscribe({next:(response)=>{
         alert("Guardado Exitosamente");

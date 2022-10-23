@@ -23,23 +23,16 @@ async function deleteInformacion(req,res){
     res.json(result); 
 };
 
-async function updateInformacion(req,res){
-    debugger
-    const { QueryTypes } = require('sequelize');
-     let result = await informacion.set(req.body); 
-   /*  let result = await informacion.save(req.body, {where:{Direccion , Telefono,Horario,Email }}); */
-    /* const result = await sequelize.query("UPDATE informacion SET `Direccion` = 'Av. San Martin' WHERE `id_informacion`= 2", { type: QueryTypes.UPDATE }); */
-    console.log(result);
-    res.json(result); 
-}; 
-
 async function insertInformacion(req,res){
     const { QueryTypes } = require('sequelize');
-    let result = await informacion.create(req.body);
+   /*  let result = await informacion.create(req.body); */
+    let [result, create] = await informacion.upsert(req.body);
     /* const result = await sequelize.query("INSERT INTO informacion (`Direccion`,`Horario`,`Telefono`,`Email`,`Logo`) VALUES('Av. Colon 195 - PA 01', 'Lunes a Viernes | 08:30 a 12:00hs','3516175809','cbalucas@hotmail.com','')", { type: QueryTypes.UPDATE }); */
     console.log(result);
     res.json(result); 
 };
+
+
 
 async function buscarPorId(req,res){
     const { QueryTypes } = require('sequelize');
@@ -53,7 +46,6 @@ module.exports = {
   getInformacion,
   insertInformacion,
   deleteInformacion,
-updateInformacion, 
 buscarPorId,
 
 };

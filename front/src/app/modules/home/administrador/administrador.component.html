@@ -188,7 +188,7 @@
       <div class="card mt-2 mx-auto p-4 bg-light">
         <div class="card-body bg-light">
           <div class = "container">
-            <form id="formulario-redsocial" role="form" (ngSubmit)="Guardar_RedSocial()">
+            <form id="formulario-redsocial" role="form" >
               <div class="controls">
                 <!-- FILA -->
                 <!-- *********SEARCH**************** -->
@@ -232,10 +232,10 @@
                 </div>
                 <div class="row">
                   <div class="col-md-6">
-                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Eliminar" >
+                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Eliminar"  (click)="Eliminar_RedSocial(redSocialNva.Red_social)">
                   </div>
                   <div class="col-md-6">
-                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Guardar" >
+                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Guardar"  (click)="Guardar_RedSocial()">
                   </div>
                 </div>
               </div>
@@ -264,7 +264,7 @@
       <div class="card mt-2 mx-auto p-4 bg-light">
         <div class="card-body bg-light">
           <div class = "container">
-            <form id="formulario-informacion" role="form" (ngSubmit)="UpDate_Info()"> <!-- (ngSubmit)="Guardar_Info()" -->
+            <form id="formulario-informacion" role="form" (ngSubmit)="Guardar_Info()"> <!-- (ngSubmit)="UpDate_Info()" -->
               <div class="controls">
 
                 <!-- *********SEARCH**************** -->

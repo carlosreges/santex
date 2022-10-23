@@ -14,12 +14,12 @@ export class informacionService {
     return this.http.post("info/add", body);
 
   }
-
+/* UPDATE INFO */
   UpDate_Info (body: any): Observable<void>{
     debugger;
       return this.http.put(`info/upd/1`,body);
     }
-
+/*  */
   Buscar_info (nombre: string): Observable<informacion>{
   debugger;
     return this.http.get(`info/buscar/${nombre}`);
