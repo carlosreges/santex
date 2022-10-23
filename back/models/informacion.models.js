@@ -27,11 +27,6 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       unique: false,
     },
-    Logo: {
-      type: DataTypes.STRING(45),
-      allowNull: false,
-      unique: false,
-    },
 
   }, {
     timestamps: false,

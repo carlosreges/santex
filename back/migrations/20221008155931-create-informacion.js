@@ -23,9 +23,6 @@ module.exports = {
       Email: {
         type: Sequelize.STRING
       },
-      Logo: {
-        type: Sequelize.STRING
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

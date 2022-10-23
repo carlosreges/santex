@@ -264,7 +264,7 @@
       <div class="card mt-2 mx-auto p-4 bg-light">
         <div class="card-body bg-light">
           <div class = "container">
-            <form id="formulario-informacion" role="form" (ngSubmit)="Guardar_Info()">
+            <form id="formulario-informacion" role="form" (ngSubmit)="UpDate_Info()"> <!-- (ngSubmit)="Guardar_Info()" -->
               <div class="controls">
 
                 <!-- *********SEARCH**************** -->
@@ -312,21 +312,23 @@
                     </div>
                   </div>
                 </div>
-                <div class="row">
+<!-- LOGO DE LA MUNICPALIDAD -->
+                <!--                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_imagen">Logo *</label>
-                      <input id="form_imagen" type="file" [(ngModel)]="informacionNva.Logo" class="file-upload" onchange="console.log(event.target.files)">
+                      <input id="form_imagen" type="file" [(ngModel)]="informacionNva.Logo" class="file-upload" onchange="console.log(event.target.files)" >
                     </div>
                   </div>
 
-                </div>
+                </div>-->
+<!-- *********************** -->
                 <div class="row">
-                  <div class="col-md-6">
+<!--                   <div class="col-md-6">
                     <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Eliminar" >
                   </div>
-                  <div class="col-md-6">
-                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Guardar" >
+ -->                  <div class="col-md-6">
+                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Actualizar" >
                   </div>
                 </div>
               </div>

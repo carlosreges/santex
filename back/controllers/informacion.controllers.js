@@ -23,12 +23,14 @@ async function deleteInformacion(req,res){
     res.json(result); 
 };
 
-/* async function updateInformacion(req,res){
+async function updateInformacion(req,res){
+    debugger
     const { QueryTypes } = require('sequelize');
-    const result = await sequelize.query("UPDATE informacion SET `Direccion` = 'Av. San Martin' WHERE `id_informacion`= 2", { type: QueryTypes.UPDATE });
+    let result = await informacion.set(req.body, {where:{ id_informacion: 1 }});
+    /* const result = await sequelize.query("UPDATE informacion SET `Direccion` = 'Av. San Martin' WHERE `id_informacion`= 2", { type: QueryTypes.UPDATE }); */
     console.log(result);
     res.json(result); 
-}; */
+}; 
 
 async function insertInformacion(req,res){
     const { QueryTypes } = require('sequelize');
@@ -50,7 +52,7 @@ module.exports = {
   getInformacion,
   insertInformacion,
   deleteInformacion,
-/*   updateInformacion, */
+updateInformacion, 
 buscarPorId,
 
 };

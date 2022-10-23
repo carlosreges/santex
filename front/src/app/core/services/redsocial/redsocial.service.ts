@@ -20,4 +20,7 @@ export class RedsocialService {
     return this.http.get(`redSocial/buscar/${nombre}`);
   }
 
+
+
+
 }
