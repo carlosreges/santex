@@ -22,6 +22,8 @@ import {
   PASSWORD_PATTERN,
 } from 'src/app/core/interfaces/users/users.interface';
 import { debugPort } from 'process';
+/* import { resetFakeAsyncZone } from '@angular/core/testing';
+import { clear } from 'console'; */
 
 
 
@@ -117,7 +119,8 @@ private fileImp:any;
   Guardar_RedSocial():void {
     this.componenteSubscripcion.add (
         this.RedSocialService.Guardar_RedSocial(this.redSocialNva).subscribe({next:(response)=>{
-           alert("Guardado Exitosamente");
+          
+          alert("Guardado Exitosamente");
     }}))
   }
   Buscar_RedSocial(nombre:any):void{
@@ -157,6 +160,7 @@ private fileImp:any;
         this.informacionNva=response;
     }}))
   }
+  
 /* FUNCIONES LOCALES ****************/
   Guardar_local():void {
     this.componenteSubscripcion.add (
@@ -175,7 +179,7 @@ private fileImp:any;
         this.localNvo=response;
     }}))
   }
-
+ 
 /* FUNCIONES USUARIO ?? PARA CREAR O MNO UNO */
 
 }
