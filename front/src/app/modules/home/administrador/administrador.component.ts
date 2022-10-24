@@ -141,15 +141,6 @@ private fileImp:any;
     }}))
   }
 
-  UpDate_Info():void {
-
-    this.componenteSubscripcion.add (
-      this.informacionService.UpDate_Info(this.informacionNva).subscribe({next:(response)=>{
-        alert("Guardado Exitosamente");
-    }}))
-  }
-
-
   Buscar_Info(id:any):void{
     this.componenteSubscripcion.add(
       /* this.informacionService.Buscar_info(id.target.value).subscribe({next:(response:informacion)=>{ */
@@ -169,10 +160,12 @@ private fileImp:any;
 
 
 
-  Buscar_local(nombre:any):void{
+  Buscar_local(Titulo:any):void{
+debugger;
     this.componenteSubscripcion.add(
-      this.localesService.Buscar_local(nombre.target.value).subscribe({next:(response:locales)=>{
-        this.localNvo=response;
+      this.localesService.Buscar_local(Titulo).subscribe({next:(response:locales)=>{
+/*         this.localesService.Buscar_local(Titulo.target.value).subscribe({next:(response:locales)=>{ */
+          this.localNvo=response;
     }}))
   }
 

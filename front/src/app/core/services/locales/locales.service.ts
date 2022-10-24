@@ -15,9 +15,9 @@ export class localesService {
 
   }
 
-  Buscar_local (nombre: string): Observable<locales>{
+  Buscar_local (Titulo: string): Observable<locales>{
   debugger;
-    return this.http.get(`local/buscar/${nombre}`);
+    return this.http.get(`local/buscar/${Titulo}`);
   }
 
 }
