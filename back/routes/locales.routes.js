@@ -6,10 +6,10 @@ const app = Express.Router();
 
 app.get("/all",localesController.getLocales);
 app.delete("/del/:id",localesController.deleteLocales);
-/* app.put("/upd",categoriasController.updateCategorias); */
+
 
 app.post("/add", localesController.insertLocales);
 app.get("/buscar/:titulo", localesController.buscarPorTitulo);
-
+app.get("/search/:id", localesController.buscarPorId);
 
 module.exports = app;

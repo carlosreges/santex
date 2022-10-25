@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" (click)="showDataCat(); hideDataAdm(); hideDataRSoc(); hideDataInf()" href="#">Establecimientos</a>
+          <a class="nav-link active" aria-current="page" (click)="showDataCat(); hideDataAdm(); hideDataRSoc(); hideDataInf()" href="#" (click)="Buscar_localID(2)">Establecimeintos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" (click)="showDataRSoc(); hideDataAdm(); hideDataCat(); hideDataInf() " href="#">Redes Sociales</a>
@@ -63,7 +63,7 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="input-group rounded">
-                        <input type="search" (keyup)="Buscar_local($event)" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
+                        <input type="search" (keyup)="Buscar_localTitulo($event)" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
                         <span class="input-group-text border-0" id="search-addon">
                           <i class="fas fa-search"></i>
                         </span>

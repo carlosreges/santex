@@ -160,12 +160,17 @@ private fileImp:any;
 
 
 
-  Buscar_local(Titulo:any):void{
-debugger;
+  Buscar_localTitulo(titulo:any):void{
     this.componenteSubscripcion.add(
-      this.localesService.Buscar_local(Titulo).subscribe({next:(response:locales)=>{
-/*         this.localesService.Buscar_local(Titulo.target.value).subscribe({next:(response:locales)=>{ */
-          this.localNvo=response;
+      this.localesService.Buscar_localTitulo(titulo.target.value).subscribe({next:(response:locales)=>{
+        this.localNvo=response;
+    }}))
+  }
+
+  Buscar_localID(id:any):void{
+    this.componenteSubscripcion.add(
+      this.localesService.Buscar_localID(id.target.value).subscribe({next:(response:locales)=>{
+        this.localNvo=response;
     }}))
   }
 

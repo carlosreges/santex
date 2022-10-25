@@ -15,10 +15,15 @@ export class localesService {
 
   }
 
-  Buscar_local (Titulo: string): Observable<locales>{
-  debugger;
-    return this.http.get(`local/buscar/${Titulo}`);
-  }
+  Buscar_localTitulo (titulo: string): Observable<locales>{
+    debugger;
+      return this.http.get(`local/buscar/${titulo}`);
+    }
+
+    Buscar_localID (id: number): Observable<locales>{
+      debugger;
+        return this.http.get(`local/search/${id}`);
+      }
 
 }
 

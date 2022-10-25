@@ -15,10 +15,10 @@ export class informacionService {
 
   }
 /* UPDATE INFO */
-  UpDate_Info (body: any): Observable<void>{
+/*   UpDate_Info (body: any): Observable<void>{
     debugger;
       return this.http.put(`info/upd/1`,body);
-    }
+    } */
 /*  */
   Buscar_info (nombre: string): Observable<informacion>{
   debugger;
