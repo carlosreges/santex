@@ -35,9 +35,11 @@ async function insertLocales(req,res){
 
 async function buscarPorTitulo(req,res){
     const { QueryTypes } = require('sequelize');
-    const result = await locales.findOne({where:{ Titulo: req.params.nombre }});
+    const result = await locales.findOne({where:{ Titulo: req.params.titulo }});
+    
     /* const result = await sequelize.query("SELECT * FROM `redes_sociales`", { type: QueryTypes.SELECT }); */
     console.log(result);
+    console.log(req.params.nombre);
     res.json(result); 
 };
 
