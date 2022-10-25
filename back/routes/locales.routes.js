@@ -11,5 +11,6 @@ app.delete("/del/:id",localesController.deleteLocales);
 app.post("/add", localesController.insertLocales);
 app.get("/buscar/:titulo", localesController.buscarPorTitulo);
 app.get("/search/:id", localesController.buscarPorId);
+app.get("/buscar/categoria/:categoria", localesController.buscarPorCategoria);
 
 module.exports = app;

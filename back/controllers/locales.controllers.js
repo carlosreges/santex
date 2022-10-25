@@ -39,7 +39,7 @@ async function buscarPorTitulo(req,res){
     
     /* const result = await sequelize.query("SELECT * FROM `redes_sociales`", { type: QueryTypes.SELECT }); */
     console.log(result);
-    console.log(req.params.nombre);
+ 
     res.json(result); 
 };
 
@@ -51,12 +51,21 @@ async function buscarPorId(req,res){
     res.json(result); 
 };
 
+async function buscarPorCategoria(req,res){
+    const { QueryTypes } = require('sequelize');
+    const result = await locales.findAll({where:{ Categoria: req.params.categoria}});
+
+   
+    res.json(result); 
+};
+
 module.exports = {
   getLocales,
   insertLocales,
   deleteLocales,
   buscarPorTitulo,
  buscarPorId,
+ buscarPorCategoria,
 
 };
 

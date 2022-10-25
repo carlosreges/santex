@@ -25,5 +25,11 @@ export class localesService {
         return this.http.get(`local/search/${id}`);
       }
 
+      Buscar_localCategoria (nombre:string): Observable<locales[]>{
+return this.http.get(`local/buscar/categoria/${nombre}`);
+
+      }
+
+
 }
 
