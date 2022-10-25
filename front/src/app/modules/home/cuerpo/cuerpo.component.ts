@@ -86,7 +86,12 @@ export class CuerpoComponent implements OnInit {
     return (this.section)
   }
 
+Secciones(){
+  window.location.hash=this.section;
+}
+
   obtenerDatosCards(cardType:string){
+   this.cards=[];
     this.componenteSubscripcion.add(
       this.localesService.Buscar_localCategoria(cardType).subscribe({
         next:response=>{

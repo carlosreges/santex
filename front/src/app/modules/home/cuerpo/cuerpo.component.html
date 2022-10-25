@@ -1,16 +1,16 @@
 
-  <app-cabeza></app-cabeza>
+  <app-cabeza (changeSection)="Secciones()" ></app-cabeza>
   <div>
     <img src="assets/images/Asenuza_Late_Morteros III.PNG" width="100%" id="imagen">
   </div>
 
     <h1 class=" text-left" ><strong>Ansenuza</strong></h1>
-  <div class="containerTexto">
+  <div class="containerTexto" id="Ansenuza">
       <div class="box-row">
           <p class="textoExplicativo">Esta zona es producto del esfuerzo de sus habitantes, que desde siempre han tenido el deseo de hacer conocido el paraíso en el que viven. La protagonista más importante de esta área turística es la reconocida Laguna de Mar Chiquita, una laguna de agua salada de 6 mil kilómetros de extensión, que constituye uno de los humedales salinos más grandes de Latinoamérica y del mundo.</p>
       </div>
     </div>
-<div class="ContenedorAnsenuza">
+<div class="ContenedorAnsenuza" >
   <div class="box-row>">
   Parque Nacional Ansenuza
   <div class="contenidoparque">El <span>Parque Nacional Ansenuza</span> es un área natural protegida situada en la provincia de Córdoba, República Argentina, con una superficie de 661.416 ha., que incluye la Laguna de Mar Chiquita o Mar de Ansenuza. La ley nacional que dicta su creación fue sancionada el 30 de junio de 2022. 2​
@@ -20,14 +20,13 @@
   <div class="imgparque"><img src="assets\images\logo_ansenuza_parque.webp" alt="logo" ></div>
 </div>
 
-<div class="contenidoCuerpo">
+<div class="contenidoCuerpo" id="Turismo">
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-5">
-        <!-- <button class="boton" type="button" (click)="showDataGa(); hideDataAc();hideDataAg();hideDataAj();hideDataAt()"><img src="assets\iconos\cubierto.svg" alt="logo" width="50"><br>Gastronomia</button> -->
-        <button class="boton" type="button" (click)=" obtenerDatosCards('Gastronomia')"><img src="assets\iconos\cubierto.svg" alt="logo" width="50"><br>Gastronomia</button>
-        <button class="boton" type="button" (click)="showDataAg(); hideDataAc();hideDataGa();hideDataAj();hideDataAt()"><img src="assets\iconos\avion.svg" alt="logo" width="50"><br>Agencia de viaje</button>
-        <button class="boton" type="button" (click)="showDataAt(); hideDataAc();hideDataAg();hideDataAj();hideDataGa()"><img src="assets\iconos\teatro.svg" alt="logo" width="50"><br>Atracciones</button>
-        <button class="boton" type="button" (click)="showDataAj(); hideDataAc();hideDataAg();hideDataGa();hideDataAt()"><img src="assets\iconos\cama.svg" alt="logo" width="50"><br>Alojamiento</button>
-        <button class="boton" type="button" (click)="showDataAc(); hideDataGa();hideDataAg();hideDataAj();hideDataAt()"><img src="assets\iconos\Bici.svg" alt="logo"width="50" ><br>Actividades</button>
+        <button class="boton" type="button" (click)="obtenerDatosCards('Gastronomias')"><img src="assets\iconos\cubierto.svg" alt="logo" width="50"><br>Gastronomias</button>
+        <button class="boton" type="button" (click)="obtenerDatosCards('Agencias de Viajes')"><img src="assets\iconos\avion.svg" alt="logo" width="50"><br>Agencias de viaje</button>
+        <button class="boton" type="button" (click)="obtenerDatosCards('Atracciones')"><img src="assets\iconos\teatro.svg" alt="logo" width="50"><br>Atracciones</button>
+        <button class="boton" type="button" (click)="obtenerDatosCards('Alojamientos')"><img src="assets\iconos\cama.svg" alt="logo" width="50"><br>Alojamientos</button>
+        <button class="boton" type="button" (click)="obtenerDatosCards('Actividades')"><img src="assets\iconos\Bici.svg" alt="logo"width="50" ><br>Actividades</button>
 
       </div>
     </div>
@@ -41,20 +40,72 @@
         <img src="assets\images\resto\resto1.png" class="card-img-top" alt="..."style="width: 322px; height: 200px">
           <div class="card-body">
             <h3>{{item.Titulo}}</h3>
-            <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> : 011-1234-6598</a></p>
-            <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> : Av. Flamenco 154</a></p>
+            <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> {{item.Telefono}}</a></p>
+            <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> {{item.Direccion}}</a></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Web</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">{{item.Web}}</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">{{item.Instagram}}</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">{{item.Facebook}}</button>
                 </div>
               </div>
-          </div>
+              <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> {{item.Descripcion}}</a></p>
+            </div>
         </div>
     </div>
   </div>
 
 
+
+
 </ng-container>
+      </div>
+    </div>
+
+
+    <div class="container text-center text-md-left" id="Contacto">
+      <div class="pie-titulo-contacto" >
+        <a> Dirección de Turismo de Morteros</a>
+      </div>
+      <hr>
+
+      <div class="row">
+        <div class="col-md-3 mx-auto">
+          <img src="assets/iconos/direccion.svg" class="iconoContacto">
+          <ul class="list-unstyled">
+            <li>
+              <h6   class="font-weight-bold text-md-left mt-3 mb-2">{{informacionDato?.Direccion}}</h6>
+            </li>
+          </ul>
+        </div>
+        <hr class="clearfix w-100 d-md-none">
+        <div class="col-md-3 mx-auto">
+          <img src="assets/iconos/reloj.svg"   class="iconoContacto">
+          <ul class="list-unstyled">
+            <li>
+              <h6 class="font-weight-bold text-md-left mt-3 mb-2">{{informacionDato?.Horario}}</h6>
+            </li>
+          </ul>
+        </div>
+        <hr class="clearfix w-100 d-md-none">
+        <div class="col-md-3 mx-auto">
+          <img src="assets/iconos/telephone.svg"  class="iconoContacto">
+          <ul class="list-unstyled">
+            <li>
+              <h6 class="font-weight-bold text-md-left mt-3 mb-2">{{informacionDato?.Telefono}}</h6>
+            </li>
+          </ul>
+        </div>
+        <hr class="clearfix w-100 d-md-none">
+        <div class="col-md-3 mx-auto">
+          <img src="assets/iconos/sobre.svg" class="iconoContacto">
+          <ul class="list-unstyled">
+            <li>
+              <h6 class="font-weight-bold text-md-left mt-3 mb-2">{{informacionDato?.Email}}</h6>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
 
