@@ -4,18 +4,34 @@
     <img src="assets/images/Asenuza_Late_Morteros III.PNG" width="100%" id="imagen">
   </div>
 
+    <h1 class=" text-left" ><strong>Morteros</strong></h1>
+    <div class="ContenedorAnsenuza" >
+      <div class="box-row>">
+        
+      <div class="contenidoparque"><p >En el extremo noreste de la Provincia de Córdoba, Morteros se transforma en un tranquilo destino ideal para quienes escapan del ruido y la ajetreada vida de las grandes ciudades. Ondulaciones y abundante verde, que se interna hasta sus espacios recreativos, rodean a este rinconcito que sorprenderá a todos sus visitantes.<br>
+        A 17 kilómetros de la localidad, la hermosa Laguna Mar Chiquita despliega todos sus encantos: los atardeceres son una de las postales más esperadas; las aves que revolotean merecen un avistaje; el aire puro y la inmensidad del azul de sus aguas obligan a emprender una caminata por sus orillas.</p></div>
+       <!--  <div class="maps"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d357341.08430648944!2d-62.36700997427862!3d-30.705060863430987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9435039ff322311d%3A0xdcbb82c4008ca472!2sMorteros%2C%20C%C3%B3rdoba!5e1!3m2!1ses-419!2sar!4v1666761549004!5m2!1ses-419!2sar" width="400" height="350"  style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div> -->
+      
+      </div>
+    </div>
+
     <h1 class=" text-left" ><strong>Ansenuza</strong></h1>
   <div class="containerTexto" id="Ansenuza">
       <div class="box-row">
-          <p class="textoExplicativo">Esta zona es producto del esfuerzo de sus habitantes, que desde siempre han tenido el deseo de hacer conocido el paraíso en el que viven. La protagonista más importante de esta área turística es la reconocida Laguna de Mar Chiquita, una laguna de agua salada de 6 mil kilómetros de extensión, que constituye uno de los humedales salinos más grandes de Latinoamérica y del mundo.</p>
+        <div class="contenidoparque"><p >Esta zona es producto del esfuerzo de sus habitantes, que desde siempre han tenido el deseo de hacer conocido el paraíso en el que viven. La protagonista más importante de esta área turística es la reconocida Laguna de Mar Chiquita, una laguna de agua salada de 6 mil kilómetros de extensión, que constituye uno de los humedales salinos más grandes de Latinoamérica y del mundo.</p>
       </div>
+    </div>
     </div>
 <div class="ContenedorAnsenuza" >
   <div class="box-row>">
   Parque Nacional Ansenuza
   <div class="contenidoparque">El <span>Parque Nacional Ansenuza</span> es un área natural protegida situada en la provincia de Córdoba, República Argentina, con una superficie de 661.416 ha., que incluye la Laguna de Mar Chiquita o Mar de Ansenuza. La ley nacional que dicta su creación fue sancionada el 30 de junio de 2022. 2​
 
-    Los bañados del río Dulce (también llamado Salí o Petri) y la laguna de Mar Chiquita conforman uno de los humedales de importancia. </div>
+    Los bañados del río Dulce (también llamado Salí o Petri) y la laguna de Mar Chiquita conforman uno de los humedales de importancia. <br>
+    El mayor lago salado de Sudamérica
+    Conocida como Mar de Ansenuza por ser parte de un humedal de alrededor de un millón de hectáreas de extensión, que lo convierte en el quinto lago de agua salada más grande del planeta, reúne nada menos que el 66% de todas las especies de aves migratorias y playeras registradas en la Argentina.
+    
+    Sitio clave para la conservación de la biodiversidad a nivel global, fue incluido en la Red Hemisférica de Reservas de Aves Playeras, designado Área Importante para la Conservación de las Aves (AICA) y sitio Ramsar e incluido en la red de Lagos Vivientes.</div>
 </div>
   <div class="imgparque"><img src="assets\images\logo_ansenuza_parque.webp" alt="logo" ></div>
 </div>
@@ -31,33 +47,46 @@
       </div>
     </div>
 
-    <div class="album py-5 bg-light">
-      <div class="container">
-<ng-container *ngFor="let item of cards">
+    <div class="bg-light">
+      <div class="container-fluid">
+      
+<ng-container>
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-    <div class="col">
+  <div class="col-4" *ngFor="let item of cards">
+
+      
       <div class="card shadow-sm">
-        <img src={{item.Imagen}}   class="card-img-top" alt="..."style="width: 322px; height: 200px"> <!-- "assets\images\resto\resto1.png" -->
+        
           <div class="card-body">
+            <img src={{item.Imagen}}   class="card-img-top" alt="..."style="width: 322px; height: 200px">
             <h3>{{item.Titulo}}</h3>
             <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> {{item.Telefono}}</a></p>
             <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> {{item.Direccion}}</a></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">{{item.Web}}</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">{{item.Instagram}}</button>
+              <div class="d-flex content-between align-items-center"> 
+               
+                <a title="Web" href="{{item.Web}}" target="_blank">
+                  <img src="assets/iconos/home.svg" width = "40em" height="40em"  alt="Web" class="iconoRedesSociales">
+                </a>
+                <a title="Facebook" href="{{item.Facebook}}" target="_blank">
+                  <img src="assets/iconos/facebook.svg" width = "40em" height="40em"  alt="Facebook" class="iconoRedesSociales">
+                </a>
+                <a title="Instagram" href="{{item.Instagram}}" target="_blank">
+                  <img src="assets/iconos/instagram.svg" width = "40em" height="40em"  alt="Intagram" class="iconoRedesSociales">
+                </a>
+              
+                
+               <!--  <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">{{item.Facebook}}</button>
-                </div>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">{{item.Instagram}}</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" img src="assets/iconos/facebook.svg" width = "40em" height="40em"  alt="Facebook" opacity="0.0" class="iconoRedesSociales" [href]="{{item.Facebook}}"></button> 
+                </div> -->
               </div>
               <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> {{item.Descripcion}}</a></p>
             </div>
-        </div>
-    </div>
-  </div>
-
-
-
-
+      </div>
+     </div> 
+   
+</div>
 </ng-container>
       </div>
     </div>
