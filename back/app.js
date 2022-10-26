@@ -89,6 +89,10 @@ models.sequelize.authenticate()
 
 app.use('/', routes);
 
+/* FILE CARGA*/
+/* *********************** */ 
 
+
+/* ********************* */
 module.exports = app;
 
