@@ -109,12 +109,19 @@
   width: 45%;
   height: 8em;
 }
+.maps{
+  display : flex;
+  flex-direction : row;
+  width: 45%;
+  height: 8em;
+  display: inline-flexbox;
+}
 .containerTexto{
   background-color:whitesmoke;
   margin: 1.5em;
   padding: 3%;
   text-align: left;
-font-size:x-large;
+  font-size:x-large;
   display : flex;
   flex-direction : row;
 }
@@ -164,4 +171,5 @@ vertical-align:text-top;
 
 border-spacing: 1%;
 }
+
 

@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth/auth.service';
+import { CuerpoComponent } from '../cuerpo/cuerpo.component';
 
 @Component({
   selector: 'app-cabeza',
