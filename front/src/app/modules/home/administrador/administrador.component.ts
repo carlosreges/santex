@@ -22,6 +22,7 @@ import {
   PASSWORD_PATTERN,
 } from 'src/app/core/interfaces/users/users.interface';
 import { debugPort } from 'process';
+import { UserService } from 'src/app/core/services/user/user.service';
 /* import { resetFakeAsyncZone } from '@angular/core/testing';
 import { clear } from 'console'; */
 
@@ -77,7 +78,7 @@ private fileImp:any;
 
 
  constructor(private router: Router, private RedSocialService:RedsocialService,
-  private informacionService:informacionService, private localesService:localesService) { }
+  private informacionService:informacionService, private localesService:localesService,private userService:UserService) { }
 
   ngOnInit(): void {
 
@@ -177,7 +178,18 @@ private fileImp:any;
         this.localNvo=response;
     }}))
   }
- 
+  Guardar_Usuario(){
+    console.log(this.usuarioNvo);
+    debugger;
+
+    this.componenteSubscripcion.add(
+      this.userService.guardar(this.usuarioNvo).subscribe({
+        next:(response:any)=>{
+          debugger;
+        }
+      })
+      )
+  }
 /* FUNCIONES USUARIO ?? PARA CREAR O MNO UNO */
 
 }

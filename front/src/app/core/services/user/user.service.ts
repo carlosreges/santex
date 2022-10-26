@@ -11,4 +11,7 @@ export class UserService {
   getProfile(): Observable<User> {
     return this.apiService.get<User>('users/myInfo');
   }
+  guardar (body:any): Observable<any>{
+    return this.apiService.post<User>('users/add',body);
+  }
 }

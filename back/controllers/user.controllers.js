@@ -1,5 +1,5 @@
 const userProvider = require('../providers/user.providers');
-
+const userModel = require ('../models/user.models');
 /**
  *
  * @param {*} req
@@ -15,7 +15,15 @@ async function login(req, res, next) {
     next(error);
   }
 }
-
+/* async function guardar(req,res,next){
+try {
+  const { username, password,  email } = req.body;
+  const result = await userModel.create(req.body);
+  res.json(user);
+} catch (error) {
+  next(error);
+} */
+/* } */
 
 /**
  *
@@ -37,4 +45,5 @@ async function userInfo(req, res, next) {
 module.exports = {
   login,
   userInfo,
+  guardar,
 };
