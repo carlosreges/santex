@@ -144,15 +144,6 @@ private fileImp:any;
     }}))
   }
 
-  UpDate_Info():void {
-
-    this.componenteSubscripcion.add (
-      this.informacionService.UpDate_Info(this.informacionNva).subscribe({next:(response)=>{
-        alert("Guardado Exitosamente");
-    }}))
-  }
-
-
   Buscar_Info(id:any):void{
     this.componenteSubscripcion.add(
      /*  this.informacionService.Buscar_info(id.target.value).subscribe({next:(response:informacion)=>{ */
@@ -173,9 +164,16 @@ private fileImp:any;
 
 
 
-  Buscar_local(nombre:any):void{
+  Buscar_localTitulo(titulo:any):void{
     this.componenteSubscripcion.add(
-      this.localesService.Buscar_local(nombre.target.value).subscribe({next:(response:locales)=>{
+      this.localesService.Buscar_localTitulo(titulo.target.value).subscribe({next:(response:locales)=>{
+        this.localNvo=response;
+    }}))
+  }
+
+  Buscar_localID(id:any):void{
+    this.componenteSubscripcion.add(
+      this.localesService.Buscar_localID(id.target.value).subscribe({next:(response:locales)=>{
         this.localNvo=response;
     }}))
   }

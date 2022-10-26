@@ -24,12 +24,6 @@ async function deleteLocales(req,res){
     res.json(result); 
 };
 
-/* async function updateCategorias(req,res){
-    const { QueryTypes } = require('sequelize');
-    const result = await sequelize.query("UPDATE redes_sociales SET `Red_social` = 'Facebook' WHERE `id_red_social`= 2", { type: QueryTypes.UPDATE });
-    console.log(result);
-    res.json(result); 
-}; */
 
 async function insertLocales(req,res){
     const { QueryTypes } = require('sequelize');
@@ -41,19 +35,37 @@ async function insertLocales(req,res){
 
 async function buscarPorTitulo(req,res){
     const { QueryTypes } = require('sequelize');
-    const result = await locales.findOne({where:{ Titulo: req.params.nombre }});
+    const result = await locales.findOne({where:{ Titulo: req.params.titulo }});
+    
+    /* const result = await sequelize.query("SELECT * FROM `redes_sociales`", { type: QueryTypes.SELECT }); */
+    console.log(result);
+ 
+    res.json(result); 
+};
+
+async function buscarPorId(req,res){
+    const { QueryTypes } = require('sequelize');
+    const result = await locales.findOne({where:{ id_local: req.params.id }});
     /* const result = await sequelize.query("SELECT * FROM `redes_sociales`", { type: QueryTypes.SELECT }); */
     console.log(result);
     res.json(result); 
 };
 
+async function buscarPorCategoria(req,res){
+    const { QueryTypes } = require('sequelize');
+    const result = await locales.findAll({where:{ Categoria: req.params.categoria}});
+
+   
+    res.json(result); 
+};
 
 module.exports = {
   getLocales,
   insertLocales,
   deleteLocales,
   buscarPorTitulo,
-  /* updateCategorias, */
+ buscarPorId,
+ buscarPorCategoria,
 
 };
 
