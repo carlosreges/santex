@@ -23,6 +23,7 @@ export class CabezaComponent implements OnInit {
   }
 
   cambiarSeccion(section: string){
+   debugger;
     this.changeSection.emit(this.section);
   }
 
