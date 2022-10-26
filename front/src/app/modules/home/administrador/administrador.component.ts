@@ -81,6 +81,30 @@ private fileImp:any;
 
 
   }
+/* FILE ADJUNTAR */
+/* getFile($event:any): void{
+
+const [file] = $event.target.files; */
+
+/* this.fileImp={
+  fileRaw:file,
+  fileName: file.name,
+}
+
+}
+
+sendFile():void{
+  const body = new FormData
+  body.append('myFile', this.fileImp.fileRaw, this.fileImp.fileName )
+this.localesService.sendPost(body);
+.subscribe(res  => console.log(res));
+} */
+
+
+
+
+/* ******************* */
+
   showDataAdm() {
     return (this.elementAdm = true);
   }
