@@ -13,7 +13,7 @@ app.post('/login', [
   Validator.checkValidationResult,
 ],
 userController.login);
-/* app.post('/add',userController.guardar); */
+app.post('/add',userController.guardar);
 
 
 // users/info/1

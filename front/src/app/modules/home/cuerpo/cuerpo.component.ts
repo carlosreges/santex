@@ -87,9 +87,11 @@ export class CuerpoComponent implements OnInit {
     return (this.section)
   } */
 
-Secciones(){
+Secciones(event:any){
  /*  window.location.hash=this.section; */
-  window.location.hash="Turismo";
+debugger;
+ 
+  window.location.hash=event;
 }
 
   obtenerDatosCards(cardType:string){

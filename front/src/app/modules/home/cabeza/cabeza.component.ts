@@ -10,7 +10,7 @@ import { CuerpoComponent } from '../cuerpo/cuerpo.component';
 })
 export class CabezaComponent implements OnInit {
 
-  @Output() changeSection= new EventEmitter<any>();
+  @Output() changeSection= new EventEmitter<string>();
   section="";
   username="";
   password="";
@@ -25,13 +25,14 @@ export class CabezaComponent implements OnInit {
 
   cambiarSeccion(section: string){
    debugger;
-    this.changeSection.emit(this.section);
+    this.changeSection.emit(section);
   }
 
   login(username: string, password: string): void{
     this._authService.login (this.username, this.password)
     .subscribe(
       (res: any) => {
+       debugger
         this._authService.setUser(res);
         this.router.navigateByUrl("administrador");
       },

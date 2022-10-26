@@ -4,7 +4,9 @@ import { Observable } from 'rxjs';
 import { ApiService } from '../../http/api.service';
 import { User } from '../../interfaces/users/users.interface';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class UserService {
   constructor(private apiService: ApiService) {}
 
