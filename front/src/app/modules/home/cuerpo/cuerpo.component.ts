@@ -3,8 +3,9 @@ import { response } from 'express';
 import { localesService } from './../../../core/services/locales/locales.service';
 import { Subscription } from 'rxjs';
 import { informacion } from 'src/app/core/interfaces/Informacion/informacion.interfaces';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { informacionService } from 'src/app/core/services/informacion/informacion.service';
+import { ThisReceiver } from '@angular/compiler';
 
 @Component({
   selector: 'app-cuerpo',
@@ -13,11 +14,11 @@ import { informacionService } from 'src/app/core/services/informacion/informacio
 })
 export class CuerpoComponent implements OnInit {
   section="";
-  elementG = false;
+/*   elementG = false;
   elementAc = false;
   elementAt = false;
   elementAg = false;
-  elementAj =false;
+  elementAj =false; */
   informacionDato?: informacion | null ;
   componenteSubscripcion: Subscription=new Subscription();
   cards: locales[] = [];
@@ -26,13 +27,13 @@ export class CuerpoComponent implements OnInit {
 
   ngOnInit(): void {
     this.componenteSubscripcion.add(
-      /* this.informacionService.Buscar_info(id.target.value).subscribe({next:(response:informacion)=>{ */
+
       this.informacionService.Buscar_info('1').subscribe({next:(response:informacion)=>{
         this.informacionDato=response;
         console.log(response);
     }}))
   }
-  showDataAg() {
+  /* showDataAg() {
     if(this.elementAg==false){
     return (this.elementAg = true)}
     else
@@ -81,13 +82,14 @@ export class CuerpoComponent implements OnInit {
   hideDataAc() {
     return (this.elementAc = false);
   }
-
-  mostrarSeccion(section: any){
+ */
+/*   mostrarSeccion(section: any){
     return (this.section)
-  }
+  } */
 
 Secciones(){
-  window.location.hash=this.section;
+ /*  window.location.hash=this.section; */
+  window.location.hash="Turismo";
 }
 
   obtenerDatosCards(cardType:string){
