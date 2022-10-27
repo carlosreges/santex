@@ -5,6 +5,7 @@ export interface User {
   username: string;
   updatedAt: Date;
   createdAt: Date;
+
 }
 
 export const MIN_USERNAME_LENGTH: number = 5;

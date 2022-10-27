@@ -10,7 +10,7 @@ import { User } from 'src/app/core/interfaces/users/users.interface';
 import { RedsocialService } from './../../../core/services/redsocial/redsocial.service';
 import { informacionService } from './../../../core/services/informacion/informacion.service';
 import { localesService } from './../../../core/services/locales/locales.service';
-/* import { userService } from './../../../core/services/user/user.service'; */
+
 
 /* USUARIO */
 
@@ -144,7 +144,7 @@ this.localesService.sendPost(body);
   Guardar_RedSocial():void {
     this.componenteSubscripcion.add (
         this.RedSocialService.Guardar_RedSocial(this.redSocialNva).subscribe({next:(response)=>{
-          
+
           alert("Guardado Exitosamente");
     }}))
   }
@@ -176,7 +176,7 @@ this.localesService.sendPost(body);
         this.informacionNva=response;
     }}))
   }
-  
+
 /* FUNCIONES LOCALES ****************/
   Guardar_local():void {
     this.componenteSubscripcion.add (
@@ -214,7 +214,9 @@ this.localesService.sendPost(body);
       })
       )
   }
-/* FUNCIONES USUARIO ?? PARA CREAR O MNO UNO */
+
+
+
 
 }
 
