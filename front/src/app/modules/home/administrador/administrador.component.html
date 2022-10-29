@@ -195,27 +195,35 @@
               <div class="controls">
                 <!-- FILA -->
                 <!-- *********SEARCH**************** -->
-                <div class="row">
+  <!--               <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="input-group rounded">
-                        <input (keyup)="Buscar_RedSocial($event)"  type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
+                        <label for="form_need">Especifique la Red Social *</label> -->
+                      <!-- <select [(ngModel)]="redSocialNva.Red_social" id="form_need" name="need" class="form-control" required="required" data-error="Especifique la Seccion." (change)="Buscar_RedSocial($event)">
+                        <option value="" selected disabled>--Seleccione--</option>
+                        <option value="Whatsapp" >Whatsapp</option>
+                        <option value="Twitter">Twitter</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Facebook">Facebook</option>
+                      </select> -->
+                        <!-- <input (keyup)="Buscar_RedSocial($event)"  type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
                         <span class="input-group-text border-0" id="search-addon">
-                          <i class="fas fa-search"></i>
-                        </span>
-                      </div>
+                          <i class="fas fa-search"></i> -->
+                        <!-- </span> -->
+          <!--             </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!-- ******************************* -->
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
                       <label for="form_need">Especifique la Red Social *</label>
-                      <select [(ngModel)]="redSocialNva.Red_social" id="form_need" name="need" class="form-control" required="required" data-error="Especifique la Seccion.">
+                      <select [(ngModel)]="redSocialNva.Red_social" id="form_need" name="need" class="form-control" required="required" data-error="Especifique la Seccion." (change)="Buscar_RedSocial($event)">
                         <option value="" selected disabled>--Seleccione--</option>
                         <option value="Whatsapp" >Whatsapp</option>
-                        <option value="Twitter">Twitter</option>
+                        <!-- <option value="Twitter">Twitter</option> -->
                         <option value="Instagram">Instagram</option>
                         <option value="Facebook">Facebook</option>
                       </select>
@@ -360,7 +368,7 @@
             <form id="formulario-usuario" role="form" (ngSubmit)="Guardar_Usuario()" >
 <!-- BUSCAR USUARIO -->
 <!-- ************** -->
-              <div class="row">
+<!--               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
                     <div class="input-group rounded">
@@ -371,7 +379,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
 <!-- FIN DE BUSQUEDA -->
               <div class="row">
                 <div class="col-md-6">
@@ -396,11 +404,17 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6">
+<!-- NO ELIMINA, INGRESA A INFORMACION.... -->
+<!-- ************************************* -->
+                <!--                 <div class="col-md-6">
                   <input type="button" class="btn btn-success btn-send  pt-2 btn-block" value="Eliminar" (click)="Eliminar_Usuario(usuarioNvo.username)">
-                </div>
+                </div> -->
+
+<!-- ************************************** -->
+
+
                 <div class="col-md-6">
-                  <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Guardar" >(click)="Guardar_Usuario()"
+                  <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Guardar" (click)="Guardar_Usuario()">
                 </div>
               </div>
             </form>
