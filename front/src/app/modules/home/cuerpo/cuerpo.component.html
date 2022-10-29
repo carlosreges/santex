@@ -6,10 +6,10 @@
   </div>
 
   <div id="Ansenuza">
- 
-      
+
+
       </div>
-    
+
 
       <div class="ContenedorAnsenuza" >
         <div class="box-row>">
@@ -34,19 +34,24 @@
   <div class="imgparque2"><img src="assets\images\logo_ansenuza_parque.webp" width="400" height="340"  style="border:1;"alt="logo" ></div>
 </div>
 
-<h1>Morteros te ofrece...</h1>
 
-<div class="contenidoCuerpo" id="Turismo">
+<div class="ContenedorAnsenuza" id="Turismo">
+  <div class="box-row>">
+<strong>Morteros...</strong>
+<div class="contenidoparque"> Te ofrece las siguientes propuestas para conocer esta ciudad y enamorarte de ella !!!  </div><br>
+
+
+<div class="contenidoCuerpo" >
 <div class="col-12">
         <button class="boton" type="button" (click)="obtenerDatosCards('Gastronomias')"><img src="assets\iconos\cubierto.svg" alt="logo" width="70"><br>Gastronomía</button>
-        <button class="boton" type="button" (click)="obtenerDatosCards('Agencias de Viajes')"><img src="assets\iconos\avion.svg" alt="logo"width="70"><br>Agencias de viaje</button>
-        <button class="boton" type="button" (click)="obtenerDatosCards('Atracciones')"><img src="assets\iconos\teatro.svg" alt="logo" width="70"><br>Atractivos</button>
         <button class="boton" type="button" (click)="obtenerDatosCards('Alojamientos')"><img src="assets\iconos\cama.svg" alt="logo" width="70"><br>Alojamiento</button>
-        <button class="boton" type="button" (click)="obtenerDatosCards('Actividades')"><img src="assets\iconos\Bici.svg" alt="logo" width="70"><br>Actividades recreativas</button>
-
+        <button class="boton" type="button" (click)="obtenerDatosCards('Atracciones')"><img src="assets\iconos\teatro.svg" alt="logo" width="70"><br>Atractivos</button>
+        <button class="boton" type="button" (click)="obtenerDatosCards('Actividades')"><img src="assets\iconos\Bici.svg" alt="logo" width="70"><br>Actividades</button>
+        <button class="boton" type="button" (click)="obtenerDatosCards('Agencias de Viajes')"><img src="assets\iconos\avion.svg" alt="logo"width="70"><br>Agencias de viaje</button>
       </div>
     </div>
-
+  </div>
+</div>
     <div class="bg-light">
       <div class="container-fluid">
 
@@ -62,7 +67,10 @@
             <h3>{{item.Titulo}}</h3>
             <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> {{item.Telefono}}</a></p>
             <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> {{item.Direccion}}</a></p>
-              <div class="d-flex content-between align-items-center">
+
+            <p class="card-text"> <img src=".\assets\iconos\book.svg" style="width: 1em; height:1em"><a> {{item.Descripcion}}</a></p>
+            <hr> <!-- LINEA SEPARATORIA PAARA LOS ICONO Y EL TEXTO -->
+            <div class="d-flex content-between align-items-center">
 
                 <a title="Web" href="{{item.Web}}" target="_blank">
                   <img src="assets/iconos/home.svg" width = "40em" height="40em"  alt="Web" class="iconoRedesSociales">
@@ -81,7 +89,7 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary" img src="assets/iconos/facebook.svg" width = "40em" height="40em"  alt="Facebook" opacity="0.0" class="iconoRedesSociales" [href]="{{item.Facebook}}"></button>
                 </div> -->
               </div>
-              <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> {{item.Descripcion}}</a></p>
+
             </div>
       </div>
      </div>
@@ -90,6 +98,7 @@
 </ng-container>
       </div>
     </div>
+
 
 
     <div class="container text-center text-md-left" id="Contacto">
