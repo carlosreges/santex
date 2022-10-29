@@ -10,7 +10,7 @@ import { User } from 'src/app/core/interfaces/users/users.interface';
 import { RedsocialService } from './../../../core/services/redsocial/redsocial.service';
 import { informacionService } from './../../../core/services/informacion/informacion.service';
 import { localesService } from './../../../core/services/locales/locales.service';
-/* import { userService } from './../../../core/services/user/user.service'; */
+
 
 /* USUARIO */
 
@@ -84,6 +84,30 @@ private fileImp:any;
 
 
   }
+/* FILE ADJUNTAR */
+/* getFile($event:any): void{
+
+const [file] = $event.target.files; */
+
+/* this.fileImp={
+  fileRaw:file,
+  fileName: file.name,
+}
+
+}
+
+sendFile():void{
+  const body = new FormData
+  body.append('myFile', this.fileImp.fileRaw, this.fileImp.fileName )
+this.localesService.sendPost(body);
+.subscribe(res  => console.log(res));
+} */
+
+
+
+
+/* ******************* */
+
   showDataAdm() {
     return (this.elementAdm = true);
   }
@@ -120,7 +144,7 @@ private fileImp:any;
   Guardar_RedSocial():void {
     this.componenteSubscripcion.add (
         this.RedSocialService.Guardar_RedSocial(this.redSocialNva).subscribe({next:(response)=>{
-          
+
           alert("Guardado Exitosamente");
     }}))
   }
@@ -152,7 +176,7 @@ private fileImp:any;
         this.informacionNva=response;
     }}))
   }
-  
+
 /* FUNCIONES LOCALES ****************/
   Guardar_local():void {
     this.componenteSubscripcion.add (
@@ -190,7 +214,9 @@ private fileImp:any;
       })
       )
   }
-/* FUNCIONES USUARIO ?? PARA CREAR O MNO UNO */
+
+
+
 
 }
 

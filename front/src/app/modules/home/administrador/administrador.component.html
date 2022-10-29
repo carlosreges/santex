@@ -135,18 +135,21 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="row">
+<!-- **************************** -->
+<!-- CARGA DE UN DOCUMENTO ADJUNTO -->
+<!-- **************************** -->
+<div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_imagen">Imagen *</label>
-                      <input id="form_imagen" [(ngModel)]="localNvo.Imagen" type="file" class="file-upload" onchange="console.log(event.target.files)">
-
+                      <input id="form_imagen" [(ngModel)]="localNvo.Imagen"        type="file" class="file-upload" onchange="console.log(event.target.files)">
                     </div>
                   </div>
                   <!-- COLUMNA -->
                 </div>
-                <div class="row">
+<!-- **************************** -->
+<!-- **************************** -->
+<div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
                       <label for="form_message">Breve Descripcion *</label>
@@ -356,8 +359,9 @@
           <div class="card-body bg-light">
             <div class = "container">
               <form id="formulario-usuario" role="form" (ngSubmit)="Guardar_Usuario()" ><!-- (ngSubmit)="Guardar_Usuario()" -->
-
-                <div class="controls">
+<!-- BUSCAR USUARIO -->
+<!-- ************** -->
+                <!-- <div class="controls">
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
@@ -369,8 +373,8 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-
+                  </div> -->
+<!-- FIN DE BUSQUEDA -->
                   <div class="row">
 
                     <div class="col-md-6">
@@ -395,14 +399,14 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-6">
+<!--                     <div class="col-md-6">
                       <input type="button" class="btn btn-success btn-send  pt-2 btn-block" value="Eliminar" >
-                    </div>
+                    </div> -->
                     <div class="col-md-6">
                       <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Guardar" >
                     </div>
                   </div>
-                </div>
+                <!-- </div> -->
               </form>
             </div>
           </div>

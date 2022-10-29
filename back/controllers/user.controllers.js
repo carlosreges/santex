@@ -50,9 +50,13 @@ async function userInfo(req, res, next) {
   }
 }
 
+
+
+
 module.exports = {
   login,
   userInfo,
   guardar,
+ 
   
 };
