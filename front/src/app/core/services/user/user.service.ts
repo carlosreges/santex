@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -17,6 +18,14 @@ export class UserService {
     return this.apiService.post<User>('users/add',body);
   }
 
+  BuscarUsuario (username: string): Observable<User>{
+    debugger;
+      return this.apiService.get(`users/buscar/${username}`);
+    }
 
+    EliminarUsuario (username: string): Observable<User>{
+      debugger;
+        return this.apiService.delete(`users/del/${username}`);
+      }
 
 }

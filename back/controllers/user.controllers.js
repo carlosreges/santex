@@ -25,7 +25,8 @@ try {
     password:hash,
     email:req.body.email,
   }
- 
+  debugger;
+ /*  let [result, create] = await userModel.upsert(body); */
   const result = await userModel.create(body);
   res.json(user);
 } catch (error) {
@@ -50,13 +51,28 @@ async function userInfo(req, res, next) {
   }
 }
 
+async function buscarPorUsuario(req,res){
+  const { QueryTypes } = require('sequelize');
+  const result = await userModel.findOne({where:{ username: req.params.username }});
+ 
+  console.log(result);
+  res.json(result); 
+};
 
-
+async function deleteUsuario(req,res){
+  const { QueryTypes } = require('sequelize');
+  const result = await userModel.destroy({where: {username: req.params.username}});
+  /* const result = await sequelize.query("DELETE FROM `informacion` WHERE `id_informacion` = 3", { type: QueryTypes.DELETE }); */
+  console.log(result);
+  res.json(result); 
+};
 
 module.exports = {
   login,
   userInfo,
   guardar,
+  buscarPorUsuario,
+  deleteUsuario,
  
   
 };
