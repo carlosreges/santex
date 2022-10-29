@@ -74,7 +74,7 @@ export class AuthService {
 
   public logOut(): void {
     this.dialog.closeAll();
-    this.user = {id: 0, username: '', createdAt: new Date(), updatedAt: new Date() };
+    this.user = {id: 0, username: '', password:'', email:'', createdAt: new Date(), updatedAt: new Date() };
     this.cookieService.delete('user');
     this.cookieService.delete('token');
     this.cookieService.deleteAll('/',);

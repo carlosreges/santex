@@ -57,6 +57,7 @@ export class AdministradorComponent implements OnInit {
     username : "",
     password : "",
     email: "",
+
   }
 
   informacionNva = {
@@ -210,12 +211,28 @@ this.localesService.sendPost(body);
       this.userService.guardar(this.usuarioNvo).subscribe({
         next:(response:any)=>{
           debugger;
+          alert("Guardado Exitosamente");
         }
       })
       )
   }
 
+  Eliminar_Usuario(username:string):void{
+    debugger;
+    this.componenteSubscripcion.add(
 
+      this.userService.EliminarUsuario(username).subscribe({next:(response:User)=>{
+
+        alert("Eliminado Exitosamente");
+    }}))
+  }
+
+  Buscar_Usuario(username:any):void{
+    this.componenteSubscripcion.add(
+      this.userService.BuscarUsuario(username.target.value).subscribe({next:(response:User)=>{
+        this.usuarioNvo=response
+    }}))
+  }
 
 
 }
