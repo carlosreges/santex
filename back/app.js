@@ -89,10 +89,12 @@ models.sequelize.authenticate()
 
 app.use('/', routes);
 
-/* FILE CARGA*/
+/* POPOVER*/
 /* *********************** */ 
-
-
+/* $(function () {
+  $('[data-toggle="popover"]').popover()
+})
+ */
 /* ********************* */
 module.exports = app;
 

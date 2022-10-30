@@ -71,8 +71,13 @@
             <p class="card-text"> <img src=".\assets\iconos\book.svg" style="width: 1em; height:1em"><a> {{item.Descripcion}}</a></p>
             <hr> <!-- LINEA SEPARATORIA PAARA LOS ICONO Y EL TEXTO -->
             <div class="d-flex content-between align-items-center">
-            <a href="#" title="{{item.Titulo}}" data-toggle="popover" data-trigger="focus" >Más información</a> <!-- data-content="{{item.Descripcion}}" -->
-              <div class="d-flex content-between align-items-center">
+            <!-- POPOVER -->
+            <!-- ************ -->
+            <!-- <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button> -->
+          <!--   <a href="" title="{{item.Titulo}}" data-toggle="popover" data-trigger="focus" data-content="Hola" >Más información</a> -->
+
+            <!-- ************** -->
+            <div class="d-flex content-between align-items-center">
 
                 <a title="Web" href="{{item.Web}}" target="_blank">
                   <img src="assets/iconos/home.svg" width = "40em" height="40em"  alt="Web" class="iconoRedesSociales">
@@ -97,7 +102,12 @@
 
 
 
-    <div class="container text-center text-md-left" id="Contacto" >
+
+
+
+<hr width="100%"> <!-- VER SI SE LO PUDE ENGROSAR LA LINEA -->
+
+     <div class="container text-center text-md-left" id="Contacto" >
       <div class="pie-titulo-contacto" >
         <a> Dirección de Turismo de Morteros</a>
       </div>
@@ -109,7 +119,7 @@
           <img src="assets/iconos/direccion.svg" class="iconoContacto">
           <ul class="list-unstyled">
             <li>
-              <h6   class="font-weight-bold text-md-left mt-3 mb-2">{{informacionDato?.Direccion}}</h6>
+              <h6   class="font-weight-bold text-md-left mt-3 mb-6">{{informacionDato?.Direccion}}</h6>
             </li>
           </ul>
         </div>
@@ -118,7 +128,7 @@
           <img src="assets/iconos/reloj.svg"   class="iconoContacto">
           <ul class="list-unstyled">
             <li>
-              <h6 class="font-weight-bold text-md-left mt-3 mb-2">{{informacionDato?.Horario}}</h6>
+              <h6 class="font-weight-bold text-md-left mt-3 mb-6">{{informacionDato?.Horario}}</h6>
             </li>
           </ul>
         </div>
@@ -127,7 +137,7 @@
           <img src="assets/iconos/telephone.svg"  class="iconoContacto">
           <ul class="list-unstyled">
             <li>
-              <h6 class="font-weight-bold text-md-left mt-3 mb-2">{{informacionDato?.Telefono}}</h6>
+              <h6 class="font-weight-bold text-md-left mt-3 mb-6">{{informacionDato?.Telefono}}</h6>
             </li>
           </ul>
         </div>
@@ -136,13 +146,14 @@
           <img src="assets/iconos/sobre.svg" class="iconoContacto">
           <ul class="list-unstyled">
             <li>
-              <h6 class="font-weight-bold text-md-left mt-3 mb-2">{{informacionDato?.Email}}</h6>
+              <h6 class="font-weight-bold text-md-left mt-3 mb-6">{{informacionDato?.Email}}</h6>
             </li>
           </ul>
         </div>
 
       </div>
     </div>
+
 
 
 

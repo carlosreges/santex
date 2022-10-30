@@ -33,6 +33,9 @@ export class CuerpoComponent implements OnInit {
         console.log(response);
     }}))
   }
+
+
+
   /* showDataAg() {
     if(this.elementAg==false){
     return (this.elementAg = true)}
@@ -90,7 +93,7 @@ export class CuerpoComponent implements OnInit {
 Secciones(event:any){
  /*  window.location.hash=this.section; */
 debugger;
- 
+
   window.location.hash=event;
 }
 

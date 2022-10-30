@@ -146,7 +146,7 @@ this.localesService.sendPost(body);
     this.componenteSubscripcion.add (
         this.RedSocialService.Guardar_RedSocial(this.redSocialNva).subscribe({next:(response)=>{
 
-          alert("Guardado Exitosamente");
+       alert("Guardado Exitosamente");
     }}))
   }
   Buscar_RedSocial(nombre:any):void{
@@ -211,6 +211,7 @@ this.localesService.sendPost(body);
       this.userService.guardar(this.usuarioNvo).subscribe({
         next:(response:any)=>{
           debugger;
+
           alert("Guardado Exitosamente");
         }
       })
