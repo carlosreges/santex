@@ -10,7 +10,7 @@ import { User } from 'src/app/core/interfaces/users/users.interface';
 import { RedsocialService } from './../../../core/services/redsocial/redsocial.service';
 import { informacionService } from './../../../core/services/informacion/informacion.service';
 import { localesService } from './../../../core/services/locales/locales.service';
-
+import Swal from 'sweetalert2';
 
 /* USUARIO */
 
@@ -145,8 +145,12 @@ this.localesService.sendPost(body);
   Guardar_RedSocial():void {
     this.componenteSubscripcion.add (
         this.RedSocialService.Guardar_RedSocial(this.redSocialNva).subscribe({next:(response)=>{
-
-          alert("Guardado Exitosamente");
+          Swal.fire(
+            'Red Social Guardada ',
+            'Gracias!',
+            'success'
+          )
+          
     }}))
   }
   Buscar_RedSocial(nombre:any):void{
@@ -159,14 +163,22 @@ this.localesService.sendPost(body);
   Eliminar_RedSocial(nombre:string):void{
     this.componenteSubscripcion.add(
       this.RedSocialService.EliminarRedSocial(nombre).subscribe({next:(response:redsocial)=>{
-        alert("Eliminado Exitosamente");
+        Swal.fire(
+          'Red Social Eliminada ',
+          'Gracias!',
+          'info'
+        )
     }}))
   }
 /* FUNCIONES INFORMACION ************ */
   Guardar_Info():void {
     this.componenteSubscripcion.add (
       this.informacionService.Guardar_info(this.informacionNva).subscribe({next:(response)=>{
-        alert("Guardado Exitosamente");
+        Swal.fire(
+          'Informacion Guardada ',
+          'Gracias!',
+          'success'
+        )
     }}))
   }
 
@@ -183,8 +195,12 @@ this.localesService.sendPost(body);
     this.componenteSubscripcion.add (
 
       this.localesService.Guardar_local(this.localNvo).subscribe({next:(response)=>{
-        debugger;
-          alert("Guardado Exitosamente");
+       
+        Swal.fire(
+          'Local Guardado ',
+          'Gracias!',
+          'success'
+        )
         }}))
   }
 
@@ -203,18 +219,29 @@ this.localesService.sendPost(body);
         this.localNvo=response;
     }}))
   }
-  Guardar_Usuario(){
+ /*  Guardar_Usuario(){
     console.log(this.usuarioNvo);
-    debugger;
-
     this.componenteSubscripcion.add(
-      this.userService.guardar(this.usuarioNvo).subscribe({
-        next:(response:any)=>{
-          debugger;
-          alert("Guardado Exitosamente");
+      this.userService.guardar(this.usuarioNvo).subscribe({next:(response)=>{
+        Swal.fire(
+          'Usuario Guardado ',
+          'Gracias!',
+          'success'
+        )
         }
       })
       )
+  } */
+  Guardar_Usuario():void {
+    this.componenteSubscripcion.add (
+      this.userService.guardar(this.usuarioNvo).subscribe({next:(response)=>{
+        Swal.fire(
+          'Usuario Guardado ',
+          'Gracias!',
+          'success'
+        )
+          
+    }}))
   }
 
   Eliminar_Usuario(username:string):void{
@@ -223,7 +250,11 @@ this.localesService.sendPost(body);
 
       this.userService.EliminarUsuario(username).subscribe({next:(response:User)=>{
 
-        alert("Eliminado Exitosamente");
+        Swal.fire(
+          'Usuario Eliminado ',
+          'Gracias!',
+          'info'
+        )
     }}))
   }
 

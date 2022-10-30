@@ -38,17 +38,18 @@
 
 
 
-<div class="contenidoCuerpo" id="Turismo">
-<div class="col-12">
-        <button class="boton" type="button" (click)="obtenerDatosCards('Gastronomias')"><img src="assets\iconos\cubierto.svg" alt="logo" width="70"><br>Gastronomias</button>
-        <button class="boton" type="button" (click)="obtenerDatosCards('Agencias de Viajes')"><img src="assets\iconos\avion.svg" alt="logo"width="70"><br>Agencias de viaje</button>
-        <button class="boton" type="button" (click)="obtenerDatosCards('Atracciones')"><img src="assets\iconos\teatro.svg" alt="logo" width="70"><br>Atracciones</button>
-        <button class="boton" type="button" (click)="obtenerDatosCards('Alojamientos')"><img src="assets\iconos\cama.svg" alt="logo" width="70"><br>Alojamientos</button>
-        <button class="boton" type="button" (click)="obtenerDatosCards('Actividades')"><img src="assets\iconos\Bici.svg" alt="logo" width="70"><br>Actividades</button>
+  <div class="contenidoCuerpo" id="Turismo">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+        <button class="boton" type="button" (click)="obtenerDatosCards('Gastronomias')"> <img src="assets\iconos\Gastronomia.png" alt="logo" width="60"><br>Gastronomias</button>
+        <button class="boton" type="button" (click)="obtenerDatosCards('Agencias de Viajes')"><img src="assets\iconos\Agencia.png" alt="logo"width="60"><br>Agencias de viaje</button>
+        <button class="boton" type="button" (click)="obtenerDatosCards('Atracciones')"><img src="assets\iconos\Atracciones.png" alt="logo" width="60"><br>Atracciones</button>
+        <button class="boton" type="button" (click)="obtenerDatosCards('Alojamientos')"><img src="assets\iconos\hotel.png" alt="logo" width="60"><br>Alojamientos</button>
+        <button class="boton" type="button" (click)="obtenerDatosCards('Actividades')"><img src="assets\iconos\Actividades.png" alt="logo" width="60"><br>Actividades</button>
 
       </div>
     </div>
-
+  </div>
     <div class="bg-light">
       <div class="container-fluid">
 
@@ -60,7 +61,7 @@
       <div class="card shadow-sm">
 
           <div class="card-body">
-            <img src={{item.Imagen}}   class="card-img-top" alt="..."style="width: 322px; height: 200px">
+            <img src={{item.Imagen}}   class="card-img-top" alt="foto"style="width: 90; height: 200px">
             <h3>{{item.Titulo}}</h3>
             <p class="card-text"> <img src=".\assets\iconos\telephone.svg" style="width: 1em; height:1em"><a> {{item.Telefono}}</a></p>
             <p class="card-text"> <img src=".\assets\iconos\direccion.svg" style="width: 1em; height:1em"><a> {{item.Direccion}}</a></p>
