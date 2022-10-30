@@ -23,6 +23,7 @@ import {
 } from 'src/app/core/interfaces/users/users.interface';
 import { debugPort } from 'process';
 import { UserService } from 'src/app/core/services/user/user.service';
+import { clear } from 'console';
 /* import { resetFakeAsyncZone } from '@angular/core/testing';
 import { clear } from 'console'; */
 
@@ -231,6 +232,7 @@ this.localesService.sendPost(body);
       )
   } */
   Guardar_Usuario():void {
+    debugger;
     this.componenteSubscripcion.add (
       this.userService.guardar(this.usuarioNvo).subscribe({next:(response)=>{
         Swal.fire(
@@ -238,6 +240,7 @@ this.localesService.sendPost(body);
           'Gracias!',
           'success'
         )
+
 
     }}))
   }
@@ -253,6 +256,7 @@ this.localesService.sendPost(body);
           'Gracias!',
           'info'
         )
+
     }}))
   }
 
