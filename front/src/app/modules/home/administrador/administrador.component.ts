@@ -184,7 +184,7 @@ this.localesService.sendPost(body);
 
       this.localesService.Guardar_local(this.localNvo).subscribe({next:(response)=>{
         debugger;
-          alert("Guardado Exitosamente");
+     alert("Guardado Exitosamente");
         }}))
   }
 
