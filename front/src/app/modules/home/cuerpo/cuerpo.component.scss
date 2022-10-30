@@ -67,7 +67,7 @@
   font-size:large;
   border-radius: 5%;
   border-color: #f5f5f5;
-  width: 200px;
+  width: 180px;
   height: 100px;
   box-shadow: 6px 8px 15px rgb(163, 161, 161);
   margin-left: 4%;
@@ -77,10 +77,11 @@
 }
 .boton:hover{
   background-color:rgba(12, 246, 35, 0.2);
-  color:black;
+  color:rgb(9, 9, 9);
   font-size:large;
   border-radius: 5%;
   border-color: whitesmoke;
+
 
 }
 .contenidoCuerpo{
@@ -169,6 +170,7 @@ border-spacing: 1%;
 font-size: 30px;
 font-style: italic;
 font-weight: bold;
+
 /* text-decoration: underline; */
 border-style: none;
 //border-spacing: 5%;
