@@ -71,6 +71,8 @@
             <p class="card-text"> <img src=".\assets\iconos\book.svg" style="width: 1em; height:1em"><a> {{item.Descripcion}}</a></p>
             <hr> <!-- LINEA SEPARATORIA PAARA LOS ICONO Y EL TEXTO -->
             <div class="d-flex content-between align-items-center">
+            <a href="#" title="{{item.Titulo}}" data-toggle="popover" data-trigger="focus" >Más información</a> <!-- data-content="{{item.Descripcion}}" -->
+              <div class="d-flex content-between align-items-center">
 
                 <a title="Web" href="{{item.Web}}" target="_blank">
                   <img src="assets/iconos/home.svg" width = "40em" height="40em"  alt="Web" class="iconoRedesSociales">
@@ -88,6 +90,7 @@
      </div>
 
 </div>
+  </div>
 </ng-container>
       </div>
     </div>
