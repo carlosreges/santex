@@ -91,7 +91,7 @@ private fileImp:any;
 
   }
 /* FILE ADJUNTAR */
- /*getFile($event:any): void{
+/*  getFile($event:any): void{
 
 const [file] = $event.target.files;
 
