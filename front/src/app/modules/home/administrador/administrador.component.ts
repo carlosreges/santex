@@ -12,6 +12,10 @@ import { informacionService } from './../../../core/services/informacion/informa
 import { localesService } from './../../../core/services/locales/locales.service';
 import Swal from 'sweetalert2';
 
+/* ADJUNTAR FILE */
+
+/*  */
+
 /* USUARIO */
 
 
@@ -23,6 +27,7 @@ import {
 } from 'src/app/core/interfaces/users/users.interface';
 import { debugPort } from 'process';
 import { UserService } from 'src/app/core/services/user/user.service';
+import { clear } from 'console';
 /* import { resetFakeAsyncZone } from '@angular/core/testing';
 import { clear } from 'console'; */
 
@@ -86,11 +91,11 @@ private fileImp:any;
 
   }
 /* FILE ADJUNTAR */
-/* getFile($event:any): void{
+/*  getFile($event:any): void{
 
-const [file] = $event.target.files; */
+const [file] = $event.target.files;
 
-/* this.fileImp={
+ this.fileImp={
   fileRaw:file,
   fileName: file.name,
 }
@@ -101,7 +106,7 @@ sendFile():void{
   const body = new FormData
   body.append('myFile', this.fileImp.fileRaw, this.fileImp.fileName )
 this.localesService.sendPost(body);
-.subscribe(res  => console.log(res));
+.subscribe (res  => console.log(res));
 } */
 
 
@@ -150,7 +155,7 @@ this.localesService.sendPost(body);
             'Gracias!',
             'success'
           )
-          
+
     }}))
   }
   Buscar_RedSocial(nombre:any):void{
@@ -195,7 +200,7 @@ this.localesService.sendPost(body);
     this.componenteSubscripcion.add (
 
       this.localesService.Guardar_local(this.localNvo).subscribe({next:(response)=>{
-       
+
         Swal.fire(
           'Local Guardado ',
           'Gracias!',
@@ -222,17 +227,16 @@ this.localesService.sendPost(body);
  /*  Guardar_Usuario(){
     console.log(this.usuarioNvo);
     this.componenteSubscripcion.add(
-      this.userService.guardar(this.usuarioNvo).subscribe({next:(response)=>{
-        Swal.fire(
-          'Usuario Guardado ',
-          'Gracias!',
-          'success'
-        )
+      this.userService.guardar(this.usuarioNvo).subscribe({
+        next:(response:any)=>{
+          debugger;
+          alert("Guardado Exitosamente");
         }
       })
       )
   } */
   Guardar_Usuario():void {
+    debugger;
     this.componenteSubscripcion.add (
       this.userService.guardar(this.usuarioNvo).subscribe({next:(response)=>{
         Swal.fire(
@@ -240,7 +244,8 @@ this.localesService.sendPost(body);
           'Gracias!',
           'success'
         )
-          
+
+
     }}))
   }
 
@@ -255,6 +260,7 @@ this.localesService.sendPost(body);
           'Gracias!',
           'info'
         )
+
     }}))
   }
 

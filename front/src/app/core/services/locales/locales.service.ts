@@ -15,9 +15,11 @@ export class localesService {
 
   }
 
+  /* CARGA DE DOCUMENTO */
   sendPost(body:FormData):Observable<any>{
-    return this.http.post(`http://localhots:3000/upload`, body)
+    return this.http.post(`http://localhost:3000/upload`, body)
   }
+  /* ********************** */
 
   Buscar_localTitulo (titulo: string): Observable<locales>{
     debugger;

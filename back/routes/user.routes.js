@@ -15,7 +15,7 @@ app.post('/login', [
 userController.login);
 app.post('/add',userController.guardar);
 app.get('/buscar/:username',userController.buscarPorUsuario);
-app.get('/del/:username',userController.deleteUsuario);
+app.delete('/del/:username',userController.deleteUsuario);
 
 // users/info/1
 app.get('/myInfo', [
