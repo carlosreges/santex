@@ -142,7 +142,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="form_imagen">Imagen *</label>
-                      <input id="form_imagen" [(ngModel)]="localNvo.Imagen"        type="file" class="file-upload" onchange="console.log(event.target.files)">
+                      <textarea [(ngModel)]="localNvo.Imagen" id="form_message" name="message" class="form-control" placeholder="Url de la imagen" rows="2" required="required" ></textarea>
                     </div>
                   </div>
                   <!-- COLUMNA -->
