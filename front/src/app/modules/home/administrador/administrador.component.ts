@@ -12,6 +12,10 @@ import { informacionService } from './../../../core/services/informacion/informa
 import { localesService } from './../../../core/services/locales/locales.service';
 import Swal from 'sweetalert2';
 
+/* ADJUNTAR FILE */
+
+/*  */
+
 /* USUARIO */
 
 
@@ -87,11 +91,11 @@ private fileImp:any;
 
   }
 /* FILE ADJUNTAR */
-/* getFile($event:any): void{
+ /*getFile($event:any): void{
 
-const [file] = $event.target.files; */
+const [file] = $event.target.files;
 
-/* this.fileImp={
+ this.fileImp={
   fileRaw:file,
   fileName: file.name,
 }
@@ -102,7 +106,7 @@ sendFile():void{
   const body = new FormData
   body.append('myFile', this.fileImp.fileRaw, this.fileImp.fileName )
 this.localesService.sendPost(body);
-.subscribe(res  => console.log(res));
+.subscribe (res  => console.log(res));
 } */
 
 
