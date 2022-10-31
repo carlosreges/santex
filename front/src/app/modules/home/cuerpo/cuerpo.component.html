@@ -35,38 +35,26 @@
 </div>
 
 
-<div class="ContenedorAnsenuza" id="Turismo">
-  <div class="box-row>">
+<div class="ContenedorAnsenuza1" id="Turismo">
+ <div class="row">
 <strong>Morteros...</strong>
-<div class="contenidoparque"> Te ofrece las siguientes propuestas para conocer esta ciudad y enamorarte de ella !!!  </div><br>
+<div class="contenidoparque1"> Te ofrece las siguientes propuestas para conocer esta ciudad y enamorarte de ella !!!  </div><br>
 
 
 <div class="contenidoCuerpo" id="Turismo">
   <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
-      <button class="boton" type="button" (click)="obtenerDatosCards('Gastronomias')"> <img src="assets\iconos\Gastronomia.png" alt="logo" width="60"><br>Gastronomias</button>
-        <button class="boton" type="button" (click)="obtenerDatosCards('Agencias de Viajes')"><img src="assets\iconos\Agencia.png" alt="logo"width="60"><br>Agencias de viaje</button>
-        <button class="boton" type="button" (click)="obtenerDatosCards('Atracciones')"><img src="assets\iconos\Atracciones.png" alt="logo" width="60"><br>Atracciones</button>
-        <button class="boton" type="button" (click)="obtenerDatosCards('Alojamientos')"><img src="assets\iconos\hotel.png" alt="logo" width="60"><br>Alojamientos</button>
-        <button class="boton" type="button" (click)="obtenerDatosCards('Actividades')"><img src="assets\iconos\Actividades.png" alt="logo" width="60"><br>Actividades</button>
-
+      <button class="boton" type="button" (click)="obtenerDatosCards('Gastronomias')"> <img src="assets\iconos\Gastronomia.png" alt="logo" width="50"><br>Gastronomias</button>
+        <button class="boton" type="button" (click)="obtenerDatosCards('Agencias de Viajes')"><img src="assets\iconos\Agencia.png" alt="logo"width="50"><br>Agencias de viaje</button>
+        <button class="boton" type="button" (click)="obtenerDatosCards('Atracciones')"><img src="assets\iconos\Atracciones.png" alt="logo" width="50"><br>Atracciones</button>
+        <button class="boton" type="button" (click)="obtenerDatosCards('Alojamientos')"><img src="assets\iconos\hotel.png" alt="logo" width="50"><br>Alojamientos</button>
+        <button class="boton" type="button" (click)="obtenerDatosCards('Actividades')"><img src="assets\iconos\Actividades.png" alt="logo" width="50"><br>Actividades</button>
+      </div>
       </div>
     </div>
   </div>
-
-
-
-<!-- <div class="contenidoCuerpo" >
-<div class="col-12">
-        <button class="boton" type="button" (click)="obtenerDatosCards('Gastronomias')"><img src="assets\iconos\Gastronomia.png" alt="logo" width="70"><br>Gastronomías</button>
-        <button class="boton" type="button" (click)="obtenerDatosCards('Alojamientos')"><img src="assets\iconos\hotel.png" alt="logo" width="70"><br>Alojamientos</button>
-        <button class="boton" type="button" (click)="obtenerDatosCards('Atracciones')"><img src="assets\iconos\Atracciones.png" alt="logo" width="70"><br>Atracciones</button>
-        <button class="boton" type="button" (click)="obtenerDatosCards('Actividades')"><img src="assets\iconos\Actividades.png" alt="logo" width="70"><br>Actividades</button>
-        <button class="boton" type="button" (click)="obtenerDatosCards('Agencias de Viajes')"><img src="assets\iconos\Agencia.png" alt="logo"width="70"><br>Agencias de viajes</button>
-      </div>
-    </div>-->
   </div>
-</div>
+
     <div class="bg-light">
       <div class="container-fluid">
 
@@ -85,23 +73,18 @@
 
             <p class="card-text"> <img src=".\assets\iconos\book.svg" style="width: 1em; height:1em"><a> {{item.Descripcion}}</a></p>
             <hr> <!-- LINEA SEPARATORIA PAARA LOS ICONO Y EL TEXTO -->
-            <div class="d-flex content-between align-items-center">
-            <!-- POPOVER -->
-            <!-- ************ -->
-            <!-- <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button> -->
-          <!--   <a href="" title="{{item.Titulo}}" data-toggle="popover" data-trigger="focus" data-content="Hola" >Más información</a> -->
-
-            <!-- ************** -->
-            <div class="d-flex content-between align-items-center">
+            <!-- <div class="d-flex content-between align-items-center"> -->
+      
+            <div class="d-flex content-between " style="float:right">
 
                 <a title="Web" href="{{item.Web}}" target="_blank">
-                  <img src="assets/iconos/home.svg" width = "40em" height="40em"  alt="Web" class="iconoRedesSociales">
+                  <img src="assets/iconos/web.png" width = "50em" height="40em"  alt="Web" class="iconoRedesSociales">
                 </a>
                 <a title="Facebook" href="{{item.Facebook}}" target="_blank">
-                  <img src="assets/iconos/facebook.svg" width = "40em" height="40em"  alt="Facebook" class="iconoRedesSociales">
+                  <img src="assets/iconos/facebook.png" width = "50em" height="40em"  alt="Facebook" class="iconoRedesSociales" >
                 </a>
                 <a title="Instagram" href="{{item.Instagram}}" target="_blank">
-                  <img src="assets/iconos/instagram.svg" width = "40em" height="40em"  alt="Intagram" class="iconoRedesSociales">
+                  <img src="assets/iconos/instagram.png" width = "50em" height="40em"  alt="Intagram" class="iconoRedesSociales">
                 </a>
               </div>
 
@@ -110,7 +93,7 @@
      </div>
 
 </div>
-  </div>
+ 
 </ng-container>
       </div>
     </div>
